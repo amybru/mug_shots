@@ -46,12 +46,18 @@ footer {
   background-color: rgba(0,0,0,5);
 }
 
+footer > h4 {
+    font-family: 'Ranchers', cursive;
+}
+
 .footer-phone {
     color: #d4af37;
+    font-size: 0.75rem;
 }
 
 .footer-email {
     color: #d4af37;
+    font-size: 0.75rem;
 }
 
 .social-item {

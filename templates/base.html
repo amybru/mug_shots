@@ -36,7 +36,7 @@
     {% endblock %}
 
     {% block extra_js %}
-    <script src="{ url_for('static', filename='js/sidenav.js') }}"></script>
+    <script src="{% static 'js/navbar.js' %}"></script>
     {% endblock %}
     
     <title>Mug Shots {% block extra_title %}{% endblock %}</title>
@@ -52,7 +52,7 @@
             </div>
         </div>
         <div class="row">
-            <nav class="col-12 navbar navbar-expand-md navbar-light bg-light sticky-top">
+            <nav class="col-12 navbar navbar-expand-md navbar-light bg-light sticky-top" id="mainnav">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#side-nav" aria-controls="side-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -80,12 +80,12 @@
       <footer class="footer page-footer">
          <div class="container">
             <div class= "row">
-            <div class="footer-contact col-4">
+            <div class="footer-contact col-sm-12 col-md-4">
                <h4>Contact Us</h4>
                <h5 class="footer-phone">(121)121-1212</h5>
                <h5 class="footer-email">mugshotsproject11@gmail.com</h5>
             </div>
-            <div class="footer-follow col-4">
+            <div class="footer-follow col-sm-12 col-md-4">
                 <h4>Follow</h4>
                 <ul class="list-inline social-links">
                     <li class="list-inline-item social-item">
@@ -105,7 +105,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="footer-search col-4">
+            <div class="footer-search col-sm-12 col-md-4">
             <h4>Search Our Site</h4>
             <div class="list-inline-item"> 
                 <form method="GET" action="">
