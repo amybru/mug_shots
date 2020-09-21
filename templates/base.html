@@ -19,8 +19,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Ranchers&family=Ubuntu:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
-    <!--Base css-->
+    <!-- Main css-->
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
     {% endblock %}
     {% block extra_css %}
     {% endblock %}
@@ -35,7 +36,7 @@
     {% endblock %}
 
     {% block extra_js %}
-    <script src="{% static 'js/sidenav.js' %}"></script>
+    <script src="{ url_for('static', filename='js/sidenav.js') }}"></script>
     {% endblock %}
     
     <title>Mug Shots {% block extra_title %}{% endblock %}</title>
@@ -51,7 +52,7 @@
             </div>
         </div>
         <div class="row">
-            <nav class="col-12 navbar navbar-expand-lg navbar-light bg-light sticky-top">
+            <nav class="col-12 navbar navbar-expand-md navbar-light bg-light sticky-top">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#side-nav" aria-controls="side-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -87,17 +88,17 @@
             <div class="footer-follow col-4">
                 <h4>Follow</h4>
                 <ul class="list-inline social-links">
-                    <li class="list-inline-item">
+                    <li class="list-inline-item social-item">
                         <a target="_blank" href="https://www.facebook.com/">
                             <i class="fab fa-facebook"></i>
                         </a>
                     </li>
-                    <li class="list-inline-item">
+                    <li class="list-inline-item social-item">
                         <a target="_blank" href="https://twitter.com/?lang=en">
                             <i class="fab fa-twitter"></i>
                         </a>
                     </li>
-                    <li class="list-inline-item">
+                    <li class="list-inline-item social-item">
                         <a target="_blank" href="https://www.instagram.com/?hl=en">
                             <i class="fab fa-instagram"></i>
                         </a>
@@ -111,7 +112,7 @@
                     <div class="input-group w-100">
                         <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search">
                         <div class="input-group-append">
-                            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                            <button class="form-control btn search-btn" type="submit">
                                 <span class="icon">
                                     <i class="fas fa-search"></i>
                                 </span>
