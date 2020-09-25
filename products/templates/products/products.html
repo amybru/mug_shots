@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <!--Main Landing picture for shop page to view all products-->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">SHOP</h1>
+        </div>
+    </div>
+
+    <!--Sort by size-->
+    
+
+    <!--Products-->
+    <div class="container product-container">
+        <div class="row">
+                {{% for product in products %}}
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="card" style="width: 18rem;">
+                    {{% if product.image %}}
+                    <a href="">
+                        <img class="card-img-top product-img" src="{{ product.img.url }}" alt="{{ product.name }}">
+                    </a>
+                    {{% else %}}
+                    <a href="">
+                        <img class="card-img-top no-product-img" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                    </a>
+                    {{% endif %}}
+                        <div class="card-body">
+                            <h4 class="product-name">{{ product.name }}</h4>
+                            <h5 class="product-price">${{ product.price }}</h5>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                {{% endfor %}}
+                </div>
+        </div>
+    </div>
+{% endblock %}
