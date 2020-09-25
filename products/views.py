@@ -13,3 +13,15 @@ def all_products(request):
     }
     return render(request, 'products/products.html', context)
 
+def one_product(request, product_id):
+    """A view to show one product in the database"""
+
+    product = get_object_or_404(Product, pk=product_id)
+
+    context = {
+        'product': product,
+        'all_products': 'active'
+    }
+
+    return render(request, 'products/products.html', context)
+

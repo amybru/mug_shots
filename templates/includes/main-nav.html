@@ -1,12 +1,12 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto right">
     <li class="nav-item {{ home_page }}">
-                        <a class="text-black nav-link" href="#" id="nav-home" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="text-black nav-link" href="{% url 'home' %}" id="nav-home" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-coffee"></i><p>Home</p>
                         </a>
                     </li>
         <li class="nav-item {{ shop_page }}">
-                        <a class="text-black nav-link" href="#" id="nav-shop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="text-black nav-link" href="{% url 'products' %}" id="nav-shop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-coffee"></i><p>Shop</p>
                         </a>
                     </li>
