@@ -20,6 +20,10 @@ body {
 
 
 /* Home- gallery */
+.home-jumbotron {
+    background-image: url("./media/main-2.jpg");
+}
+
 .flex-column { 
        max-width : 260px;
    }

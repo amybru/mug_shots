@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 
-def index(request):
+def gallery(request):
     """Render GALLERY Page"""
     context = {
         'gallery_page': 'active'

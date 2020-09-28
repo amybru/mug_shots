@@ -3,24 +3,276 @@
     "pk": 1,
     "model": "products.product",
     "fields": { 
-      "sku": "pp5001340155",
+      "sku": "m8176",
       "name": "Tulip Mug",
       "description": "Glazed in Earth Colorway",
-      "price": 53.99,
+      "price": 33.99,
       "category": 3,
-      "image": "photo-1495100497150-fe209c585f50.jpg"
+      "image": "IMG-8176.jpg"
     }
   },
   {
     "pk": 2,
     "model": "products.product",
     "fields": { 
-      "sku": "pp5001340130",
-      "name": "Round Mug",
-      "description": "Glazed in Snow Colorway",
-      "price": 53.99,
+      "sku": "m8182",
+      "name": "Clasic Mug",
+      "description": "Glazed in Orchid Colorway",
+      "price": 22.99,
       "category": 2,
-      "image": "photo-1495100497150-fe209c585f50.jpg"
+      "image": "IMG-8182.jpg"
     }
-  }
+  },
+  {
+    "pk": 3,
+    "model": "products.product",
+    "fields": { 
+      "sku": "m8179",
+      "name": "Rose Mug",
+      "description": "Our classic shape, glazed in Rose Colorway",
+      "price": 22.99,
+      "category": 2,
+      "image": "IMG-8179.jpg"
+    }
+  },
+   {
+    "pk": 4,
+    "model": "products.product",
+    "fields": { 
+      "sku": "m8184",
+      "name": "Top-Glazed",
+      "description": "Top-Glazed in seashell",
+      "price": 43.99,
+      "category": 4,
+      "image": "IMG-8184.jpg"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "products.product",
+    "fields": { 
+      "sku": "m8185",
+      "name": "Top-Glazed",
+      "description": "Top-Glazed in sunset",
+      "price": 43.99,
+      "category": 4,
+      "image": "IMG-8185.jpg"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "products.product",
+    "fields": { 
+      "sku": "m8198",
+      "name": "Porcelain",
+      "description": "An everyday cup",
+      "price": 15.99,
+      "category": 3,
+      "image": "IMG-8198.jpg"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "products.product",
+    "fields": { 
+      "sku": "m8186",
+      "name": "Beach Vibes",
+      "description": "Top-glazed in ocean, bottom glazed in sunset",
+      "price": 35.99,
+      "category": 3,
+      "image": "IMG-8186.jpg"
+    }
+  },
+  {
+    "pk": 8,
+    "model": "products.product",
+    "fields": { 
+      "sku": "m8187",
+      "name": "Rainbow Mug",
+      "description": "A classic round shape with a pretty little rainbow",
+      "price": 21.99,
+      "category": 2,
+      "image": "IMG-8187.jpg"
+    }
+  },
+  {
+    "pk": 9,
+    "model": "products.product",
+    "fields": { 
+      "sku": "m8188",
+      "name": "Hand Painted",
+      "description": "Top Seller!",
+      "price": 35.99,
+      "category": 4,
+      "image": "IMG-8198.jpg"
+    }
+  },
+  {
+    "pk": 10,
+    "model": "products.product",
+    "fields": { 
+      "sku": "m8189",
+      "name": "Ocean",
+      "description": "Hand carved, glazed in ocean",
+      "price": 25.99,
+      "category": 2,
+      "image": "IMG-8189.jpg"
+    }
+  },
+  {
+    "pk": 11,
+    "model": "products.product",
+    "fields": { 
+      "sku": "m8190",
+      "name": "Blueberry",
+      "description": "A unique shape handpainted blueberry design",
+      "price": 25.99,
+      "category": 2,
+      "image": "IMG-8190.jpg"
+    }
+  },
+  {
+    "pk": 12,
+    "model": "products.product",
+    "fields": { 
+      "sku": "m8197",
+      "name": "Begin.",
+      "description": "An everyday porcelain cup to begin the day",
+      "price": 15.99,
+      "category": 3,
+      "image": "IMG-8198.jpg"
+    }
+  },
+  {
+    "pk": 13,
+    "model": "products.product",
+    "fields": { 
+      "sku": "m8191",
+      "name": "Cherry Blossoms",
+      "description": "A tall mug with cherry blossoms hand painted on the outside. Glazed with blossom colorway on inside.",
+      "price": 35.99,
+      "category": 4,
+      "image": "IMG-8191.jpg"
+    }
+  },
+  {
+    "pk": 14,
+    "model": "products.product",
+    "fields": { 
+      "sku": "m8192",
+      "name": "Honey Pot",
+      "description": "A short round 'honey pot' cup",
+      "price": 29.99,
+      "category": 2,
+      "image": "IMG-8198.jpg"
+    }
+  },
+  {
+    "pk": 15,
+    "model": "products.product",
+    "fields": { 
+      "sku": "m8193",
+      "name": "Tulip",
+      "description": "An Tulip-shaped cup",
+      "price": 25.99,
+      "category": 3,
+      "image": "IMG-8193.jpg"
+    }
+  },
+  {
+    "pk": 16,
+    "model": "products.product",
+    "fields": { 
+      "sku": "m8194",
+      "name": "Porcelain Mug",
+      "description": "An everyday cup with a large handle",
+      "price": 19.99,
+      "category": 4,
+      "image": "IMG-8194.jpg"
+    }
+  },
+  {
+    "pk": 17,
+    "model": "products.product",
+    "fields": { 
+      "sku": "m8195",
+      "name": "Big Red",
+      "description": "An everyday cup, glazed in red",
+      "price": 15.99,
+      "category": 3,
+      "image": "IMG-8195.jpg"
+    }
+  },
+  {
+    "pk": 18,
+    "model": "products.product",
+    "fields": { 
+      "sku": "m8196",
+      "name": "Sky",
+      "description": "An everyday cup, glazed in sky blue",
+      "price": 15.99,
+      "category": 3,
+      "image": "IMG-8196.jpg"
+    }
+  },
+  {
+    "pk": 19,
+    "model": "products.product",
+    "fields": { 
+      "sku": "m8200",
+      "name": "Porcelain",
+      "description": "An everyday cup",
+      "price": 15.99,
+      "category": 3,
+      "image": "IMG-8200.jpg"
+    }
+  },
+  {
+    "pk": 20,
+    "model": "products.product",
+    "fields": { 
+      "sku": "m8201",
+      "name": "Meadow Mug",
+      "description": "Hand sculpted, top glazed in meadow",
+      "price": 35.99,
+      "category": 2,
+      "image": "IMG-8201.jpg"
+    }
+  },
+  {
+    "pk": 21,
+    "model": "products.product",
+    "fields": { 
+      "sku": "m8202",
+      "name": "Porcelain",
+      "description": "An everyday cup",
+      "price": 15.99,
+      "category": 3,
+      "image": "IMG-8202.jpg"
+    }
+  },
+  {
+    "pk": 22,
+    "model": "products.product",
+    "fields": { 
+      "sku": "m8203",
+      "name": "Spots",
+      "description": "An everyday cup- glazed in midnight, hand painted with white spots",
+      "price": 15.99,
+      "category": 4,
+      "image": "IMG-8203.jpg"
+    }
+  },
+  {
+    "pk": 23,
+    "model": "products.product",
+    "fields": { 
+      "sku": "m8199",
+      "name": "Porcelain Tulip",
+      "description": "An everyday cup in the popular tulip shape",
+      "price": 15.99,
+      "category": 3,
+      "image": "IMG-8199.jpg"
+    }
+  },
 ]
