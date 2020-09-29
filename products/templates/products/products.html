@@ -23,26 +23,27 @@
     <!--Products-->
     <div class="container product-container">
         <div class="row">
-                {{% for product in products %}}
+                {% for product in products %}
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card" style="width: 18rem;">
-                    {{% if product.image %}}
+                   {% if product.image %}
                     <a href="">
-                        <img class="card-img-top product-img" src="{{ product.img.url }}" alt="{{ product.name }}">
+                        <img class="card-img-top product-img" src="{{ product.img }}" alt="{{ product.name }}">
                     </a>
-                    {{% else %}}
+                   {% else %}
                     <a href="">
-                        <img class="card-img-top no-product-img" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                        <img class="card-img-top no-product-img" src="{{ MEDIA_URL }}no-image.jpg" alt="{{ product.name }}">
                     </a>
-                    {{% endif %}}
+                   {% endif %}
                         <div class="card-body">
                             <h4 class="product-name">{{ product.name }}</h4>
                             <h5 class="product-price">${{ product.price }}</h5>
                                 <a href="#" class="btn btn-primary">Add to Cart</a>
                         </div>
                     </div>
-                {{% endfor %}}
+                
                 </div>
+                {% endfor %}
         </div>
     </div>
 {% endblock %}
