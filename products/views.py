@@ -1,10 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Product
 
 # Create your views here.
 def all_products(request):
     """A view to show all products in the database, including the option to sort and search"""
-
     products = Product.objects.all()
 
     context = {
@@ -20,8 +19,7 @@ def one_product(request, product_id):
 
     context = {
         'product': product,
-        'all_products': 'active'
     }
 
-    return render(request, 'products/products.html', context)
+    return render(request, 'products/one_product.html', context)
 
