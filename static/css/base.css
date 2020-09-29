@@ -21,7 +21,9 @@ body {
 
 /* Home- gallery */
 .home-jumbotron {
-    background-image: url("./media/main-2.jpg");
+    height: 3em;
+    background-image: url('./media/main-2.jpg');
+    background-size: cover;
 }
 
 .flex-column { 
