@@ -53,7 +53,7 @@
         </div>
         <div class="row">
             <nav class="col-12 navbar navbar-expand-md navbar-light bg-light sticky-top" id="mainnav">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#side-nav" aria-controls="side-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" id="navbar-toggler" type="button" data-toggle="collapse" data-target="#side-nav" aria-controls="side-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 {% include 'includes/main-nav.html' %}
@@ -108,7 +108,7 @@
             <div class="footer-search col-sm-12 col-md-4">
             <h4>Search Our Site</h4>
             <div class="list-inline-item"> 
-                <form method="GET" action="">
+                <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
                         <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search">
                         <div class="input-group-append">

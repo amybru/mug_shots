@@ -13,6 +13,8 @@ window.onscroll = function() {
 
 /* Side Nav, comes on small screens */
 /* Set the width of the side navigation to 250px */
+document.getElementById("navbar-toggler").addEventListener("click");
+
 function openNav() {
   document.getElementById("side-nav").style.width = "250px";
 }
