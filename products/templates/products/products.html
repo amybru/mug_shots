@@ -18,7 +18,13 @@
     </div>
 
     <!--Sort by size-->
-    
+    <div class="filter-buttons btn-group" role="group">
+        <a href="{% url 'products' %}?category=twelve_oz">12 oz</a>
+        <a href="{% url 'products' %}?category=sixteen_oz">16 oz</a>
+        <a href="{% url 'products' %}?category=twentyfour_oz">24 oz</a>
+        <a href="{% url 'products' %}?category=sale">SALE</a>
+        <a href="{% url 'products' %}?category=new_arrivals">New Arrivals</a>
+    </div>
 
     <!--Products-->
     <div class="container product-container">
@@ -28,11 +34,11 @@
                     <div class="card" style="width: 18rem;">
                    {% if product.image %}
                     <a href="{% url 'one_product' product.id %}">
-                        <img class="card-img-top product-img" src="{{ product.img }}" alt="{{ product.name }}">
+                        <img class="card-img-top product-img" src="/media/{{ product.image }}" alt="{{ product.name }}">
                     </a>
                    {% else %}
                     <a href="{% url 'one_product' product.id %}">
-                        <img class="card-img-top no-product-img" src="{{ MEDIA_URL }}no-image.jpg" alt="{{ product.name }}">
+                        <img class="card-img-top no-product-img" src="/media/no-image.jpg" alt="{{ product.name }}">
                     </a>
                    {% endif %}
                         <div class="card-body">
