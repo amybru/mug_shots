@@ -23,6 +23,9 @@
                     <div class="col-sm-12 col-md-6">
                         <div class="card-body">
                             <h4 class="product-name">{{ product.name }}</h4>
+                            {% if product.category %}
+                            <p><i class="fas fa-tags"></i>{{ product.category.friendly_name }}</p>
+                            {% endif %}
                             <h5 class="product-price">${{ product.price }}</h5>
                             <p class="product-description">{{ product.description }}</p>
                             <p class="product-id">{{ product.sku }}</p>
