@@ -301,3 +301,37 @@ footer > h4 {
     background-color:#d4af37;
     color:#dfdfdf;
 }
+
+/* One product, a page to view a product by its product id */
+.product-container {
+    margin-top: 4em;
+}
+
+.img-container {
+    text-align: center;
+}
+
+.product {
+    width: 18em;
+    height: 18em;
+}
+
+.one-product-name {
+    font-family: 'Ranchers', cursive;
+    font-size: 3em;
+    color:#d4af37;
+}
+
+.one-product-btn {
+    background-color:#133616;
+    color:#dfdfdf;
+    transition: all 0.35s ease-in-out;
+     -moz-transition: all 0.35s ease-in-out;
+     -webkit-transition: all 0.35s ease-in-out;
+     -o-transition: all 0.35s ease-in-out;
+}
+
+.one-product-btn:hover {
+    background-color:#d4af37;
+    color:#dfdfdf;
+}
