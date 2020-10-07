@@ -11,23 +11,22 @@
 
 {% block content %}
     <!--Main Landing picture for shop page to view all products-->
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid jumbotron-shop">
         <div class="container">
             <h1 class="display-4">SHOP</h1>
-        </div>
-    </div>
+        
 
-    <!--Sort by size-->
+    <!--Sort by size, filter by price and category-->
     <div class="filter-buttons btn-group" role="group">
-        <a href="{% url 'products' %}?category=twelve_oz">12 oz</a>
-        <a href="{% url 'products' %}?category=sixteen_oz">16 oz</a>
-        <a href="{% url 'products' %}?category=twentyfour_oz">24 oz</a>
-        <a href="{% url 'products' %}?category=sale">SALE</a>
-        <a href="{% url 'products' %}?category=new_arrivals">New Arrivals</a>
-    </div>
+        <a href="{% url 'products' %}?category=twelve_oz" class="btn btn-filter">12 oz</a>
+        <a href="{% url 'products' %}?category=sixteen_oz" class="btn btn-filter">16 oz</a>
+        <a href="{% url 'products' %}?category=twentyfour_oz" class="btn btn-filter">24 oz</a>
+        <a href="{% url 'products' %}?category=sale" class="btn btn-filter">SALE</a>
+        <a href="{% url 'products' %}?category=new_arrivals" class="btn btn-filter" >New Arrivals</a>
+
 
     <div class="dropdown">
-        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="btn dropdown-toggle toggle-filter" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Sort
         </a>
 
@@ -38,14 +37,16 @@
     <a class="dropdown-item" href="{% url 'products' %}?sort=category&direction=desc">Category (large to small)</a>
   </div>
 </div>
-
+</div>
+</div>
+    </div>
 
     <!--Products-->
     <div class="container product-container">
         <div class="row">
                 {% for product in products %}
                 <div class="col-sm-6 col-md-4 col-lg-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card product-card">
                    {% if product.image %}
                     <a href="{% url 'one_product' product.id %}">
                         <img class="card-img-top product-img" src="/media/{{ product.image }}" alt="{{ product.name }}">
@@ -56,12 +57,12 @@
                     </a>
                    {% endif %}
                         <div class="card-body">
-                            <h4 class="product-name">{{ product.name }}</h4>
-                            <h5 class="product-price">${{ product.price }}</h5>
+                            <h5 class="product-name">{{ product.name }}</h5>
+                            <h6 class="product-price">${{ product.price }}</h6>
                             {% if product.category %}
-                            <p><i class="fas fa-tags"></i>{{ product.category.friendly_name }}</p>
+                            <p><i class="fas fa-tags category-tag"></i>{{ product.category.friendly_name }}</p>
                             {% endif %}
-                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                                <a href="#" class="btn add-btn">Add to Cart</a>
                         </div>
                     </div>
                 

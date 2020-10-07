@@ -13,18 +13,18 @@
     <!--Main Landing picture for home page-->
     <div class="jumbotron jumbotron-fluid  home-jumbotron">
         <div class="container">
-            <h1 class="display-4">Fluid jumbotron</h1>
-            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-            <a href="{% url 'products' %}" class="shop-button">Shop</a>
+            <h1 class="display-4">The Mug Shots Shop</h1>
+            <p class="lead">Handmade One of a Kind Mugs</p>
+            <a href="{% url 'products' %}" class="btn btn-lg shop-button vertical-center">Shop Now!</a>
         </div>
     </div>
 
     <!--About us section, contains text & photo about the company-->
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4 about">
                 <h3>Who are we?</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Located in a trendy arts district in Caffeine, CA we are small enough to offer a unique, custom mugs to small coffee shops and individuals. Our mission is to make the best, handmade custom mugs at the best price we can offer with no hidden costs, every day, the American way. But really, this is about you, not us. We love stories and there is one behind every custom mug we make. Chose a mug recently made in the store, or work with our team to create your own custom creation.</p>
             </div>
             <div class="col-12 col-md-8">
                 <img id="teamphoto" src="/media/potter.jpg" width="200" alt="Photo of the MUG SHOTS at work">
@@ -35,27 +35,24 @@
     <!--Section to view photos linked to instagram and to comission a piece-->
     <div class="container">
         <div class="row">
-            <div class="grid col-12 col-lg-6 d-flex flex-row flex-wrap justify-content-center grid-container">
-                <div class="d-flex flex-column">
-                    <img src="1" class="img-fluid">
-                    <img src="2" class="img-fluid">
+            <div class="grid grid-row col-12 col-lg-6 d-flex flex-row flex-wrap justify-content-center grid-container">
+                <div class="d-flex flex-column grid-column">
+                    <img src="media/custom-1.jpg" class="img-fluid">
+                    <img src="media/IMG-8182.jpg" class="img-fluid">
                 </div>
-                <div class="d-flex flex-column">
-                    <img src="3" class="img-fluid">
-                    <img src="4" class="img-fluid">
+                <div class="d-flex flex-column grid-column">
+                    <img src="media/main-3.jpg" class="img-fluid">
+                    <img src="media/main-5.jpg" class="img-fluid">
                 </div>
-                <div class="d-flex flex-column">
-                    <img src="5" class="img-fluid">
-                    <img src="6" class="img-fluid">
-                </div>
-                <div class="d-flex flex-column">
-                    <img src="7" class="img-fluid">
-                    <img src="8" class="img-fluid">
+                <div class="d-flex flex-column grid-column">
+                    <img src="media/custom-3.jpg" class="img-fluid">
+                    <img src="media/IMG-8194.jpg" class="img-fluid">
                 </div>
             </div>
             <div class="home-comission col-12 col-lg-6">
-                <h4>Comission a Piece</h4>
-                <button type="button" class="btn btn-primary">Primary</button>
+                <h5>See our custom mugs displayed around the site!</h5>
+                <p>Take a look around the site at the many different coffee mugs we offer. Choose a style and color, add your name or a phrase, or ask us for help!</p>
+                <a href="{% url 'products' %}" class="btn shop-button vertical-center">Comission a piece</a>
             </div>
         </div>
     </div>

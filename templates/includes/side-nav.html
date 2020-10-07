@@ -1,22 +1,23 @@
+
 <div id="side-nav" class="sidenav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item">
-                        <a class="text-black nav-link" href="{% url 'products' %}" id="nav-shop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="text-black nav-link" href="{% url 'products' %}" id="nav-shop">
                         <p>Shop</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="text-black nav-link" href="{% url 'gallery' %}" id="nav-gallery" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="text-black nav-link" href="{% url 'gallery' %}" id="nav-gallery">
                         <p>Gallery</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="text-black nav-link" href="#" id="nav-contact" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="text-black nav-link" href="#" id="nav-contact">
                         <p>Contact</p>
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="text-black nav-link" href="#" id="user-options">
                             <div class="text-center">
                                 <p class="my-0">My Account</p>
                             </div>
@@ -35,7 +36,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-cart fa-lg"></i></div>
                             </div>
