@@ -11,55 +11,147 @@
 
 {% block content %}
     <!--Main Landing picture for home page-->
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid jumbotron-gallery">
         <div class="container">
             <h1 class="display-4">Gallery</h1>
         </div>
     </div>
 
-    <!--About us section, contains text & photo about the company-->
     <div class="container">
         <div class="row">
-            <!--Carousel -->
+            <!--Custom Carousel -->
+            <div class="image-container"> 
+        <div class="slide"> 
+            <div class="slide-number">1</div> 
+            <img src="/media/custom-1.jpg">
+        </div> 
+        <div class="slide"> 
+            <div class="slide-number">2</div> 
+            <img src="/media/custom-2.jpg"> 
+        </div> 
+        <div class="slide"> 
+            <div class="slide-number">3</div> 
+            <img src="/media/custom-3.jpg">
+        </div> 
+        <div class="slide"> 
+            <div class="slide-number">4</div> 
+            <img src="/media/custom-4.jpg">
+        </div> 
+        <div class="slide"> 
+            <div class="slide-number">5</div> 
+            <img src="/media/cutsom-5.jpg">
+        </div> 
+   
+        <!-- Next and Previous icon to change images -->
+        <a class="previous" onclick="moveSlides(-1)"> 
+            <i class="fa fa-arrow-circle-left"></i> 
+        </a> 
+        <a class="next" onclick="moveSlides(1)"> 
+            <i class="fa fa-arrow-circle-right"></i>
+        </a> 
+    <br> 
+   
+    <div style="text-align:center"> 
+        <span class="dot" 
+            onclick="activeSlide(1)"> 
+        </span> 
+        <span class="dot"
+            onclick="activeSlide(2)"> 
+        </span> 
+        <span class="dot" 
+            onclick="activeSlide(3)"> 
+        </span> 
+        <span class="dot" 
+            onclick="activeSlide(4)"> 
+        </span> 
+        <span class="dot" 
+            onclick="activeSlide(5)"> 
+        </span> 
         </div>
     </div>
+     </div> 
+
+<!-- Jquerry -->
+<script> 
+    var slideIndex = 1; 
+    displaySlide(slideIndex); 
+   
+    function moveSlides(n) { 
+        displaySlide(slideIndex += n); 
+    } 
+   
+    function activeSlide(n) { 
+        displaySlide(slideIndex = n); 
+    } 
+   
+    /* Main function */
+    function displaySlide(n) { 
+        var i; 
+        var totalslides =  
+            document.getElementsByClassName("slide"); 
+        var totaldots =  
+            document.getElementsByClassName("footerdot"); 
+          
+        if (n > totalslides.length) { 
+            slideIndex = 1; 
+        } 
+          
+        if (n < 1) { 
+            slideIndex = totalslides.length; 
+        } 
+        for (i = 0; i < totalslides.length; i++) { 
+            totalslides[i].style.display = "none"; 
+        } 
+        for (i = 0; i < totaldots.length; i++) { 
+            totaldots[i].className =  
+            totaldots[i].className.replace(" active", ""); 
+        } 
+        totalslides[slideIndex - 1].style.display = "block"; 
+        totaldots[slideIndex - 1].className += " active"; 
+    } 
+</script> 
+
 
     <!--Instagram Grid-->
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="grid col-12 col-md-6 justify-content-center">
+            <div class="grid col-12 col-md-6 insta-text">
                 <h3 class="insta-title">Explore our Instagram</h3>
                 <p>View some previously comissioned pieces and read customer testimonials</p>
             </div>
             <div class="username-title col-12 col-md-6 text-right">
-                <a href="https://www.instagram.com/mugshots_mugs/?hl=en" target="_blank">
-                    <h4>@mugshots_mugs</h4>
+                <a href="https://www.instagram.com/mugshots_mugs/?hl=en" target="_blank" class="insta-link">
+                    <h2>@mugshots_mugs</h2>
                 </a>
             </div>
         </div>
-            <div class="row">
-                <div class="d-flex flex-column col-sm-12 col-md-4 col-lg-3">
-                    <img src="1" class="img-fluid">
-                    <img src="2" class="img-fluid">
+            <div class="row no-gutters">
+                <div class="d-flex flex-column col-sm-12 col-md-6 col-lg-3">
+                    <img src="/media/IMG-8176.jpg" class="img-fluid">
+                    <img src="/media/IMG-8179.jpg" class="img-fluid">
+                    <img src="/media/IMG-8182.jpg" class="img-fluid">
                 </div>
-                <div class="d-flex flex-column col-sm-12 col-md-4 col-lg-3">
-                    <img src="3" class="img-fluid">
-                    <img src="4" class="img-fluid">
+                <div class="d-flex flex-column col-sm-12 col-md-6 col-lg-3">
+                    <img src="/media/IMG-8189.jpg" class="img-fluid">
+                    <img src="/media/IMG-8184.jpg" class="img-fluid">
+                    <img src="/media/IMG-8190.jpg" class="img-fluid">
                 </div>
-                <div class="d-flex flex-column col-sm-12 col-md-4 col-lg-3">
-                    <img src="5" class="img-fluid">
-                    <img src="6" class="img-fluid">
+                <div class="d-flex flex-column col-sm-12 col-md-6 col-lg-3">
+                    <img src="/media/IMG-8185.jpg" class="img-fluid">
+                    <img src="/media/IMG-8186.jpg" class="img-fluid">
+                    <img src="/media/IMG-8191.jpg" class="img-fluid">
                 </div>
-                <div class="d-flex flex-column col-sm-12 col-md-4 col-lg-3">
-                    <img src="7" class="img-fluid">
-                    <img src="8" class="img-fluid">
+                <div class="d-flex flex-column col-sm-12 col-md-6 col-lg-3">
+                    <img src="/media/IMG-8187.jpg" class="img-fluid">
+                    <img src="/media/IMG-8188.jpg" class="img-fluid">
+                    <img src="/media/IMG-8192.jpg" class="img-fluid">
                 </div>
             </div>
-        <div class="row">
-            <div class="home-comission col-12">
+    </div>
+        <div class="container-fluid comission-container">
+            <div class="home-comission">
                 <h4>See something you're intersted in?</h4>
-                <a href=""><h3>Contact us today!</h3></a>
+                <a class="btn contact-btn" href=""><h3>Contact us today!</h3></a>
             </div>
         </div>
-    </div>
 {% endblock %}
