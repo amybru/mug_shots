@@ -48,9 +48,14 @@
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card product-card">
                    {% if product.image %}
+                   <div class="img-container">
                     <a href="{% url 'one_product' product.id %}">
                         <img class="card-img-top product-img" src="/media/{{ product.image }}" alt="{{ product.name }}">
+                        <div class="middle">
+                            <div class="background-text">{{ product.name }}</div>
+                        </div>
                     </a>
+                    </div>
                    {% else %}
                     <a href="{% url 'one_product' product.id %}">
                         <img class="card-img-top no-product-img" src="/media/no-image.jpg" alt="{{ product.name }}">
