@@ -11,6 +11,14 @@
     font-size: 7em;
 }
 
+@media screen and (max-width: 600px) {
+  .logo-font {
+    font-family: 'Ranchers', cursive;
+    color: #d4af37;
+    font-size: 5em;
+  }
+}
+
 .main-logo-link {
     border-bottom: 1px solid #161616;
 }
@@ -36,13 +44,13 @@
       display: inline-block;
       float: none;
       margin-top: 20px;
-      margin-left: 3.5em;
+      margin-left: 3em;
 }
 
 .navbar-nav > li > a {
         padding-left: 30px;
         padding-right: 30px;
-        color:#dfdfdf;
+        color: #161616;;
 }
 
 
@@ -114,6 +122,7 @@
 /* Active class to show the user their current page */
 .active {
     background-color: #d4af37;
+    border-radius: 50px;
 }
 
 

@@ -13,18 +13,24 @@
     <!--Main Landing picture for shop page to view all products-->
     <div class="jumbotron jumbotron-fluid jumbotron-shop">
         <div class="container">
+        <div class="row">
+            <div class="col-12">
             <h1 class="display-4">SHOP</h1>
-        
+            </div>
+        </div>
 
     <!--Sort by size, filter by price and category-->
+    <div class="row">
+    <div class="col-12 col-md-7">
     <div class="filter-buttons btn-group" role="group">
         <a href="{% url 'products' %}?category=twelve_oz" class="btn btn-filter">12 oz</a>
         <a href="{% url 'products' %}?category=sixteen_oz" class="btn btn-filter">16 oz</a>
         <a href="{% url 'products' %}?category=twentyfour_oz" class="btn btn-filter">24 oz</a>
         <a href="{% url 'products' %}?category=sale" class="btn btn-filter">SALE</a>
         <a href="{% url 'products' %}?category=new_arrivals" class="btn btn-filter" >New Arrivals</a>
-
-
+    </div>
+</div>
+<div class="col-12 col-md-5">
     <div class="dropdown">
         <a class="btn dropdown-toggle toggle-filter" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Sort
@@ -39,6 +45,8 @@
 </div>
 </div>
 </div>
+    </div>
+    </div>
     </div>
 
     <!--Products-->

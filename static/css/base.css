@@ -109,18 +109,14 @@ footer > h4 {
     height: 25em;
     background-position: center;
     font-family: 'Ranchers', cursive;
+    text-align: center;
+     color: #d4af37;
 }
 
 .home-jumbotron h1 {
-    text-align: center;
-    color: #d4af37;
     padding-top: 20px;
 }
 
-.home-jumbotron p {
-    text-align: center;
-    color: #d4af37;
-}
 
 .shop-button {
     background-color: #d4af37;
@@ -174,23 +170,26 @@ footer > h4 {
   width: 200%;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
   .grid-column {
     flex: 50%;
     max-width: 50%;
   }
 }
 
-@media screen and (max-width: 600px) {
-  .grid-column {
-    flex: 100%;
-    max-width: 100%;
-  }
+.home-ig p {
+    color: #133616;
+    font-size: 0.8rem;
+    font-family: 'Ranchers', cursive;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    padding: 10px;
 }
 
 .home-comission {
     background-color: #133616;
     padding: 15px;
+    text-align: center;
 }
 
 .home-comission h5 {
@@ -440,6 +439,52 @@ footer > h4 {
     color: #dfdfdf;
 }
 
+.images-row {
+    margin-left: 20px;
+}
+
+.gallery-container {
+    margin: 8px;
+}
+
+.gallery-grid-img {
+    object-fit: cover;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.gallery-grid-text {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  padding-bottom: 10em;
+}
+
+.gallery-container:hover .gallery-grid-text {
+  opacity: 1;
+}
+
+.gallery-container:hover .gallery-grid-img {
+  opacity: 0.5;
+}
+
+
+.gallery-container:hover {
+    -moz-box-shadow: 0 0 10px #d4af37;
+      -webkit-box-shadow: 0 0 10px #d4af37;
+      box-shadow: 0 0 10px #d4af37;
+     opacity: 0.3;
+}       
+
+.gallery-grid-text p {
+  color: #fff;
+  font-size: 20px;
+}
+
 .comission-container {
     margin-top: 10px;
     text-align: center;
@@ -455,3 +500,4 @@ footer > h4 {
     background-color:#dfdfdf;
     color: #d4af37
 }
+
