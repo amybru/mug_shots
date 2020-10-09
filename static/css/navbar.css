@@ -3,19 +3,26 @@
     color: #161616;
 }
 
+#topnav {
+    z-index: 1;
+}
+
+#navbar-row {
+    z-index: -1;
+}
 
 /* For Top-nav containing logo */
 .logo-font {
     font-family: 'Ranchers', cursive;
     color: #d4af37;
-    font-size: 7em;
+    font-size: 5em;
 }
 
 @media screen and (max-width: 600px) {
   .logo-font {
     font-family: 'Ranchers', cursive;
     color: #d4af37;
-    font-size: 5em;
+    font-size: 4em;
   }
 }
 
