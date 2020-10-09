@@ -75,7 +75,7 @@
                             {% if product.category %}
                             <p><i class="fas fa-tags category-tag"></i>{{ product.category.friendly_name }}</p>
                             {% endif %}
-                                <a href="#" class="btn one-product-btn">Add to Cart</a>
+                                <a href="{% url 'one_product' product.id %}" class="btn one-product-btn">View More Info...</a>
                         </div>
                     </div>
                 
