@@ -102,6 +102,22 @@ footer > h4 {
     cursor: pointer;
 }
 
+/* Toasts */
+.message-container {
+    position: fixed;
+    top: 125px;
+    right: 20px;
+    z-index: 999999999999;
+}
+
+.site-toasts {
+    overflow: visible;
+    opacity: 100;
+    background-color: #d4af37;
+    color:black;
+}
+
+
 
 /* Home Page */
 .home-jumbotron {
