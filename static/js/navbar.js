@@ -1,6 +1,4 @@
 
-
-
 /* Side Nav, comes on small screens */
 /* Set the width of the side navigation to 250px */
 

@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col">
                 <hr>
-                <h2 class="checkout-title mb-4">Checkout</h2>
+                <h2 class="page-title mb-4">Checkout</h2>
                 <hr>
             </div>
         </div>
@@ -112,14 +112,14 @@
                     </fieldset>
 
                     <div class="submit-button text-right mt-5 mb-2">                    
-						<a href="{% url 'view_bag' %}" class="btn rounded-0">
+						<a href="{% url 'view_bag' %}" class="btn user-btn">
 							<span class="icon">
 								<i class="fas fa-arrow-left"></i>
-							</span>
-							<span class="font-weight-bold">Adjust Bag</span>
+                            </span>
+                                <span> Edit Cart</span>
 						</a>
-						<button id="submit-button" class="btn rounded-0">
-							<span class="font-weight-bold">Complete Order</span>
+						<button id="submit-button" class="btn user-btn">
+							<span>Complete Order</span>
 							<span class="icon">
 								<i class="fas fa-lock"></i>
 							</span>

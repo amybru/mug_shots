@@ -27,11 +27,21 @@
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div class="text-right">
-                        <a class="btn rounded-0" href="{% url 'products' %}">Cancel</a>
-                        <button class="btn rounded-0" type="submit">Add Product</button>
+                        <a class="btn user-btn" href="{% url 'products' %}">Cancel</a>
+                        <button class="btn user-btn" type="submit">Add Product</button>
                     </div>
                 </form>
             </div>            
         </div>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $('#new-image').change(function() {
+            var file = $('#new-image')[0].files[0];
+            $('#filename').text(`Image will be set to: ${file.name}`);
+        });
+    </script>
 {% endblock %}

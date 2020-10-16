@@ -556,5 +556,48 @@ footer > h4 {
 
 .qty-text {
     border: 2px solid #dfdfdf;
-    padding: 5px;
+}
+
+/* login & sign up pages */
+.page-title {
+    font-family: 'Ranchers', cursive;
+    color: #d4af37;
+}
+
+.user-btn{
+    background-color:#133616;
+    color:#dfdfdf;
+    transition: all 0.35s ease-in-out;
+     -moz-transition: all 0.35s ease-in-out;
+     -webkit-transition: all 0.35s ease-in-out;
+     -o-transition: all 0.35s ease-in-out;
+}
+
+.user-btn:hover {
+    background-color:#d4af37;
+    color:#dfdfdf;
+}
+
+.user-card {
+    background-color: #dfdfdf;
+    color: #161616;
+    border-radius: 1rem;
+    -webkit-box-shadow: -10px -10px 15px 0 #d4af37;
+    box-shadow: -10px -10px 20px 0 #d4af37;
+    border: none;
+    
+}
+
+.signup-link{
+    text-decoration: none;
+    color: #d4af37;
+}
+
+.order-history-table {
+    color: #161616;
+}
+
+/* Syles specifically for the superuser to see, not visable on other pages */
+.btn-file {
+    color: #dfdfdf;
 }

@@ -64,3 +64,10 @@ select option[value=""] {
     margin: 0;
     height: 100%;
 }
+
+.order-confirmation-wrapper {
+     border-radius: 1rem;
+    -webkit-box-shadow: -10px -10px 15px 0 #d4af37;
+    box-shadow: -10px -10px 20px 0 #d4af37;
+    margin-top: 20px;
+}
