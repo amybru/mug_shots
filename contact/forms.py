@@ -22,7 +22,7 @@ class ContactForm(forms.ModelForm):
         label='',
         widget=forms.TextInput(attrs={
             'class': 'form-control',
-            'placeholder': 'Title'
+            'placeholder': 'Subject'
         })
     )
 

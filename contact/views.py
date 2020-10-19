@@ -1,9 +1,12 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.conf import settings
+
 from django.core.mail import send_mail
 import os
 from .forms import ContactForm
 from .models import Contact
+
 
 # Created an env var for the admin email so not in code.
 ADMINS_EMAIL = os.environ.get('ADMINS_EMAIL')
@@ -55,7 +58,8 @@ def contact(request):
 
     context = {
         'contact_page': 'active',
-        'form': form
+        'form': form,
+        'api_key': settings.GOOGLE_MAP_API_KEY,
     }
 
     return render(request, 'contact/contact.html', context)

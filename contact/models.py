@@ -14,4 +14,4 @@ class Contact(models.Model):
     query_user = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.contact_title
+        return self.contact_subject
