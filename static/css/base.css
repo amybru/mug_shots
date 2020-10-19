@@ -200,13 +200,13 @@ footer > h4 {
   }
 }
 
-.home-ig p {
+.home-ig a {
     color: #133616;
     font-size: 0.8rem;
     font-family: 'Ranchers', cursive;
     margin-bottom: 0.5rem;
-    text-align: center;
     padding: 10px;
+    text-decoration: none
 }
 
 .home-comission {
