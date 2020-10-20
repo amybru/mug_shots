@@ -20,7 +20,7 @@
     <div class="container">
         <div class="row">
             <!--Custom Carousel -->
-            <div class="image-container"> 
+            <div class="images-carousel col-12 d-sm-block col-md-6 order-md-2"> 
         <div class="slide"> 
             <div class="slide-number">1</div> 
             <img src="/media/custom-1.jpg">
@@ -69,7 +69,7 @@
         </span> 
         </div>
     </div>
-     </div> 
+     
 
 
 <script>
@@ -113,8 +113,27 @@ var slideIndex = 1;
 
 </script>
 
+ <!--Customer Testimonials -->
+            <div class="col-12 d-sm-block col-md-6 order-md-1 text-center">
+                <h3 class="page-title">Customer Testimonials</h3>
+        <div class="container">
+        <div class="row">
+            {% if not reviews %}
+                {% include 'gallery/includes/no-reviews.html' %}
+            {% else %}
+                {% include 'gallery/includes/reviews.html' %}
+            {% endif %}
+        </div>
+        </div>
+    </div>
+    </div>
+     <div class="row">
+        {% include 'gallery/includes/review-form.html' %}
+        </div>
+    </div>
+
     <!--Instagram Grid-->
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="grid col-12 col-md-6 insta-text">
                 <h3 class="insta-title">Explore our Instagram</h3>
