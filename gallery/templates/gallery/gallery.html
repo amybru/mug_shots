@@ -17,120 +17,6 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <!--Custom Carousel -->
-            <div class="images-carousel col-12 d-sm-block col-md-6 order-md-2"> 
-        <div class="slide"> 
-            <div class="slide-number">1</div> 
-            <img src="/media/custom-1.jpg">
-        </div> 
-        <div class="slide"> 
-            <div class="slide-number">2</div> 
-            <img src="/media/custom-2.jpg"> 
-        </div> 
-        <div class="slide"> 
-            <div class="slide-number">3</div> 
-            <img src="/media/custom-3.jpg">
-        </div> 
-        <div class="slide"> 
-            <div class="slide-number">4</div> 
-            <img src="/media/custom-4.jpg">
-        </div> 
-        <div class="slide"> 
-            <div class="slide-number">5</div> 
-            <img src="/media/cutsom-5.jpg">
-        </div> 
-   
-        <!-- Next and Previous icon to change images -->
-        <a class="previous" onclick="moveSlides(-1)"> 
-            <i class="fa fa-arrow-circle-left"></i> 
-        </a> 
-        <a class="next" onclick="moveSlides(1)"> 
-            <i class="fa fa-arrow-circle-right"></i>
-        </a> 
-    <br> 
-   
-    <div style="text-align:center"> 
-        <span class="dot" 
-            onclick="activeSlide(1)"> 
-        </span> 
-        <span class="dot"
-            onclick="activeSlide(2)"> 
-        </span> 
-        <span class="dot" 
-            onclick="activeSlide(3)"> 
-        </span> 
-        <span class="dot" 
-            onclick="activeSlide(4)"> 
-        </span> 
-        <span class="dot" 
-            onclick="activeSlide(5)"> 
-        </span> 
-        </div>
-    </div>
-     
-
-
-<script>
-
-var slideIndex = 1; 
-    displaySlide(slideIndex); 
-   
-    function moveSlides(n) { 
-        displaySlide(slideIndex += n); 
-    } 
-   
-    function activeSlide(n) { 
-        displaySlide(slideIndex = n); 
-    } 
-   
-    /* Main function */
-    function displaySlide(n) { 
-        var i; 
-        var totalslides =  
-            document.getElementsByClassName("slide"); 
-        var totaldots =  
-            document.getElementsByClassName("footerdot"); 
-          
-        if (n > totalslides.length) { 
-            slideIndex = 1; 
-        } 
-          
-        if (n < 1) { 
-            slideIndex = totalslides.length; 
-        } 
-        for (i = 0; i < totalslides.length; i++) { 
-            totalslides[i].style.display = "none"; 
-        } 
-        for (i = 0; i < totaldots.length; i++) { 
-            totaldots[i].className =  
-            totaldots[i].className.replace(" active", ""); 
-        } 
-        totalslides[slideIndex - 1].style.display = "block"; 
-        totaldots[slideIndex - 1].className += " active"; 
-    } 
-
-</script>
-
- <!--Customer Testimonials -->
-            <div class="col-12 d-sm-block col-md-6 order-md-1 text-center">
-                <h3 class="page-title">Customer Testimonials</h3>
-        <div class="container">
-        <div class="row">
-            {% if not reviews %}
-                {% include 'gallery/includes/no-reviews.html' %}
-            {% else %}
-                {% include 'gallery/includes/reviews.html' %}
-            {% endif %}
-        </div>
-        </div>
-    </div>
-    </div>
-     <div class="row">
-        {% include 'gallery/includes/review-form.html' %}
-        </div>
-    </div>
 
     <!--Instagram Grid-->
     <div class="container">
@@ -252,6 +138,125 @@ var slideIndex = 1;
                 </div>
             </div>
     </div>
+
+    <!--Testimonials, add new review form, and carousel-->
+    <div class="container testimonials-container">
+     <div class="row testimonial-row">
+         <h3 class="page-title">Customer Testimonials</h3>
+        <div class="container">
+        <div class="row">
+            {% if not reviews %}
+                {% include 'gallery/includes/no-reviews.html' %}
+            {% else %}
+                {% include 'gallery/includes/reviews.html' %}
+            {% endif %}
+        </div>
+        </div>
+        </div>
+
+<!--Custom Carousel -->
+        <div class="row carousel-form-row">
+            <div class="images-carousel col-12 d-sm-block col-md-6 order-md-2"> 
+        <div class="slide"> 
+            <div class="slide-number">1</div> 
+            <img src="/media/custom-1.jpg">
+        </div> 
+        <div class="slide"> 
+            <div class="slide-number">2</div> 
+            <img src="/media/custom-2.jpg"> 
+        </div> 
+        <div class="slide"> 
+            <div class="slide-number">3</div> 
+            <img src="/media/custom-3.jpg">
+        </div> 
+        <div class="slide"> 
+            <div class="slide-number">4</div> 
+            <img src="/media/custom-4.jpg">
+        </div> 
+        <div class="slide"> 
+            <div class="slide-number">5</div> 
+            <img src="/media/cutsom-5.jpg">
+        </div> 
+   
+        <!-- Next and Previous icon to change images -->
+        <a class="previous" onclick="moveSlides(-1)"> 
+            <i class="fa fa-arrow-circle-left"></i> 
+        </a> 
+        <a class="next" onclick="moveSlides(1)"> 
+            <i class="fa fa-arrow-circle-right"></i>
+        </a> 
+    <br> 
+   
+    <div style="text-align:center"> 
+        <span class="dot" 
+            onclick="activeSlide(1)"> 
+        </span> 
+        <span class="dot"
+            onclick="activeSlide(2)"> 
+        </span> 
+        <span class="dot" 
+            onclick="activeSlide(3)"> 
+        </span> 
+        <span class="dot" 
+            onclick="activeSlide(4)"> 
+        </span> 
+        <span class="dot" 
+            onclick="activeSlide(5)"> 
+        </span> 
+        </div>
+    </div>
+     
+
+
+<script>
+
+var slideIndex = 1; 
+    displaySlide(slideIndex); 
+   
+    function moveSlides(n) { 
+        displaySlide(slideIndex += n); 
+    } 
+   
+    function activeSlide(n) { 
+        displaySlide(slideIndex = n); 
+    } 
+   
+    /* Main function */
+    function displaySlide(n) { 
+        var i; 
+        var totalslides =  
+            document.getElementsByClassName("slide"); 
+        var totaldots =  
+            document.getElementsByClassName("footerdot"); 
+          
+        if (n > totalslides.length) { 
+            slideIndex = 1; 
+        } 
+          
+        if (n < 1) { 
+            slideIndex = totalslides.length; 
+        } 
+        for (i = 0; i < totalslides.length; i++) { 
+            totalslides[i].style.display = "none"; 
+        } 
+        for (i = 0; i < totaldots.length; i++) { 
+            totaldots[i].className =  
+            totaldots[i].className.replace(" active", ""); 
+        } 
+        totalslides[slideIndex - 1].style.display = "block"; 
+        totaldots[slideIndex - 1].className += " active"; 
+    } 
+
+</script>
+
+ <!--Add review form -->
+            <div class="col-12 d-sm-block col-md-6 order-md-1">
+             {% include 'gallery/includes/review-form.html' %}
+               
+    </div>
+    </div>
+    </div>
+
         <div class="container-fluid comission-container">
             <div class="home-comission">
                 <h4>See something you're intersted in?</h4>
