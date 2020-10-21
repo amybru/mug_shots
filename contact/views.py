@@ -18,7 +18,7 @@ def contact(request):
         if request.user.is_authenticated:
 
             form = Contact(
-                contact_name=request.POST['contact_name'],
+                full_name=request.POST['full_name'],
                 contact_subject=request.POST['contact_subject'],
                 email=request.POST['email'],
                 contact_body=request.POST['contact_body'],

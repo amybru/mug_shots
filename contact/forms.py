@@ -6,11 +6,11 @@ class ContactForm(forms.ModelForm):
 
     class Meta:
         model = Contact
-        fields = ['contact_name', 'contact_subject', 'email', 'contact_body']
+        fields = ['full_name', 'contact_subject', 'email', 'contact_body']
 
-    contact_name = forms.CharField(
+    full_name = forms.CharField(
         required=True,
-        label='',
+        label='Full Name:',
         widget=forms.TextInput(attrs={
             'class': 'form-control',
             'placeholder': 'Full Name'
@@ -19,7 +19,7 @@ class ContactForm(forms.ModelForm):
 
     contact_subject = forms.CharField(
         required=True,
-        label='',
+        label='Subject:',
         widget=forms.TextInput(attrs={
             'class': 'form-control',
             'placeholder': 'Subject'
@@ -28,7 +28,7 @@ class ContactForm(forms.ModelForm):
 
     email = forms.EmailField(
         required=True,
-        label='',
+        label='Email:',
         widget=forms.EmailInput(attrs={
             'class': 'form-control',
             'placeholder': 'Email'
@@ -37,7 +37,7 @@ class ContactForm(forms.ModelForm):
 
     contact_body = forms.CharField(
         required=True,
-        label='',
+        label='Please enter your message:',
         widget=forms.Textarea(attrs={
             'class': 'form-control',
             'placeholder': 'Message'
