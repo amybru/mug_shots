@@ -52,7 +52,6 @@ footer > h4 {
      justify-content: center;
      color: #dfdfdf;
      background: #d4af37;
-     margin-left: 25px;
      transition: all 0.35s ease-in-out;
      -moz-transition: all 0.35s ease-in-out;
      -webkit-transition: all 0.35s ease-in-out;
@@ -374,8 +373,30 @@ footer > h4 {
     object-fit: cover;
 }
 
+.testimonials-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.carousel-form-row {
+    margin-top: 20px;
+}
+
+.add-review-form {
+    border-radius: 1rem;
+    -webkit-box-shadow: -10px -10px 15px 0 #d4af37;
+    box-shadow: -10px -10px 20px 0 #d4af37;
+    border: none;
+    margin-top: 30px;
+}
+
+textarea {
+    height: 120px!important;
+}
+
 .images-carousel{
     padding-right: 0;
+    margin-top: 3.5em;
 }
 
 .slide img {
@@ -564,7 +585,7 @@ footer > h4 {
 }
 
 .qty-text {
-    border: 2px solid #dfdfdf;
+    color: #dfdfdf;
 }
 
 /* login & sign up pages */
@@ -585,6 +606,10 @@ footer > h4 {
 .user-btn:hover {
     background-color:#d4af37;
     color:#dfdfdf;
+}
+
+.card-row {
+    margin-top: 3em;
 }
 
 .user-card {
