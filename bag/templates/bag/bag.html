@@ -79,8 +79,8 @@
                                                 </div>
                                             </div>
                                         </form>
-                                        <a class="update-link qty-text rounded btn btn-sm">Update</a>
-                                        <a class="remove-item qty-text rounded float-right btn btn-sm" id="remove_{{ item.item_id }}" data-size="{{ item.size }}">Remove</a>
+                                        <a class="update-link qty-text rounded">Update</a>
+                                        <a class="remove-item qty-text rounded float-right" id="remove_{{ item.item_id }}">Remove</a>
                                 </td>
                                     <td class="py-3">
                                         <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
