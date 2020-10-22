@@ -6,7 +6,8 @@ from datetime import datetime
 class Contact(models.Model):
     """Create the contact model. create foreign key to the user table. This will allow the superuser to see what user
     made an enquiry if they are logged in."""
-    full_name = models.CharField(max_length=200)
+    first_name = models.CharField(max_length=200)
+    last_name = models.CharField(max_length=200)
     contact_subject = models.CharField(max_length=200)
     email = models.CharField(max_length=200)
     contact_body = models.TextField(blank=True)

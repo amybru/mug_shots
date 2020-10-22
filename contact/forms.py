@@ -6,14 +6,23 @@ class ContactForm(forms.ModelForm):
 
     class Meta:
         model = Contact
-        fields = ['full_name', 'contact_subject', 'email', 'contact_body']
+        fields = ['first_name', 'last_name', 'contact_subject', 'email', 'contact_body']
 
-    full_name = forms.CharField(
+    first_name = forms.CharField(
         required=True,
-        label='Full Name:',
+        label='First Name:',
         widget=forms.TextInput(attrs={
             'class': 'form-control',
-            'placeholder': 'Full Name'
+            'placeholder': 'First Name'
+        })
+    )
+
+    last_name = forms.CharField(
+        required=True,
+        label='Last Name:',
+        widget=forms.TextInput(attrs={
+            'class': 'form-control',
+            'placeholder': 'Last Name'
         })
     )
 

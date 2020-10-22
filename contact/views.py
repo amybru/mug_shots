@@ -18,7 +18,8 @@ def contact(request):
         if request.user.is_authenticated:
 
             form = Contact(
-                full_name=request.POST['full_name'],
+                first_name=request.POST['first_name'],
+                last_name=request.POST['last_name'],
                 contact_subject=request.POST['contact_subject'],
                 email=request.POST['email'],
                 contact_body=request.POST['contact_body'],
@@ -29,7 +30,8 @@ def contact(request):
 
         else:
             form = Contact(
-                contact_name=request.POST['contact_name'],
+                first_name=request.POST['first_name'],
+                last_name=request.POST['last_name'],
                 contact_subject=request.POST['contact_subject'],
                 email=request.POST['email'],
                 contact_body=request.POST['contact_body'],
@@ -51,7 +53,11 @@ def contact(request):
     else:
         if request.user.is_authenticated:
             form = ContactForm(
-                initial={'email': request.user.email}
+                initial={
+                    'first_name': request.user.first_name,
+                    'last_name': request.user.last_name,
+                    'email': request.user.email
+                    },
             )
         else:
             form = ContactForm()
