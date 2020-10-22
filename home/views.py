@@ -1,10 +1,12 @@
 from django.shortcuts import render
 
-# Create your views here.
+"""
+Render Index page
+"""
 
 
 def index(request):
-    """Render Index page"""
+
     context = {
         'home_page': 'active'
     }

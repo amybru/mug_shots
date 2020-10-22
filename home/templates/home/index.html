@@ -1,62 +1,58 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block page_header %}
-    <div class="container">
-        <div class="row">
-            <div class="col-12"></div>
-        </div>
-    </div>
+<div class="container">
+   <div class="row">
+      <div class="col-12"></div>
+   </div>
+</div>
 {% endblock %}
-
 {% block content %}
-    <!--Main Landing picture for home page-->
-    <div class="jumbotron jumbotron-fluid  home-jumbotron">
-        <div class="container">
-            <h1 class="display-4">The Mug Shots Shop</h1>
-            <p class="lead">Handmade One of a Kind Mugs</p>
-            <a href="{% url 'products' %}" class="btn btn-lg shop-button center">Shop Now!</a>
-        </div>
-    </div>
-
-    <!--About us section, contains text & photo about the company-->
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-4 about">
-                <h3>Who are we?</h3>
-                <p>Located in a trendy arts district in Caffeine, CA we are small enough to offer a unique, custom mugs to small coffee shops and individuals. Our mission is to make the best, handmade custom mugs at the best price we can offer with no hidden costs, every day, the American way. But really, this is about you, not us. We love stories and there is one behind every custom mug we make. Chose a mug recently made in the store, or work with our team to create your own custom creation.</p>
+<!--Main Landing picture for home page-->
+<div class="jumbotron jumbotron-fluid  home-jumbotron">
+   <div class="container">
+      <h1 class="display-4">The Mug Shots Shop</h1>
+      <p class="lead">Handmade One of a Kind Mugs</p>
+      <a href="{% url 'products' %}" class="btn btn-lg shop-button center">Shop Now!</a>
+   </div>
+</div>
+<!--About us section, contains text & photo about the company-->
+<div class="container">
+   <div class="row">
+      <div class="col-12 col-md-4 about">
+         <h3>Who are we?</h3>
+         <p>Located in a trendy arts district in Caffeine, CA we are small enough to offer a unique, custom mugs to small coffee shops and individuals. Our mission is to make the best, handmade custom mugs at the best price we can offer with no hidden costs, every day, the American way. But really, this is about you, not us. We love stories and there is one behind every custom mug we make. Chose a mug recently made in the store, or work with our team to create your own custom creation.</p>
+      </div>
+      <div class="col-12 col-md-8">
+         <img id="teamphoto" src="/media/potter.jpg" width="200" alt="Photo of the MUG SHOTS at work">
+      </div>
+   </div>
+</div>
+<!--Section to view photos linked to instagram and to comission a piece-->
+<div class="container">
+   <div class="row">
+      <div class="grid grid-row col-12 col-lg-6  justify-content-center grid-container">
+         <div class="grid-column col-sm-6 col-md-4">
+            <img src="media/custom-1.jpg" class="img-fluid" alt="Instagram Photo, 4 mugs">
+            <img src="media/IMG-8182.jpg" class="img-fluid" alt="Instagram Photo, 2 mugs">
+         </div>
+         <div class="grid-column col-4 d-none d-md-block">
+            <img src="media/main-3.jpg" class="img-fluid" alt="Grey hand sculpted mug">
+            <div class="home-ig">
+               <a href="https://www.instagram.com/mugshots_mugs/?hl=en" target="_blank">Check out some of our most popular designs on Instagram!</a>
             </div>
-            <div class="col-12 col-md-8">
-                <img id="teamphoto" src="/media/potter.jpg" width="200" alt="Photo of the MUG SHOTS at work">
-            </div>
-        </div>
-    </div>
-
-    <!--Section to view photos linked to instagram and to comission a piece-->
-    <div class="container">
-        <div class="row">
-            <div class="grid grid-row col-12 col-lg-6  justify-content-center grid-container">
-                <div class="grid-column col-sm-6 col-md-4">
-                    <img src="media/custom-1.jpg" class="img-fluid">
-                    <img src="media/IMG-8182.jpg" class="img-fluid">
-                </div>
-                <div class="grid-column col-4 d-none d-md-block">
-                    <img src="media/main-3.jpg" class="img-fluid">
-                    <div class="home-ig">
-                    <a href="https://www.instagram.com/mugshots_mugs/?hl=en" target="_blank">Check out some of our most popular designs on Instagram!</a>
-                    </div>
-                    <img src="media/IMG-8194.jpg" class="img-fluid">
-                </div>
-                <div class=" grid-column col-sm-6 col-md-4">
-                    <img src="media/custom-3.jpg" class="img-fluid">
-                    <img src="media/main-5.jpg" class="img-fluid">
-                </div>
-            </div>
-            <div class="home-comission col-12 col-lg-6">
-                <h5>See our custom mugs displayed around the site!</h5>
-                <p>Take a look around the site at the many different coffee mugs we offer. Choose a style and color, add your name or a phrase, or ask us for help!</p>
-                <a href="{% url 'products' %}" class="btn shop-button center">Comission a piece</a>
-            </div>
-        </div>
-    </div>
+            <img src="media/IMG-8194.jpg" class="img-fluid" alt="Popular Porcelain Mug">
+         </div>
+         <div class=" grid-column col-sm-6 col-md-4">
+            <img src="media/custom-3.jpg" class="img-fluid" alt="Collection of mugs in different colors">
+            <img src="media/main-5.jpg" class="img-fluid" alt="Fall Flavors Mug">
+         </div>
+      </div>
+      <div class="home-comission col-12 col-lg-6">
+         <h5>See our custom mugs displayed around the site!</h5>
+         <p>Take a look around the site at the many different coffee mugs we offer. Choose a style and color, add your name or a phrase, or ask us for help!</p>
+         <a href="{% url 'products' %}" class="btn shop-button center">Comission a piece</a>
+      </div>
+   </div>
+</div>
 {% endblock %}

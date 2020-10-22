@@ -1,0 +1,68 @@
+<nav class="col-12 navbar navbar-expand-md navbar-light bg-light" id="mainnav">
+   <button class="navbar-toggler" id="navbar-toggler" type="button" data-toggle="collapse" data-target="#side-nav" aria-controls="side-nav" aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon"></span>
+   </button>
+   <div class="collapse navbar-collapse" id="main-nav">
+      <ul class="navbar-nav w-auto mx-auto right">
+         <li class="nav-item {{ home_page }}">
+            <a class="text-black nav-link" href="{% url 'home' %}" id="nav-home">
+               <i class="fas fa-coffee"></i>
+               <p>Home</p>
+            </a>
+         </li>
+         <li class="nav-item {{ shop_page }}">
+            <a class="text-black nav-link" href="{% url 'products' %}" id="nav-shop">
+               <i class="fas fa-coffee"></i>
+               <p>Shop</p>
+            </a>
+         </li>
+         <li class="nav-item {{ gallery_page }}">
+            <a class="text-black nav-link" href="{% url 'gallery' %}" id="nav-gallery">
+               <i class="fas fa-coffee"></i>
+               <p>Gallery</p>
+            </a>
+         </li>
+         <li class="nav-item {{ contact_page }}">
+            <a class="text-black nav-link" href="{% url 'contact' %}" id="nav-contact" >
+               <i class="fas fa-coffee"></i>
+               <p>Contact</p>
+            </a>
+         </li>
+         <li class="nav-item dropdown">
+            <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               <div class="text-center">
+                  <i class="fas fa-coffee"></i>
+                  <p>My Account</p>
+               </div>
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+               {% if request.user.is_authenticated %}
+               {% if request.user.is_superuser %}
+               <a href="{% url 'add_product' %}" class="dropdown-item">Management</a>
+               <a href="{% url 'orders' %}" class="dropdown-item">Orders</a>
+               {% endif %}
+               <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+               <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+               {% else %}
+               <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+               <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+               {% endif %}
+            </div>
+         </li>
+         <li class="nav-item {{ cart }}">
+            <a class="text-black nav-link grand-total" href="{% url 'view_bag' %}" >
+               <div class="text-center">
+                  <div><i class="fas fa-shopping-cart fa-lg"></i></div>
+                  <p class="my-0">
+                     {% if grand_total %}
+                     ${{ grand_total|floatformat:2 }}
+                     {% else %}
+                     $0.00
+                     {% endif %}
+                  </p>
+               </div>
+            </a>
+         </li>
+      </ul>
+   </div>
+</nav>
