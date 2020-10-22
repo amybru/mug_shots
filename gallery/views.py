@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib import messages
+from django.http import JsonResponse
 
 from profiles.models import UserProfile
 from gallery.forms import ReviewForm
@@ -67,11 +68,16 @@ def new_review(request):
     return render(request, template, context)
 
 
+def get_review_info(request, user_review):
+    u = UserReview.objects.get(pk=user_review)
+    return JsonResponse(u)
+
+
 def edit_review(request, review_id):
 
     user_profile = get_object_or_404(UserProfile, user=request.user)
     review = get_object_or_404(UserReview, id=review_id)
-    review_form = ReviewForm()
+    review_form = ReviewForm(instance=review)
 
     if request.user == user_profile.user:
         if request.method == 'POST':
@@ -125,7 +131,7 @@ def delete_review(request, review_id):
             return redirect(reverse("gallery"))
 
     else:
-        messages.error(request, 'You have to be signed in.')
+        messages.error(request, 'You must be signed in.')
         return redirect(reverse("gallery"))
 
     template = 'gallery/gallery.html'
