@@ -8,7 +8,7 @@ from products.models import Product
 
 def view_bag(request):
     """
-    A view that renders the bag contents page
+    A view that renders the contents of the cart
     """
 
     return render(request, 'bag/bag.html')
@@ -60,7 +60,7 @@ def adjust_bag(request, item_id):
 
 def remove_from_bag(request, item_id):
     """
-    Remove the item from the shopping bag
+    Remove the item from the shopping cart
     """
 
     try:

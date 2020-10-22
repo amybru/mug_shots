@@ -1,0 +1,33 @@
+/* Shopping Cart App */
+.shopping-container {
+    margin-top: 2.5em;
+}
+
+.table {
+    color:#dfdfdf;
+}
+
+.shopping_cart_title {
+    font-family: 'Ranchers', cursive;
+}
+
+.empty-row {
+    margin-left: 15px;
+}
+
+.cart-table {
+     color: #d4af37;
+}
+
+.plus-minus-button {
+    background-color:#d4af37;
+    color:#dfdfdf;
+}
+
+.alert-message {
+    color: #d4af37;
+}
+
+.qty-text {
+    color: #dfdfdf;
+}
