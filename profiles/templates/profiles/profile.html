@@ -16,11 +16,11 @@
 {% block content %}
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col-12">
                 <hr>
                 <h2 class="logo-font mb-4">My Profile</h2>
-                <h4>{{ full_name }} </h4>
-                <h5>{{ username }}</h5>
+                <h4>Hello {{ request.user.first_name }}!</h4>
+                <h5>Username: {{ request.user.username }}</h5>
                 <hr>
             </div>
         </div>
@@ -70,9 +70,7 @@
                                         <ul class="list-unstyled">
                                             {% for item in order.lineitems.all %}
                                                 <li class="small">
-                                                    {% if item.product.has_sizes %}
-                                                        Size {{ item.product.size|upper }}
-                                                    {% endif %}{{ item.product.name }} x{{ item.quantity }}
+                                                {{ item.product.name }} x{{ item.quantity }}
                                                 </li>
                                             {% endfor %}
                                         </ul>

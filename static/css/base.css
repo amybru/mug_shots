@@ -77,7 +77,6 @@ footer > h4 {
     color: #dfdfdf;
 }
 
-
 /* General Buttons */
 .vertical-center {
   margin-left: 43%;
@@ -371,6 +370,7 @@ footer > h4 {
     height: 4em;
     width: 4em;
     object-fit: cover;
+    margin: 5px;
 }
 
 .testimonials-container {
@@ -393,6 +393,47 @@ footer > h4 {
 textarea {
     height: 120px!important;
 }
+
+.reviews-card {
+    background-color: #dfdfdf;
+}
+
+.reviews-card p {
+    color: #161616;
+}
+
+.review-link {
+    color:#d4af37;
+    text-decoration: none;
+}
+
+.modal-btn {
+    background-color: #133616;
+    color: #dfdfdf;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.modal-btn:hover{
+    background-color: #dfdfdf;
+    color: #133616;
+}
+
+/* Delete & Edit Modals */
+.edit-modal {
+    background-color: #d4af37;
+}
+
+.edit-modal h5 {
+    color: #133616;
+}
+
+.edit-modal p {
+    color: #161616;
+}
+
 
 .images-carousel{
     padding-right: 0;
@@ -629,6 +670,12 @@ textarea {
 
 .order-history-table {
     color: #161616;
+}
+
+.staff-orders-table {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 3em;
 }
 
 /* Syles specifically for the superuser to see, not visable on other pages */

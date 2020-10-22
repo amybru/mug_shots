@@ -27,11 +27,10 @@ def profile(request):
     context = {
         'form': form,
         'orders': orders,
-        'on_profile_page': True
+        'on_profile_page': True,
     }
 
     return render(request, template, context)
-
 
 
 def order_history(request, order_number):
@@ -50,3 +49,12 @@ def order_history(request, order_number):
 
     return render(request, template, context)
 
+
+def orders(request):
+
+    context = {
+        'orders': orders,
+        'on_profile_page': True,
+    }
+
+    return render(request, 'profiles/orders.html', context)
