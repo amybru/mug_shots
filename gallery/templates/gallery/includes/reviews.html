@@ -6,7 +6,7 @@
   </div>
   <div class="card-body">
     <div>
-        <p class="page-title">Review of: <a href="{% url 'one_product' review.product.id %}" class="insta-link">{{ review.product }}</a></p>
+        <p class="page-title">Review of: <a href="{% url 'one_product' review.product.id %}" class="review-link">{{ review.product }}</a></p>
     </div>
     <div>
     </div>
@@ -17,7 +17,7 @@
             <p class="review-content">{{ review.review_content }}</p>
     </div>
         <div class="footer">
-      <p>Added by:</p>
+      <p>Added by:{{ review.user_profile }}</p>
 
 
                       {% if request.user.is_authenticated %}
