@@ -68,11 +68,6 @@ def new_review(request):
     return render(request, template, context)
 
 
-def get_review_info(request, user_review):
-    u = UserReview.objects.get(pk=user_review)
-    return JsonResponse(u)
-
-
 def edit_review(request, review_id):
 
     user_profile = get_object_or_404(UserProfile, user=request.user)
@@ -98,7 +93,7 @@ def edit_review(request, review_id):
         else:
             review_form = ReviewForm(instance=review)
 
-    template = 'gallery/gallery.html'
+    template = 'gallery/includes/edit_review.html'
     context = {
         'review_form': review_form,
         'user_profile': user_profile,
