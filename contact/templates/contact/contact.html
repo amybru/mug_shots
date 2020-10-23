@@ -3,58 +3,44 @@
 
 {% block title %}Contact{% endblock %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'contact/css/contact.css' %}">
+{% endblock %}
 
 {% block content %}
 <div class="container">
-    <div class="row card-row">
-    <div class="col-12 col-md-6">
-    <div class="card form-card user-card">
-                <div class="card-header page-title">
-                            <h2><i class="far fa-envelope"></i>Contact Us </h2>
-                        </div>
-                        <div class="card-body">
-                        <p>Have a question or want to request a custom product? Please fill out the form below!</p>
-
-                    <form action="{% url 'contact' %}" method="POST">
-                        <!-- Hidden field to help prevent attacks -->
-                        {% csrf_token %}
-                        <div class="form-group">
-                        {{ form|crispy }}
-                        </div>
-                        <input type="submit" value="Submit" class="btn btn-block user-btn">
-                    </form>
-                </div>
+   <div class="row card-row">
+      <div class="col-12 col-md-6">
+         <div class="card form-card user-card">
+            <div class="card-header page-title">
+               <h2><i class="far fa-envelope"></i>Contact Us </h2>
             </div>
-    </div>
-    <div class="col-12 col-md-6 page-title">
-        <h2>Visit our studio</h2>
-        <p>123 Beverage Blvd</p>
-        <p>Caffeine, CA</p>
-        <p>22222</p>
-        <div id="map"></div>
-    </div>
-</div>
+            <div class="card-body">
+               <p>Have a question or want to request a custom product? Please fill out the form below!</p>
+               <form action="{% url 'contact' %}" method="POST">
+                  <!-- Hidden field to help prevent attacks -->
+                  {% csrf_token %}
+                  <div class="form-group">
+                     {{ form|crispy }}
+                  </div>
+                  <input type="submit" value="Submit" class="btn btn-block user-btn">
+               </form>
+            </div>
+         </div>
+      </div>
+      <div class="col-12 col-md-6 page-title">
+         <h2>Visit our studio</h2>
+         <p>123 Beverage Blvd</p>
+         <p>Caffeine, CA</p>
+         <p>22222</p>
+         <div id="map"></div>
+      </div>
+   </div>
 </div>
 {% endblock %}
- 
+
 {% block postloadjs %}
 <script async defer src="https://maps.googleapis.com/maps/api/js?key={{api_key}}&callback=initMap"
-  type="text/javascript"></script>
-<script type="text/javascript">
-// Initialize and add the map
-function initMap() {
-  // The location of Caffeine, CA (fictional)
-  const caffeine = { lat: 37.7694, lng: -122.4862 };
-  // The map, centered at California 
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 10,
-    center: caffeine,
-  });
-  // The marker, positioned at Caffeine, CA
-  const marker = new google.maps.Marker({
-    position: caffeine,
-    map: map,
-  });
-}
-</script>
+   type="text/javascript"></script>
+<script src="{% static 'contact/js/map.js' %}"></script>
 {% endblock %}

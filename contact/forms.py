@@ -3,10 +3,16 @@ from .models import Contact
 
 
 class ContactForm(forms.ModelForm):
-
+    """
+    Form to allow the user to contact the site owners
+    """
     class Meta:
         model = Contact
-        fields = ['first_name', 'last_name', 'contact_subject', 'email', 'contact_body']
+        fields = ['first_name',
+                  'last_name',
+                  'contact_subject',
+                  'email',
+                  'contact_body']
 
     first_name = forms.CharField(
         required=True,
