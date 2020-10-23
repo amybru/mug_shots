@@ -1,19 +1,21 @@
+<!--Included on gallery page, If user is logged in, they can fill out a form to add a new review-->
 {% if request.user.is_authenticated %}
 <div class="col-12 add-review-form">
-    <div class="form-box">
-        <h2 class="standard-title mb-5 mt-3 text-center">Add a new review:</h2>
-        <form action="{% url 'new_review' %}" method="POST">
-            {% csrf_token %}
-            {{ review_form|crispy }}
-            <div class="text-center">
-                <button class="btn user-btn mt-3 mb-5">Add</button>
-            </div>
-        </form>
-    </div>
+   <div class="form-box">
+      <h2 class="standard-title mb-5 mt-3 text-center">Add a new review:</h2>
+      <form action="{% url 'new_review' %}" method="POST">
+         {% csrf_token %}
+         {{ review_form|crispy }}
+         <div class="text-center">
+            <button class="btn user-btn mt-3 mb-5">Add</button>
+         </div>
+      </form>
+   </div>
 </div>
 {% else %}
 <div class="col-12 text-center mt-5 pl-5 pr-5">
-    <h5>Want to leave a review? Please either <a href="{% url 'account_login' %}" class="insta-link">Sign In</a> or
-    <a class="insta-link" href="{% url 'account_signup' %}">Register</a> to add your feedback here.</h5>
+   <h5>Want to leave a review? Please either <a href="{% url 'account_login' %}" class="insta-link">Sign In</a> or
+      <a class="insta-link" href="{% url 'account_signup' %}">Register</a> to add your feedback here.
+   </h5>
 </div>
 {% endif %}

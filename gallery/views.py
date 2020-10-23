@@ -1,6 +1,5 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib import messages
-from django.http import JsonResponse
 
 from profiles.models import UserProfile
 from gallery.forms import ReviewForm
@@ -11,7 +10,10 @@ from gallery.models import UserReview
 
 
 def gallery(request):
-    """Render GALLERY Page"""
+    """
+    Render GALLERY Page.
+    Gallery page has a reviews section where any user can view the reviews
+    """
     product = Product.objects.all()
     reviews = UserReview.objects.all()
     review_form = ReviewForm()
@@ -37,7 +39,9 @@ def gallery(request):
 
 
 def new_review(request):
-
+    """
+    User must be logged in to add a new review.
+    """
     user_profile = UserProfile.objects.get(user=request.user)
 
     if request.user.is_authenticated:
@@ -69,7 +73,10 @@ def new_review(request):
 
 
 def edit_review(request, review_id):
-
+    """
+    User must be logged in to edit their own review.
+    Only superusers have the ability to edit any review.
+    """
     user_profile = get_object_or_404(UserProfile, user=request.user)
     review = get_object_or_404(UserReview, id=review_id)
     review_form = ReviewForm(instance=review)
@@ -93,7 +100,7 @@ def edit_review(request, review_id):
         else:
             review_form = ReviewForm(instance=review)
 
-    template = 'gallery/includes/edit_review.html'
+    template = 'gallery/edit_review.html'
     context = {
         'review_form': review_form,
         'user_profile': user_profile,
@@ -104,7 +111,10 @@ def edit_review(request, review_id):
 
 
 def delete_review(request, review_id):
-
+    """
+    User must be logged in to delete their review.
+    Only superusers have the ability to delete any review
+    """
     review = get_object_or_404(UserReview, id=review_id)
     user_profile = get_object_or_404(UserProfile, user=request.user)
 

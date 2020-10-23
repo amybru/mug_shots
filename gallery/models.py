@@ -4,6 +4,9 @@ from products.models import Product
 
 
 class UserReview(models.Model):
+    """
+    Allows users to write a testimonial about our products
+    """
     user_profile = models.ForeignKey(
         UserProfile,
         on_delete=models.SET_NULL,
@@ -19,7 +22,8 @@ class UserReview(models.Model):
         related_name="user_product",
     )
     review_title = models.CharField(max_length=200)
-    review_content = models.TextField(blank=True, null=True, default="")
+    review_content = models.TextField(blank=True,
+                                      null=True, default="")
 
     class Meta:
         ordering = ['product']

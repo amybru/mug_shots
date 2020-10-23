@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'gallery/css/gallery.css' %}">
+{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+   <div class="row">
+      <div class="col"></div>
+   </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<!--Edit reviews, when the edit review button is clicked on the reviews card, this page is rendered with a populated form allowing the user to edit their review-->
+<div class="container">
+   <div class="row justify-content-center">
+      <div class="col-12 col-md-6 page-title">
+         <hr>
+         <h2>Edit Review</h2>
+         <hr>
+      </div>
+   </div>
+   <div class="row justify-content-center">
+      <div class="add-review-form">
+         <div class="col-12 center">
+            <form class="mt-3" action="{% url 'edit_review' review.id %}" method="POST" id="review-update-form">
+               {% csrf_token %}
+               {{ review_form|crispy }}
+               <div class="edit-buttons">
+                  <a class="btn user-btn" href="{% url 'gallery' %}">Cancel</a>
+                  <button class="btn btn-small modal-btn">Update Review</button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock %}

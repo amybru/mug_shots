@@ -1,6 +1,7 @@
+<!--If no reviews on page, this message will show-->
 <div class="col-12">
-    <p>It looks like no one has created a review!</p>
-    {% if request.user.is_authenticated %}
-        <p>Why not add a review by? Fill in the form below</p>
-    {% endif %}
+   <p>It looks like no one has created a review!</p>
+   {% if request.user.is_authenticated %}
+   <p>Why not add a review by? Fill in the form below</p>
+   {% endif %}
 </div>

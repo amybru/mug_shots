@@ -1,266 +1,239 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'gallery/css/gallery.css' %}">
+{% endblock %}
+
+{% block extra_title %}Gallery{% endblock %}
+
 {% block page_header %}
-    <div class="container">
-        <div class="row">
-            <div class="col-12"></div>
-        </div>
-    </div>
+<div class="container">
+   <div class="row">
+      <div class="col-12"></div>
+   </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <!--Main Landing picture for home page-->
-    <div class="jumbotron jumbotron-fluid jumbotron-gallery">
-        <div class="container">
-            <h1 class="display-4">Gallery</h1>
-        </div>
-    </div>
-
-
-    <!--Instagram Grid-->
-    <div class="container">
-        <div class="row">
-            <div class="grid col-12 col-md-6 insta-text">
-                <h3 class="insta-title">Explore our Instagram</h3>
-                <p>View some previously comissioned pieces and read customer testimonials</p>
-            </div>
-            <div class="username-title col-12 col-md-6 text-right">
-                <a href="https://www.instagram.com/mugshots_mugs/?hl=en" target="_blank" class="insta-link">
-                    <h2>@mugshots_mugs</h2>
-                </a>
-            </div>
-        </div>
-            <div class="row images-row no-gutters">
-                <div class="d-flex flex-column col-sm-6 col-md-4 col-lg-3">
-                    <div class="gallery-container">
-                    <a href="https://www.instagram.com/mugshots_mugs/?hl=en" target="_blank" class="insta-link">
-                        <img src="/media/IMG-8176.jpg" class="img-fluid gallery-grid-img">
-                        <div class="gallery-grid-text">
-                            <p>Tulip Mug</p><p><i class="fas fa-heart"></i> 597</p>
-                        </div>
-                        </a>
-                    </div>
-                    <div class="gallery-container">
-                    <a href="https://www.instagram.com/mugshots_mugs/?hl=en" target="_blank" class="insta-link">
-                        <img src="/media/IMG-8179.jpg" class="img-fluid gallery-grid-img">
-                        <div class="gallery-grid-text">
-                            <p>Rose Mug</p><p><i class="fas fa-heart"></i> 207</p>
-                        </div>
-                    </a>
-                    </div>
-                    <div class="gallery-container">
-                    <a href="https://www.instagram.com/mugshots_mugs/?hl=en" target="_blank" class="insta-link">
-                        <img src="/media/IMG-8182.jpg" class="img-fluid gallery-grid-img">
-                        <div class="gallery-grid-text">
-                            <p>Classic Mug</p><p><i class="fas fa-heart"></i> 801</p>
-                        </div>
-                    </a>
-                    </div>
-                </div>
-                <div class="d-flex flex-column col-sm-6 col-md-4 col-lg-3">
-                    <div class="gallery-container">
-                    <a href="https://www.instagram.com/mugshots_mugs/?hl=en" target="_blank" class="insta-link">
-                        <img src="/media/IMG-8189.jpg" class="img-fluid gallery-grid-img">
-                        <div class="gallery-grid-text">
-                            <p>Ocean Mug</p><p><i class="fas fa-heart"></i> 740</p>
-                        </div>
-                        </a>
-                    </div>
-                    <div class="gallery-container">
-                    <a href="https://www.instagram.com/mugshots_mugs/?hl=en" target="_blank" class="insta-link">
-                        <img src="/media/IMG-8184.jpg" class="img-fluid gallery-grid-img">
-                        <div class="gallery-grid-text">
-                            <p>Top-Glazed Mug</p><p><i class="fas fa-heart"></i> 364</p>
-                        </div>
-                        </a>
-                    </div>
-                    <div class="gallery-container">
-                    <a href="https://www.instagram.com/mugshots_mugs/?hl=en" target="_blank" class="insta-link">
-                        <img src="/media/IMG-8190.jpg" class="img-fluid gallery-grid-img">
-                        <div class="gallery-grid-text">
-                            <p>Blueberry Mug</p><p><i class="fas fa-heart"></i> 539</p>
-                        </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="d-flex flex-column col-sm-6 col-md-4 col-lg-3">
-                    <div class="gallery-container">
-                    <a href="https://www.instagram.com/mugshots_mugs/?hl=en" target="_blank" class="insta-link">
-                        <img src="/media/IMG-8185.jpg" class="img-fluid gallery-grid-img">
-                        <div class="gallery-grid-text">
-                            <p>Stripes Mug</p><p><i class="fas fa-heart"></i> 463</p>
-                        </div>
-                        </a>
-                    </div>
-                    <div class="gallery-container">
-                    <a href="https://www.instagram.com/mugshots_mugs/?hl=en" target="_blank" class="insta-link">
-                        <img src="/media/IMG-8186.jpg" class="img-fluid gallery-grid-img">
-                        <div class="gallery-grid-text">
-                            <p>Beach Vibes Mug</p><p><i class="fas fa-heart"></i> 918</p>
-                        </div>
-                        </a>
-                    </div>
-                    <div class="gallery-container">
-                    <a href="https://www.instagram.com/mugshots_mugs/?hl=en" target="_blank" class="insta-link">
-                        <img src="/media/IMG-8191.jpg" class="img-fluid gallery-grid-img">
-                        <div class="gallery-grid-text">
-                            <p>Cherry Blossoms Mug</p><p><i class="fas fa-heart"></i> 895</p>
-                        </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="d-flex flex-column col-sm-6 col-lg-3 d-md-none d-lg-block">
-                    <div class="gallery-container">
-                    <a href="https://www.instagram.com/mugshots_mugs/?hl=en" target="_blank" class="insta-link">
-                        <img src="/media/IMG-8187.jpg" class="img-fluid gallery-grid-img">
-                        <div class="gallery-grid-text">
-                            <p>Rainbow Mug</p><p><i class="fas fa-heart"></i> 788</p>
-                        </div>
-                        </a>
-                    </div>
-                    <div class="gallery-container">
-                    <a href="https://www.instagram.com/mugshots_mugs/?hl=en" target="_blank" class="insta-link">
-                        <img src="/media/IMG-8188.jpg" class="img-fluid gallery-grid-img">
-                        <div class="gallery-grid-text">
-                            <p>Spots Mug</p><p><i class="fas fa-heart"></i> 766</p>
-                        </div>
-                        </a>
-                    </div>
-                    <div class="gallery-container">
-                    <a href="https://www.instagram.com/mugshots_mugs/?hl=en" target="_blank" class="insta-link">
-                        <img src="/media/IMG-8192.jpg" class="img-fluid gallery-grid-img">
-                        <div class="gallery-grid-text">
-                            <p>Honey Pot Mug</p><p><i class="fas fa-heart"></i> 682</p>
-                        </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-    </div>
-
-    <!--Testimonials, add new review form, and carousel-->
-    <div class="container testimonials-container">
-     <div class="row testimonial-row">
-         <h3 class="page-title">Customer Testimonials</h3>
-        <div class="container">
-        <div class="row">
+<!--Main Landing picture for home page-->
+<div class="jumbotron jumbotron-fluid jumbotron-gallery">
+   <div class="container">
+      <h1 class="display-4">Gallery</h1>
+   </div>
+</div>
+<!--Instagram Grid, responsive grid of pictures with the name and number of likes hidden (shown on hover)-->
+<div class="container">
+   <div class="row">
+      <div class="grid col-12 col-md-6 insta-text">
+         <h3 class="insta-title">Explore our Instagram</h3>
+         <p>View some previously comissioned pieces and read customer testimonials</p>
+      </div>
+      <div class="username-title col-12 col-md-6 text-right">
+         <a href="https://www.instagram.com/mugshots_mugs/?hl=en" target="_blank" class="insta-link">
+            <h2>@mugshots_mugs</h2>
+         </a>
+      </div>
+   </div>
+   <div class="row images-row no-gutters">
+      <div class="d-flex flex-column col-sm-6 col-md-4 col-lg-3">
+         <div class="gallery-container">
+            <a href="https://www.instagram.com/mugshots_mugs/?hl=en" target="_blank" class="insta-link">
+               <img src="/media/IMG-8176.jpg" alt="three dipped mugs" class="img-fluid gallery-grid-img">
+               <div class="gallery-grid-text">
+                  <p>Tulip Mug</p>
+                  <p><i class="fas fa-heart"></i> 597</p>
+               </div>
+            </a>
+         </div>
+         <div class="gallery-container">
+            <a href="https://www.instagram.com/mugshots_mugs/?hl=en" target="_blank" class="insta-link">
+               <img src="/media/IMG-8179.jpg" alt="Rose mug" class="img-fluid gallery-grid-img">
+               <div class="gallery-grid-text">
+                  <p>Rose Mug</p>
+                  <p><i class="fas fa-heart"></i> 207</p>
+               </div>
+            </a>
+         </div>
+         <div class="gallery-container">
+            <a href="https://www.instagram.com/mugshots_mugs/?hl=en" target="_blank" class="insta-link">
+               <img src="/media/IMG-8182.jpg" alt="purple classic mug" class="img-fluid gallery-grid-img">
+               <div class="gallery-grid-text">
+                  <p>Classic Mug</p>
+                  <p><i class="fas fa-heart"></i> 801</p>
+               </div>
+            </a>
+         </div>
+      </div>
+      <div class="d-flex flex-column col-sm-6 col-md-4 col-lg-3">
+         <div class="gallery-container">
+            <a href="https://www.instagram.com/mugshots_mugs/?hl=en" target="_blank" class="insta-link">
+               <img src="/media/IMG-8189.jpg" alt="hand painted ocean mug" class="img-fluid gallery-grid-img">
+               <div class="gallery-grid-text">
+                  <p>Ocean Mug</p>
+                  <p><i class="fas fa-heart"></i> 740</p>
+               </div>
+            </a>
+         </div>
+         <div class="gallery-container">
+            <a href="https://www.instagram.com/mugshots_mugs/?hl=en" target="_blank" class="insta-link">
+               <img src="/media/IMG-8184.jpg" alt="top glazed mug" class="img-fluid gallery-grid-img">
+               <div class="gallery-grid-text">
+                  <p>Top-Glazed Mug</p>
+                  <p><i class="fas fa-heart"></i> 364</p>
+               </div>
+            </a>
+         </div>
+         <div class="gallery-container">
+            <a href="https://www.instagram.com/mugshots_mugs/?hl=en" target="_blank" class="insta-link">
+               <img src="/media/IMG-8190.jpg" alt="blueberry mug" class="img-fluid gallery-grid-img">
+               <div class="gallery-grid-text">
+                  <p>Blueberry Mug</p>
+                  <p><i class="fas fa-heart"></i> 539</p>
+               </div>
+            </a>
+         </div>
+      </div>
+      <div class="d-flex flex-column col-sm-6 col-md-4 col-lg-3">
+         <div class="gallery-container">
+            <a href="https://www.instagram.com/mugshots_mugs/?hl=en" target="_blank" class="insta-link">
+               <img src="/media/IMG-8185.jpg" alt="Mug with stripes" class="img-fluid gallery-grid-img">
+               <div class="gallery-grid-text">
+                  <p>Stripes Mug</p>
+                  <p><i class="fas fa-heart"></i> 463</p>
+               </div>
+            </a>
+         </div>
+         <div class="gallery-container">
+            <a href="https://www.instagram.com/mugshots_mugs/?hl=en" target="_blank" class="insta-link">
+               <img src="/media/IMG-8186.jpg" alt="Mug painted to look like ocean" class="img-fluid gallery-grid-img">
+               <div class="gallery-grid-text">
+                  <p>Beach Vibes Mug</p>
+                  <p><i class="fas fa-heart"></i> 918</p>
+               </div>
+            </a>
+         </div>
+         <div class="gallery-container">
+            <a href="https://www.instagram.com/mugshots_mugs/?hl=en" target="_blank" class="insta-link">
+               <img src="/media/IMG-8191.jpg" alt="Hand painted cherry blossoms" class="img-fluid gallery-grid-img">
+               <div class="gallery-grid-text">
+                  <p>Cherry Blossoms Mug</p>
+                  <p><i class="fas fa-heart"></i> 895</p>
+               </div>
+            </a>
+         </div>
+      </div>
+      <div class="d-flex flex-column col-sm-6 col-lg-3 d-md-none d-lg-block">
+         <div class="gallery-container">
+            <a href="https://www.instagram.com/mugshots_mugs/?hl=en" target="_blank" class="insta-link">
+               <img src="/media/IMG-8187.jpg" alt="Rainbow design mug" class="img-fluid gallery-grid-img">
+               <div class="gallery-grid-text">
+                  <p>Rainbow Mug</p>
+                  <p><i class="fas fa-heart"></i> 788</p>
+               </div>
+            </a>
+         </div>
+         <div class="gallery-container">
+            <a href="https://www.instagram.com/mugshots_mugs/?hl=en" target="_blank" class="insta-link">
+               <img src="/media/IMG-8188.jpg" alt="paint brush spots" class="img-fluid gallery-grid-img">
+               <div class="gallery-grid-text">
+                  <p>Spots Mug</p>
+                  <p><i class="fas fa-heart"></i> 766</p>
+               </div>
+            </a>
+         </div>
+         <div class="gallery-container">
+            <a href="https://www.instagram.com/mugshots_mugs/?hl=en" target="_blank" class="insta-link">
+               <img src="/media/IMG-8192.jpg" alt="Honey Pot mug" class="img-fluid gallery-grid-img">
+               <div class="gallery-grid-text">
+                  <p>Honey Pot Mug</p>
+                  <p><i class="fas fa-heart"></i> 682</p>
+               </div>
+            </a>
+         </div>
+      </div>
+   </div>
+</div>
+<!--Testimonials, add new review form, and carousel-->
+<div class="container testimonials-container">
+   <div class="row testimonial-row">
+      <h3 class="page-title">Customer Testimonials</h3>
+      <div class="container">
+         <div class="row">
             {% if not reviews %}
-                {% include 'gallery/includes/no-reviews.html' %}
+            {% include 'gallery/includes/no-reviews.html' %}
             {% else %}
-                {% include 'gallery/includes/reviews.html' %}
+            {% include 'gallery/includes/reviews.html' %}
             {% endif %}
-        </div>
-        </div>
-        </div>
+         </div>
+      </div>
+   </div>
+   <!--Custom Carousel -->
+   <div class="row carousel-form-row">
+      <div class="images-carousel col-12 d-sm-block col-md-6 order-md-2">
+         <div class="slide">
+            <div class="slide-number">1</div>
+            <img src="/media/custom-1.jpg" alt="Four mugs stacked">
+         </div>
+         <div class="slide">
+            <div class="slide-number">2</div>
+            <img src="/media/custom-2.jpg" alt="Mugs in a row"> 
+         </div>
+         <div class="slide">
+            <div class="slide-number">3</div>
+            <img src="/media/custom-3.jpg" alt="Mugs in various colors">
+         </div>
+         <div class="slide">
+            <div class="slide-number">4</div>
+            <img src="/media/custom-4.jpg" alt="MOR mug">
+         </div>
+         <div class="slide">
+            <div class="slide-number">5</div>
+            <img src="/media/cutsom-5.jpg" alt="Golden glaze mug">
+         </div>
+         <!-- Next and Previous icon to change images -->
+         <a class="previous" onclick="moveSlides(-1)"> 
+         <i class="fa fa-arrow-circle-left"></i> 
+         </a> 
+         <a class="next" onclick="moveSlides(1)"> 
+         <i class="fa fa-arrow-circle-right"></i>
+         </a> 
+         <br> 
+         <!--Dots underneath images for a quick locate-->
+         <div style="text-align:center"> 
+            <span class="dot" 
+               onclick="activeSlide(1)"> 
+            </span> 
+            <span class="dot"
+               onclick="activeSlide(2)"> 
+            </span> 
+            <span class="dot" 
+               onclick="activeSlide(3)"> 
+            </span> 
+            <span class="dot" 
+               onclick="activeSlide(4)"> 
+            </span> 
+            <span class="dot" 
+               onclick="activeSlide(5)"> 
+            </span> 
+         </div>
+      </div>
+      <!--Add review form -->
+      <div class="col-12 d-sm-block col-md-6 order-md-1">
+         {% include 'gallery/includes/review-form.html' %}
+      </div>
+   </div>
+</div>
+<div class="container-fluid comission-container">
+   <div class="home-comission">
+      <h4>See something you're intersted in?</h4>
+      <a class="btn contact-btn" href="">
+         <h3>Contact us today!</h3>
+      </a>
+   </div>
+</div>
+{% endblock %}
 
-<!--Custom Carousel -->
-        <div class="row carousel-form-row">
-            <div class="images-carousel col-12 d-sm-block col-md-6 order-md-2"> 
-        <div class="slide"> 
-            <div class="slide-number">1</div> 
-            <img src="/media/custom-1.jpg">
-        </div> 
-        <div class="slide"> 
-            <div class="slide-number">2</div> 
-            <img src="/media/custom-2.jpg"> 
-        </div> 
-        <div class="slide"> 
-            <div class="slide-number">3</div> 
-            <img src="/media/custom-3.jpg">
-        </div> 
-        <div class="slide"> 
-            <div class="slide-number">4</div> 
-            <img src="/media/custom-4.jpg">
-        </div> 
-        <div class="slide"> 
-            <div class="slide-number">5</div> 
-            <img src="/media/cutsom-5.jpg">
-        </div> 
-   
-        <!-- Next and Previous icon to change images -->
-        <a class="previous" onclick="moveSlides(-1)"> 
-            <i class="fa fa-arrow-circle-left"></i> 
-        </a> 
-        <a class="next" onclick="moveSlides(1)"> 
-            <i class="fa fa-arrow-circle-right"></i>
-        </a> 
-    <br> 
-   
-    <div style="text-align:center"> 
-        <span class="dot" 
-            onclick="activeSlide(1)"> 
-        </span> 
-        <span class="dot"
-            onclick="activeSlide(2)"> 
-        </span> 
-        <span class="dot" 
-            onclick="activeSlide(3)"> 
-        </span> 
-        <span class="dot" 
-            onclick="activeSlide(4)"> 
-        </span> 
-        <span class="dot" 
-            onclick="activeSlide(5)"> 
-        </span> 
-        </div>
-    </div>
-     
-
-
-<script>
-
-var slideIndex = 1; 
-    displaySlide(slideIndex); 
-   
-    function moveSlides(n) { 
-        displaySlide(slideIndex += n); 
-    } 
-   
-    function activeSlide(n) { 
-        displaySlide(slideIndex = n); 
-    } 
-   
-    /* Main function */
-    function displaySlide(n) { 
-        var i; 
-        var totalslides =  
-            document.getElementsByClassName("slide"); 
-        var totaldots =  
-            document.getElementsByClassName("footerdot"); 
-          
-        if (n > totalslides.length) { 
-            slideIndex = 1; 
-        } 
-          
-        if (n < 1) { 
-            slideIndex = totalslides.length; 
-        } 
-        for (i = 0; i < totalslides.length; i++) { 
-            totalslides[i].style.display = "none"; 
-        } 
-        for (i = 0; i < totaldots.length; i++) { 
-            totaldots[i].className =  
-            totaldots[i].className.replace(" active", ""); 
-        } 
-        totalslides[slideIndex - 1].style.display = "block"; 
-        totaldots[slideIndex - 1].className += " active"; 
-    } 
-
-</script>
-
- <!--Add review form -->
-            <div class="col-12 d-sm-block col-md-6 order-md-1">
-             {% include 'gallery/includes/review-form.html' %}
-               
-    </div>
-    </div>
-    </div>
-
-        <div class="container-fluid comission-container">
-            <div class="home-comission">
-                <h4>See something you're intersted in?</h4>
-                <a class="btn contact-btn" href=""><h3>Contact us today!</h3></a>
-            </div>
-        </div>
+{% block postloadjs %}
+<script src="{% static 'gallery/js/carousel.js' %}"></script>
 {% endblock %}
