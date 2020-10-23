@@ -9,7 +9,10 @@ from .forms import ProductForm
 
 # Create your views here.
 def all_products(request):
-    """A view to show all products in the database, including the option to sort and search"""
+    """
+    A view to show all products in the database,
+    including the option to sort and search
+    """
     products = Product.objects.all()
     query = None
     categories = None
@@ -39,7 +42,8 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "Please enter search criteria to search")
+                messages.error(request,
+                               "Please enter search criteria to search")
                 return redirect(reverse('products'))
 
             queries = Q(name__icontains=query) | Q(description__icontains=query)
@@ -58,7 +62,9 @@ def all_products(request):
 
 
 def one_product(request, product_id):
-    """A view to show one product in the database"""
+    """
+    A view to show one product in the database
+    """
 
     product = get_object_or_404(Product, pk=product_id)
 
@@ -72,7 +78,9 @@ def one_product(request, product_id):
 
 @login_required
 def add_product(request):
-    """ Add a product to the store """
+    """
+    Add a product to the store, Only staff/superusers are allowed to do this 
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -98,7 +106,9 @@ def add_product(request):
 
 @login_required
 def edit_product(request, product_id):
-    """ Edit a product in the store """
+    """ 
+    Edit a product in the store, Only staff/superusers are allowed to do this
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -111,7 +121,8 @@ def edit_product(request, product_id):
             messages.success(request, f'Successfully updated {product.name}!')
             return redirect(reverse('one_product', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please try again.')
+            messages.error(request,
+                           'Failed to update product. Please try again.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
@@ -127,11 +138,13 @@ def edit_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
-    """ Delete a product from the store """
+    """ 
+    Delete a product from the store, Only staff/superusers are allowed to do this
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
-        
+
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, 'Product deleted!')

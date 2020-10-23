@@ -1,109 +1,106 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'products/css/products.css' %}">
+{% endblock %}
+
 {% block extra_title %}Products{% endblock %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col-12"></div>
-        </div>
-    </div>
+<div class="container header-container">
+   <div class="row">
+      <div class="col-12"></div>
+   </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <!--Main Landing picture for shop page to view all products-->
-    <div class="jumbotron jumbotron-fluid jumbotron-shop">
-        <div class="container">
-        <div class="row">
-            <div class="col-12">
+<!--Main Landing picture for shop page to view all products-->
+<div class="jumbotron jumbotron-fluid jumbotron-shop">
+   <div class="container">
+      <div class="row">
+         <div class="col-12">
             <h1 class="display-4">SHOP</h1>
-            </div>
-        </div>
-
-    <!--Sort by size, filter by price and category-->
-    <div class="row">
-        <div class="col-12 col-md-7">
+         </div>
+      </div>
+      <!--Buttons to select product categories-->
+      <div class="row">
+         <div class="col-12 col-md-7">
             <div class="filter-buttons btn-group" role="group">
-                <a href="{% url 'products' %}?category=twelve_oz" class="btn btn-filter">12 oz</a>
-                <a href="{% url 'products' %}?category=sixteen_oz" class="btn btn-filter">16 oz</a>
-                <a href="{% url 'products' %}?category=twentyfour_oz" class="btn btn-filter">24 oz</a>
-                <a href="{% url 'products' %}?category=sale" class="btn btn-filter">SALE</a>
-                <a href="{% url 'products' %}?category=new_arrivals" class="btn btn-filter" >New Arrivals</a>
+               <a href="{% url 'products' %}?category=twelve_oz" class="btn btn-filter">12 oz</a>
+               <a href="{% url 'products' %}?category=sixteen_oz" class="btn btn-filter">16 oz</a>
+               <a href="{% url 'products' %}?category=twentyfour_oz" class="btn btn-filter">24 oz</a>
+               <a href="{% url 'products' %}?category=sale" class="btn btn-filter">SALE</a>
+               <a href="{% url 'products' %}?category=new_arrivals" class="btn btn-filter" >New Arrivals</a>
             </div>
-        </div>
-        <div class="col-12 col-md-5">
+         </div>
+         <!--Dropdown to sort items by price and size-->
+         <div class="col-12 col-md-5">
             <div class="dropdown">
-                <a class="btn dropdown-toggle toggle-filter" href="#" role="button" id="sortMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Sort
-                </a>
-
-                <div class="dropdown-menu" aria-labelledby="sortMenuLink">
-                    <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">Price (low to high)</a>
-                    <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=desc">Price (high to low)</a>
-                    <a class="dropdown-item" href="{% url 'products' %}?sort=category&direction=asc">Category (small to large)</a>
-                    <a class="dropdown-item" href="{% url 'products' %}?sort=category&direction=desc">Category (large to small)</a>
-                </div>
+               <a class="btn dropdown-toggle toggle-filter" href="#" role="button" id="sortMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               Sort
+               </a>
+               <div class="dropdown-menu" aria-labelledby="sortMenuLink">
+                  <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">Price (low to high)</a>
+                  <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=desc">Price (high to low)</a>
+                  <a class="dropdown-item" href="{% url 'products' %}?sort=category&direction=asc">Category (small to large)</a>
+                  <a class="dropdown-item" href="{% url 'products' %}?sort=category&direction=desc">Category (large to small)</a>
+               </div>
             </div>
-        </div>
-    </div>
-    </div>
-    </div>
-
-
-    <!--Products-->
-    <div class="container product-container">
-        <div class="row">
-            {% if products|length > 0 %}
-                {% for product in products %}
-                <div class="col-sm-6 col-md-4 col-lg-3">
-                    <div class="card product-card">
-                   {% if product.image %}
-                   <div class="img-container">
-                    <a href="{% url 'one_product' product.id %}">
-                        <img class="card-img-top product-img" src="/media/{{ product.image }}" alt="{{ product.name }}">
-                        <div class="middle">
-                            <div class="background-text">{{ product.name }}</div>
-                        </div>
-                    </a>
-                    </div>
-                   {% else %}
-                    <a href="{% url 'one_product' product.id %}">
-                        <img class="card-img-top no-product-img" src="/media/no-image.jpg" alt="{{ product.name }}">
-                    </a>
-                   {% endif %}
-                        <div class="card-body">
-                            <h5 class="product-name">{{ product.name }}</h5>
-                            <h6 class="product-price">${{ product.price }}</h6>
-                            {% if product.category %}
-                            <p><i class="fas fa-tags category-tag"></i>{{ product.category.friendly_name }}</p>
-                            {% endif %}
-                                <a href="{% url 'one_product' product.id %}" class="btn one-product-btn">View More Info...</a>
-                        </div>
-                    </div>
-                
-                </div>
-                {% endfor %}
+         </div>
+      </div>
+   </div>
+</div>
+<!--Products in database, shown in cards-->
+<div class="container product-container">
+   <div class="row">
+      {% if products|length > 0 %}
+      {% for product in products %}
+      <div class="col-sm-6 col-md-4 col-lg-3">
+         <div class="card product-card">
+            {% if product.image %}
+            <div class="img-container">
+               <a href="{% url 'one_product' product.id %}">
+                  <img class="card-img-top product-img" src="/media/{{ product.image }}" alt="{{ product.name }}">
+                  <div class="middle">
+                     <div class="background-text">{{ product.name }}</div>
+                  </div>
+               </a>
+            </div>
             {% else %}
-            <div class="page-title">
-                <h4>No results found...</h4>
-                <a href="{% url 'products' %}" class="btn user-btn">Shop Now!</a>
-            </div>
+            <a href="{% url 'one_product' product.id %}">
+            <img class="card-img-top no-product-img" src="/media/no-image.jpg" alt="{{ product.name }}">
+            </a>
             {% endif %}
-        </div>
-     </div>
-        <div class="btt-button shadow-sm rounded-0 border border-black">
-            <a class="btt-link d-flex h-100">
-                <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
-            </a>	
-        </div>
-
+            <div class="card-body">
+               <h5 class="product-name">{{ product.name }}</h5>
+               <h6 class="product-price">${{ product.price }}</h6>
+               {% if product.category %}
+               <p><i class="fas fa-tags category-tag"></i>{{ product.category.friendly_name }}</p>
+               {% endif %}
+               <a href="{% url 'one_product' product.id %}" class="btn one-product-btn">View More Info...</a>
+            </div>
+         </div>
+      </div>
+      {% endfor %}
+      {% else %}
+      <!--If no results are shown, this message appears-->
+      <div class="page-title">
+         <h4>No results found...</h4>
+         <a href="{% url 'products' %}" class="btn user-btn">Shop Now!</a>
+      </div>
+      {% endif %}
+   </div>
+</div>
+<!--Button to bring the user to top of page-->
+<div class="btt-button shadow-sm rounded-0 border border-black">
+   <a class="btt-link d-flex h-100">
+   <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+   </a>	
+</div>
 {% endblock %}
 
 {% block postloadjs %}
-    <script type="text/javascript">
-		$('.btt-link').click(function(e) {
-			window.scrollTo(0,0)
-		})
-	</script>
+<script src="{% static 'products/js/to-top-btn.js' %}"></script>
 {% endblock %}
