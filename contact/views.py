@@ -53,7 +53,8 @@ def contact(request):
         )
 
         messages.success(request,
-                         'Your email has been submitted, our team will get back to you as soon as possible.')
+                         'Your email has been submitted,'
+                         'our team will get back to you as soon as possible.')
         return redirect('contact')
 
     else:

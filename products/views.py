@@ -79,7 +79,7 @@ def one_product(request, product_id):
 @login_required
 def add_product(request):
     """
-    Add a product to the store, Only staff/superusers are allowed to do this 
+    Add a product to the store, Only staff/superusers are allowed to do this
     """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
@@ -106,7 +106,7 @@ def add_product(request):
 
 @login_required
 def edit_product(request, product_id):
-    """ 
+    """
     Edit a product in the store, Only staff/superusers are allowed to do this
     """
     if not request.user.is_superuser:
@@ -138,8 +138,9 @@ def edit_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
-    """ 
-    Delete a product from the store, Only staff/superusers are allowed to do this
+    """
+    Delete a product from the store,
+    Only staff/superusers are allowed to do this
     """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
