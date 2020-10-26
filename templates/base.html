@@ -2,6 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
    <head>
+
       {% block meta %}
       <!-- Required meta tags -->
       <meta http-equiv = "X-UA-Compatible" content="ie=edge">
@@ -40,22 +41,15 @@
       {% endblock %}
 
       <title>Mug Shots {% block extra_title %}{% endblock %}</title>
+
    </head>
    <body>
       <!-- Navigation bar, contains logo with link to home page, a search bar, and links to the main pages on the site-->
-      <header class="container-fluid fixed-top nav-container">
-         <div id="topnav" class="row">
-            <div class="col-12">
-               <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                  <h2 class="logo-font text-center">Mug Shots</h2>
-               </a>
-            </div>
-         </div>
-         <div class="row" id="navbar-row">
-            {% include 'includes/main-nav.html' %}
-         </div>
-         {% include 'includes/side-nav.html' %}
+      <header class="fixed-top nav-header">
+         {% include 'includes/main-nav.html' %}
+         {% include 'includes/small-nav.html' %}
       </header>
+
       {% if messages %}
       <div class="message-container">
          {% for message in messages %}
@@ -129,25 +123,10 @@
             </div>
          </div>
       </footer>
-
-      {% block postloadjs %}
-      <script type="text/javascript">
-         $('.toast').toast('show');
-      </script>
       
-      <script type="text/javascript">
-         /* Side Nav, comes on small screens */
-         /* Set the width of the side navigation to 250px */
-         
-         function openNav() {
-         document.getElementById("side-nav").style.width = "100%";
-         }
-         
-         /* Set the width of the side navigation to 0 */
-         function closeNav() {
-         document.getElementById("side-nav").style.width = "0";
-         }
-      </script>
+      {% block postloadjs %}
+      <script src="{% static 'js/toast.js' %}"></script>
+      <script src="{% static 'js/navbar.js' %}"></script>
       {% endblock %}
    </body>
 </html>

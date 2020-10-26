@@ -29,8 +29,8 @@ var slideIndex = 1;
         } 
         for (i = 0; i < totaldots.length; i++) { 
             totaldots[i].className =  
-            totaldots[i].className.replace(" active", ""); 
+            totaldots[i].className.replace(".active-dot", ""); 
         } 
         totalslides[slideIndex - 1].style.display = "block"; 
-        totaldots[slideIndex - 1].className += " active"; 
+        totaldots[slideIndex - 1].className += ".active-dot"; 
     } 

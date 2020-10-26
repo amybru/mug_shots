@@ -1,12 +1,11 @@
-
-/* Side Nav, comes on small screens */
-/* Set the width of the side navigation to 250px */
-
-function openNav() {
-  document.getElementById("side-nav").style.width = "250px";
-}
-
-/* Set the width of the side navigation to 0 */
-function closeNav() {
-  document.getElementById("side-nav").style.width = "0";
-}
+//For navbar, changes from a transparent background to white background on scroll
+$(document).ready(function() {
+  $(window).scroll(function() {
+    if($(this).scrollTop() < $("#main-content").height()){
+       $(".navbar").removeClass("bg-light");
+    }
+    else{
+       $(".navbar").addClass("bg-light");
+    }
+  });
+});

@@ -1,152 +1,99 @@
 /* Styling for Navbar */
 
-/* Nav container, color set */
-.nav-container {
-    background-color: #dfdfdf;
-    color: #161616;
-}
 
-#navbar-row {
-    z-index: -1;
-}
-
-/* For Top-nav containing logo */
-#topnav {
-    z-index: 1;
-}
+/* Logo text */
 
 .logo-font {
-    font-family: 'Ranchers', cursive;
-    color: #d4af37;
-    font-size: 5em;
+	font-family: 'Ranchers', cursive;
+	color: #d4af37;
+	font-size: 3em;
 }
 
 @media screen and (max-width: 600px) {
-  .logo-font {
-    font-family: 'Ranchers', cursive;
-    color: #d4af37;
-    font-size: 4em;
-  }
+	.logo-font {
+		font-family: 'Ranchers', cursive;
+		color: #d4af37;
+		font-size: 2em;
+	}
 }
-
-.main-logo-link {
-    border-bottom: 1px solid #161616;
-}
-
-#logo-main {
-    display: block;
-    margin: 20px auto;
-  }
 
 
 /* Main Navbar */
+
 .navbar {
-  border: none;
-  background-color: #dfdfdf!important;
+	position: fixed;
+	width: 100%;
+	transition: background-color 1s;
 }
 
-.navbar-nav { 
-    width: 100%;
-    text-align: center;
+
+/* Background color */
+
+.bg-light {
+	background-color: #dfdfdf !important;
 }
 
-.navbar-nav > li {
-      display: inline-block;
-      float: none;
-      margin-top: 20px;
-      margin-left: 3em;
+
+/* to align icons and text in center */
+
+.navbar-nav {
+	text-align: center;
 }
 
-.navbar-nav > li > a {
-        padding-left: 30px;
-        padding-right: 30px;
-        color: #161616;;
+
+/* text colors for links */
+
+.navbar-nav>li {
+	display: inline-block;
+	float: none;
+	margin-top: 20px;
+	margin-left: 3em;
 }
 
+.navbar-nav>li>a {
+	padding-left: 30px;
+	padding-right: 30px;
+	color: #d4af37!important;
+}
+
+
+/* Font Awesome Icon style */
 
 .fa-coffee {
-    display: inline-block;
+	display: inline-block;
 }
+
 
 /* -------------------------------- Media Queries */
 
+
 /* Slightly larger container on xl screens */
+
 @media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
-}
-
-/* The side navigation menu using some code from W3 schools */
-.sidenav {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  opacity: 1;
-  background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-}
-
-/* The navigation menu links */
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #d4af37;
-  display: block;
-  transition: 0.3s;
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-  transition: margin-left .5s;
-  padding: 20px;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+	.container {
+		max-width: 80%;
+	}
 }
 
 
-/* Active class to show the user their current page */
+/* Active class to show the user their current page, will give a white halo on font awesome icon */
+
 .active {
-    background-color: #d4af37;
-    border-radius: 50px;
+	border-radius: 50px;
+	-webkit-box-shadow: 0px 0px 20px 0 #dfdfdf;
+	box-shadow: 0px 0px 20px 0 #dfdfdf;
+	border: none;
 }
 
 
-/* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    }
+/* For small nav, background color and items aligned */
 
-    .header-container {
-        padding-top: 50px;
-    }
+#small-nav {
+	background-color: #dfdfdf;
+	padding-top: 3em;
+	text-align: center;
+}
+
+.custom-toggler-icon {
+	color: #d4af37;
 }
