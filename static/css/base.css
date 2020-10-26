@@ -1,262 +1,153 @@
+* General Styling for the Mug Shots Website */
+
+
+/* Sets the body color to a dark mode, font set to Ubuntu from Google Fonts */
+
 body {
-    background-color: #161616;
-    color: #dfdfdf;
-    font-family: 'Ubuntu', sans-serif;
-    padding-top: 14em;
+	background-color: #161616;
+	color: #dfdfdf;
+	font-family: 'Ubuntu', sans-serif;
+	padding-top: 14em;
 }
+
+
+/* Font and color for main titles across site */
+
+.page-title {
+	font-family: 'Ranchers', cursive;
+	color: #d4af37;
+}
+
 
 /* from Bulma, icons used across the site */
+
 .icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
+	align-items: center;
+	display: inline-flex;
+	justify-content: center;
+	height: 1.5rem;
+	width: 1.5rem;
 }
+
 
 /* Footer Styles from base file, viewed on all pages */
+
 footer {
-  margin: 15px;
-  padding: 20px;
-  left: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,5);
+	margin: 15px;
+	padding: 20px;
+	left: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 5);
 }
 
-footer > h4 {
-    font-family: 'Ranchers', cursive;
+footer>h4 {
+	font-family: 'Ranchers', cursive;
 }
 
 .footer-phone {
-    color: #d4af37;
-    font-size: 0.75rem;
+	color: #d4af37;
+	font-size: 0.75rem;
 }
 
 .footer-email {
-    color: #d4af37;
-    font-size: 0.75rem;
+	color: #d4af37;
+	font-size: 0.75rem;
 }
+
+
+/* Small buttons with icons, links to social pages. Color, size, and position set. Alternates color on hover */
 
 .social-item {
-     width: 32px;
-     height: 32px;
-     padding: 8px 0;
-     border-radius: 50%;
-     text-align: center;
-     line-height: 6px;
-     font-size: 20px;
-     justify-content: center;
-     color: #dfdfdf;
-     background: #d4af37;
-     transition: all 0.35s ease-in-out;
-     -moz-transition: all 0.35s ease-in-out;
-     -webkit-transition: all 0.35s ease-in-out;
-     -o-transition: all 0.35s ease-in-out;
+	width: 32px;
+	height: 32px;
+	padding: 8px 0;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 6px;
+	font-size: 20px;
+	justify-content: center;
+	color: #dfdfdf;
+	background: #d4af37;
+	transition: all 0.35s ease-in-out;
+	-moz-transition: all 0.35s ease-in-out;
+	-webkit-transition: all 0.35s ease-in-out;
+	-o-transition: all 0.35s ease-in-out;
 }
 
-.social-item > a {
-    color: #dfdfdf;
-    padding-bottom: 5px;
+.social-item>a {
+	color: #dfdfdf;
+	padding-bottom: 5px;
 }
 
- .social-item:hover{
-     background-color: #dfdfdf;
-     padding-bottom: 5px;
+.social-item:hover {
+	background-color: #dfdfdf;
+	padding-bottom: 5px;
 }
 
-.social-item > a:hover {
-    color: #d4af37;
+.social-item>a:hover {
+	color: #d4af37;
 }
+
+
+/* Search bar in footer */
 
 .search-btn {
-    background-color: #d4af37;
-    color: #dfdfdf;
-}
-
-/* General Buttons, viewed across the site*/
-.vertical-center {
-  margin-left: 43%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+	background-color: #d4af37;
+	color: #dfdfdf;
 }
 
 
-/* for to top button, shown on shop page*/
-.btt-button {
-    height: 42px;
-    width: 42px;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-}
+/* General Buttons, viewed across the site */
 
-.btt-link 
-.update-link 
-.remove-item {
-    cursor: pointer;
-}
-
-/* Toasts */
-.message-container {
-    position: fixed;
-    top: 125px;
-    right: 20px;
-    z-index: 999999999999;
-}
-
-.site-toasts {
-    overflow: visible;
-    opacity: 100;
-    background-color: #d4af37;
-    color:black;
-}
-
-.card-title {
-    font-family: 'Ranchers', cursive;
-    color: #133616;
-    font-size: 2em;
-}
-
-.user-btn{
-    background-color:#133616;
-    color:#dfdfdf;
-    transition: all 0.35s ease-in-out;
-     -moz-transition: all 0.35s ease-in-out;
-     -webkit-transition: all 0.35s ease-in-out;
-     -o-transition: all 0.35s ease-in-out;
+.user-btn {
+	background-color: #133616;
+	color: #dfdfdf;
+	transition: all 0.35s ease-in-out;
+	-moz-transition: all 0.35s ease-in-out;
+	-webkit-transition: all 0.35s ease-in-out;
+	-o-transition: all 0.35s ease-in-out;
 }
 
 .user-btn:hover {
-    background-color:#d4af37;
-    color:#dfdfdf;
+	background-color: #d4af37;
+	color: #dfdfdf;
+}
+
+
+/* Toasts */
+
+.message-container {
+	position: fixed;
+	top: 125px;
+	right: 20px;
+	z-index: 999999999999;
+}
+
+.site-toasts {
+	overflow: visible;
+	opacity: 100;
+	background-color: #d4af37;
+	color: black;
+}
+
+
+/* General Card styling, cards used throughout the site */
+
+.card-title {
+	font-family: 'Ranchers', cursive;
+	color: #133616;
+	font-size: 2em;
 }
 
 .card-row {
-    margin-top: 3em;
+	margin-top: 3em;
 }
 
 .user-card {
-    background-color: #dfdfdf;
-    color: #161616;
-    border-radius: 1rem;
-    -webkit-box-shadow: -10px -10px 15px 0 #d4af37;
-    box-shadow: -10px -10px 20px 0 #d4af37;
-    border: none;
-    
+	background-color: #dfdfdf;
+	color: #161616;
+	border-radius: 1rem;
+	-webkit-box-shadow: -10px -10px 15px 0 #d4af37;
+	box-shadow: -10px -10px 20px 0 #d4af37;
+	border: none;
 }
-
-.signup-link{
-    text-decoration: none;
-    color: #d4af37;
-}
-/* Home Page */
-.home-jumbotron {
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/media/main-1.jpg);
-    background-size: cover;
-    margin-top: 0.8em;
-    height: 25em;
-    background-position: center;
-    font-family: 'Ranchers', cursive;
-    text-align: center;
-     color: #d4af37;
-}
-
-.home-jumbotron h1 {
-    padding-top: 20px;
-}
-
-
-.shop-button {
-    background-color: #d4af37;
-    color: #dfdfdf;
-    text-decoration: none;
-    font-family: 'Ranchers', cursive;
-    margin-top: 30px;
-    transition: all 0.35s ease-in-out;
-     -moz-transition: all 0.35s ease-in-out;
-     -webkit-transition: all 0.35s ease-in-out;
-     -o-transition: all 0.35s ease-in-out;
-}
-
-.shop-button:hover {
-    background-color: #dfdfdf;
-    color: #d4af37;
-}
-
-.about h3 {
-    font-family: 'Ranchers', cursive;
-}
-
-#teamphoto {
-    width: 90%;
-    margin-bottom: 15px;
-}
-
-.flex-column { 
-       max-width : 260px;
-   }
-
-.grid-container {
-    background: #dfdfdf;
-}
-
-.grid-row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
-}
-
-.grid-column {
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
-}
-
-.grid-column img {
-  margin-top: 8px;
-  vertical-align: middle;
-  width: 200%;
-}
-
-@media screen and (max-width: 600px) {
-  .grid-column {
-    flex: 50%;
-    max-width: 50%;
-  }
-}
-
-.home-ig a {
-    color: #133616;
-    font-size: 0.8rem;
-    font-family: 'Ranchers', cursive;
-    margin-bottom: 0.5rem;
-    padding: 10px;
-    text-decoration: none
-}
-
-.home-comission {
-    background-color: #133616;
-    padding: 15px;
-    text-align: center;
-}
-
-.home-comission h5 {
-    font-family: 'Ranchers', cursive;
-}
-
-/* login & sign up pages */
-.page-title {
-    font-family: 'Ranchers', cursive;
-    color: #d4af37;
-}
-
-.order-history-table {
-    color: #161616;
-}
-
-.staff-orders-table {
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 3em;
-}
-

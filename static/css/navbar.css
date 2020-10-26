@@ -1,10 +1,9 @@
+/* Styling for Navbar */
+
+/* Nav container, color set */
 .nav-container {
     background-color: #dfdfdf;
     color: #161616;
-}
-
-#topnav {
-    z-index: 1;
 }
 
 #navbar-row {
@@ -12,6 +11,10 @@
 }
 
 /* For Top-nav containing logo */
+#topnav {
+    z-index: 1;
+}
+
 .logo-font {
     font-family: 'Ranchers', cursive;
     color: #d4af37;
@@ -36,7 +39,7 @@
   }
 
 
-/* Main Navbar- seen on all pages */
+/* Main Navbar */
 .navbar {
   border: none;
   background-color: #dfdfdf!important;

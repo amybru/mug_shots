@@ -11,7 +11,7 @@ class Contact(models.Model):
     last_name = models.CharField(max_length=200)
     contact_subject = models.CharField(max_length=200)
     email = models.CharField(max_length=200)
-    contact_body = models.TextField(blank=True)
+    contact_body = models.TextField(max_length=5000)
     contact_date = models.DateTimeField(default=datetime.now, blank=True)
     query_user = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
 

@@ -1,33 +1,42 @@
 /* Shopping Cart App */
+
+/* Gives margin to the top so container doesn't disapear under navbar */
 .shopping-container {
     margin-top: 2.5em;
 }
 
+/* Sets text color to table for cart items */
 .table {
     color:#dfdfdf;
 }
 
+/* A page title, set in alternate font for style */
 .shopping_cart_title {
     font-family: 'Ranchers', cursive;
 }
 
+/* formatting margin */
 .empty-row {
     margin-left: 15px;
 }
 
+/* Table head, color set */
 .cart-table {
      color: #d4af37;
 }
 
+/* Plus/Minus button for quantity color and text color */
 .plus-minus-button {
     background-color:#d4af37;
     color:#dfdfdf;
 }
 
-.alert-message {
-    color: #d4af37;
-}
-
+/* Buttons to update or delete item from cart, color set */
 .qty-text {
     color: #dfdfdf;
+}
+
+/* Alerts the user of free shipping if they spend a certain amount, color set */
+.alert-message {
+    color: #d4af37;
 }
