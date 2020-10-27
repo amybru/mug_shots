@@ -1,1 +1,1 @@
-web: gunicorn mug-shots.wsgi:application
+web: gunicorn mug_shots.wsgi:application
