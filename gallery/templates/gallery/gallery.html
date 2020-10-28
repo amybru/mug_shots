@@ -18,12 +18,12 @@
 {% block content %}
 <!--Main Landing picture for home page-->
 <div class="jumbotron jumbotron-fluid jumbotron-gallery">
-   <div class="container" id="main-content">
+   <div class="container">
       <h1 class="display-4">Gallery</h1>
    </div>
 </div>
 <!--Instagram Grid, responsive grid of pictures with the name and number of likes hidden (shown on hover)-->
-<div class="container">
+<div class="container" id="main-content">
    <div class="row">
       <div class="grid col-12 col-md-6 insta-text">
          <h3 class="insta-title">Explore our Instagram</h3>
@@ -86,9 +86,9 @@
          </div>
          <div class="gallery-container">
             <a href="https://www.instagram.com/mugshots_mugs/?hl=en" target="_blank" class="insta-link">
-               <img src="/{{ MEDIA_URL }}IMG-8390.jpg" alt="blueberry mug" class="img-fluid gallery-grid-img">
+               <img src="/{{ MEDIA_URL }}main-5.jpg" alt="fall flavors mug" class="img-fluid gallery-grid-img">
                <div class="gallery-grid-text">
-                  <p>Blueberry Mug</p>
+                  <p>Fall Flavors Mug</p>
                   <p><i class="fas fa-heart"></i> 539</p>
                </div>
             </a>
