@@ -17,7 +17,7 @@
 
 {% block content %}
 <!--Main Landing picture for shop page to view all products-->
-<div class="jumbotron jumbotron-fluid jumbotron-shop" id="main-content">
+<div class="jumbotron jumbotron-fluid jumbotron-shop">
    <div class="container">
       <div class="row">
          <div class="col-12">
@@ -25,7 +25,7 @@
          </div>
       </div>
       <!--Buttons to select product categories-->
-      <div class="row">
+      <div class="row" id="main-content">
          <div class="col-12 col-md-7">
             <div class="filter-buttons btn-group" role="group">
                <a href="{% url 'products' %}?category=twelve_oz" class="btn btn-filter">12 oz</a>
@@ -62,7 +62,7 @@
             {% if product.image %}
             <div class="img-container">
                <a href="{% url 'one_product' product.id %}">
-                  <img class="card-img-top product-img" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                  <img class="card-img-top product-img" src="{{ product.image.url }}" alt="{{ product.name }}">
                   <div class="middle">
                      <div class="background-text">{{ product.name }}</div>
                   </div>
