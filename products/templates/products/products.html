@@ -62,7 +62,7 @@
             {% if product.image %}
             <div class="img-container">
                <a href="{% url 'one_product' product.id %}">
-                  <img class="card-img-top product-img" src="/media/{{ product.image }}" alt="{{ product.name }}">
+                  <img class="card-img-top product-img" src="{{ item.product.image }}" alt="{{ product.name }}">
                   <div class="middle">
                      <div class="background-text">{{ product.name }}</div>
                   </div>
@@ -70,7 +70,7 @@
             </div>
             {% else %}
             <a href="{% url 'one_product' product.id %}">
-            <img class="card-img-top no-product-img" src="/media/no-image.jpg" alt="{{ product.name }}">
+            <img class="card-img-top no-product-img" src="{{ media }} no-image.jpg" alt="{{ product.name }}">
             </a>
             {% endif %}
             <div class="card-body">
