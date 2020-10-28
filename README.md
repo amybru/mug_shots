@@ -88,6 +88,38 @@ Delete products and reviews.
 
 ### Design
 
+Doing some research on popular e-commerce websites, I was able to form an idea of how I wanted the atmosphere of the website to look. I knew that as a user of the website it would be important to have a simple design. Through my research, I found some websites that I thought were 
+messy in their layout and hard to navigate. I knew I wanted my website to be image-led and very minimalistic with easy navigation.
+
+With the basic idea in place, I knew the features of the website must be divided between three categories: 1) external users (anonymous users, who are not yet authenticated), 2) users who are logged in to their accounts, and 3) the store owner (also known as the superuser). All users are able to 
+view the products in the store and the reviews in the gallery page. Only users who are logged in will be able to view their past order history, personal billing information, and edit or delete a review they previously created. The site owner would be able to view everything the users can view but 
+will also be able to add, edit, and delete products from the store as well as manage the reviews. With this in mind, I decided on adding these feature ideas when creating my wireframes: 
+* login/registration system 
+* ability to leave reviews
+* a gallery containing photos
+* the ability to add desired products to a cart 
+* confirm the purchase with a payment through Stripe
+* ability to contact the store owner with any questions
+In order to keep the user informed throughout their experience on the website, I also decided to add a notification system using Bootstrap's toasts feature, confirming the actions a user would take. For example, deleting a product from their cart or adjusting the quantity. 
+The website also must meet content requirements to provide users with enough information about each product, including item pricing and details.
+
+For this project, I chose a minimalistic dark mode style website. To soften the styling as to not have a harsh black or white, the colors #161616 (Muted black) and #dfdfdf (A light Gray, white color) were chosen for the main colors of the site.
+These colors make up most of the website with two additional colors to help certain elements such as the buttons and titles pop. The colors, #d4af37 (Gold) and #133616 (Forest Green) were chosen to complement the main black and white design. 
+
+For the font, I chose the classic font, "Ubuntu" for the main text on the site. This font is very clean to read and works well with the minimalistic theme. I wanted an additional font to make some of the titles and buttons stand out, so the font "Ranchers"
+was chosen. The Ranchers font is bold, but still very clear and easy to read, giving the site a nice finishing touch.
+
+The navigation bar was originally designed in the wireframes to display the logo of the site above the navigation bar. After working on the development of the site, it seemed to be more practical to have all of the navbar contents on the same line.
+This helped to keep to a more minimalistic design. A feature was added where the navbar is transparent when the page is first loaded, but changes to the light gray color (#dfdfdf) on scroll. On large and medium screens, the user will be able to see which page
+they are actively on by the white shadow you can see on the coffee cup icon.
+
+Keeping to the minimalistic design, all of the forms have simple pages. The login/registration process contains only a form that will accomplish the specific action, such ad logging in, signing up, confirming email, and so on. The contact form on the contact
+page follows this same design as well as the reviews form located on the contact page. To style the forms, I used the css property of box-shadow to create shadows & highlights underneath the forms giving it a slight glow. This css property uses horizontal & vertical offsetting
+along with blur and spread and finally the color of the shadow itself to produce the desired effect.
+
+A note about the 'cart' application. In the beginning, the site was developed using the term 'bag' as reflected in the code. However, it came to my attention that the users in the area where this website would be used, prefer to say 'cart' when shopping online. 
+Thus, on the front end of the website, the term 'cart' is used instead of 'bag'.
+
 ###### Defensive Design
 
 Throughout the build of this site various defensive features were added to protect against malicious activity, and also to stop things breaking.
@@ -101,42 +133,58 @@ Several checks were put in place within the forms and the models to ensure all r
 ### Wireframes
 > Home Page
 ![Home](wireframes/home.png)
-![Home Mobile](wireframes/home-mobile.png)
+![Home Mobile](wireframes/mobile-home.png)
 
 > Shop Page 
 ![Shop](wireframes/shop.png)
-![Shop Mobile](wireframes/shop-mobile.png)
+![Shop Mobile](wireframes/mobile-shop.png)
 
 > One Product Page 
 ![One Product](wireframes/oneproduct.png)
-![One Product Mobile](wireframes/oneproduct-mobile.png)
+![One Product Mobile](wireframes/mobile-oneproduct.png)
 
 > Gallery Page
 ![Gallery](wireframes/gallery.png)
-![Gallery Mobile](wireframes/gallery-mobile.png)
+![Gallery Mobile](wireframes/mobile-gallery.png)
 
 > Contact Page
 ![Contact](wireframes/contact.png)
-![Contact Mobile](wireframes/contact-mobile.png)
+![Contact Mobile](wireframes/mobile-contact.png)
 
 > Cart Page
 ![Cart](wireframes/cart.png)
-![Cart Mobile](wireframes/cart-mobile.png)
+![Cart Mobile](wireframes/mobile-cart.png)
 
 > Checkout Page
 ![Checkout](wireframes/checkout.png)
-![Checkout Mobile](wireframes/checkout-mobile.png)
+![Checkout Mobile](wireframes/mobile-checkout.png)
 
 > Login/Register Page
 ![Login/Register](wireframes/login.png)
-![Login/Register Mobile](wireframes/login-mobile.png)
+![Login/Register Mobile](wireframes/mobile-login.png)
 
 > Profile Page
 ![Profile](wireframes/profile.png)
-![Profile Mobile](wireframes/profile-mobile.png)
+![Profile Mobile](wireframes/mobile-profile.png)
 
 
 ### Database Structure
+During development with Django, I used the SQLite3 database. After the project was deployed to Heroku, 
+I changed to using a PostgresSQL database that is provided by Heroku as an add-on for production. 
+I also relied on Django’s default user model for authorization, allowing me to meet one of the project requirements of separating features by anonymous users, users in session, and superusers. 
+The structure of the Checkout and Services apps were inspired by my studies with Code Institute, namely the Boutique Ado project. 
+
+The Database Structure was first drawn to see how the database data would relate to each other across the site.
+{{{ Handrawn picture}}}
+
+After the rough sketch was drawn, I was able to use Numbers (Apple's built in spreadsheet software) to help plan the structure of the models.
+
+When each app and its models were created and implemented, python manage.py makemigrations was run in the terminal to create the initial model package and python manage.py migrate was then used to apply the model to the database and create the table.
+
+{{{Models}}}
+
+Whenever possible, first-time-right methodology was used when creating each of the models to avoid too many alterations to the models and the database table through multiple makemigrations and migrate commands. 
+Throughout development, a few of the fields were adjusted and those commands needed to be run again.
 
 
 ## Features
@@ -274,6 +322,34 @@ The template provided by Code Institute is used as basis (https://github.com/Cod
 
 ## Testing
 ### Testing User Stories
+Shopper:
+> 1 : As a shopper, I want to be able to view a list of products, so that I can choose one to purchase                                                        
+> 2 : As a shopper, I want to be able to view product details, so that I can identify price, description, and image                                        
+> 3 : As a shopper, I want to be able to view the cart at anytime, so that I can manage my purchase                                                         
+> 4 : As a shopper, I want to be able to adjust the quantity of items in my cart or completely remove them, so that I can manage my purchase                                                         
+
+Site User:
+> 5 : As a site user, I want to be able to register for an account, so that I can have a personal account to view my profile                                    
+> 6 : As a site user, I want to be able to login and logout, so that I can easily access my personal information                                         
+> 7 : As a site user, I want to be able to recover my password , so that I can recover access to my account                                                  
+> 8 : As a site user, I want to be able to receive an email conformation, so that I can verify my registration was successful                                         
+> 9 : As a site user, I want to be able to have a personalized user profile, so that I can view my personal information such as payment information and order history 
+
+Customer:
+> 10 : As a customer, I want to be able to leave a review, so that I can leave my testimonial and support this small business                          
+> 11 : As a customer, I want to be able to edit my review, so that I can edit my previously created review with new details                            
+> 12 : As a customer, I want to be able to sort the list of products, so that I can view the available products by the size I prefer                              
+> 13 : As a customer, I want to be able to search for a product by name or description, so that I can quickly find the product I am interested in                                   
+> 14 : As a customer, I want to be able to view items in my bag to be purchased, so that I can identify the products and total cost before I purchase                        
+> 15 : As a customer, I want to be able to adjust the quantity or remove items in my bag, so that I can easily make changes before checkout                                           
+> 16 : As a customer, I want to be able to enter my payment information, so that I can check out easily with no problems                                             
+> 17 : As a customer, I want to be able to view an order confirmation after checkout, so that I can verify there are no mistakes with my address, order, or payment information   
+
+Store Owner:
+> 18 : As a store owner, I want to be able to add a product, so that I can add a new item to my store                                                    
+> 19 : As a store owner, I want to be able to edit a Product, so that I can change any details in the price or description                                
+> 20 : As a store owner, I want to be able to delete a Product, so that I can remove items that are no longer available                                     
+> 21 : As a store owner, I want to be able to edit and delete reviews, so that I can manage customer reviews                                        
 
 ### Manual Testing
 
@@ -290,13 +366,104 @@ Command "python3 -m flake8" in the terminal to fix problems with code.
 
 CSS - W3C CSS Checker - No errors found
 
+### Browser testing
+This website was tested on multiple devices with varying screen sizes and in multiple browsers. All devices and web browsers passed testing.
+
+Web Browsers:
+* Google Chrome
+* Safari
+* Firefox
+
+Devices:
+* Macbook
+* iPad Pro
+* iPad Air
+* iPhone x
+* iPhone 11
+The primary method of testing the browsers was to ask several users to visit the website using these different devices and web browsers. Each user was asked to complete a test purchase, register and login to a new account, and create, edit, and delete their reviews.
 
 ## Deployment
+This project was developed using the Gitpod environment. It used Gitpod for version control. The project was regularly committed to GitHub after each crucial piece of coding.
+The deployed project can be viewed on the following link: 
+The project's GitHub repository can be viewed with the following link: 
 
 ### Local Deployment
+If you would like to further contribute to this project, you can clone it to your local machine using the following steps:
+1. Select the Repository from the Github Dashboard.
+2. Click on the "Clone or download" green button located above and to the right of the File Structure table.
+3. Click on the "clipboard icon" to the right of the Git URL to copy the web URL of the Clone.
+4. Open your preferred Integrated Development Environment (IDE) and navigate to the terminal window.
+5. Change the current working directory to the location where you want the cloned directory.
+6. Enter the following command and press 'Enter' to create your local clone:
+        git clone https://github.com/amybru/mug_shots
+7. Install the required dependencies. Add the following command to the terminal:
+        pip3 install -r requirements.txt
+8. Add the environment variables. If using Gitpod, the environment can be set in the settings. Or you can create an .env file. Add your env.py file to .gitignore to make sure your database information is not viewable to others and to keep your values safe. Add the following values:
+        SECRET_KEY
+        STRIPE_PUBLIC_KEY
+        STRIPE_SECRET_KEY
+        STRIPE_WH_SECRET
+        DATABASE_URL
+        DEVELOPMENT = True
+9. To set up the Django SQLite3 tables required for this project, use the following commands:
+        python3 manage.py makemigrations
+        python3 manage.py migrate
+10. Create a Superuser for your project to work as an admin. Add the following command to the terminal, then create username and password for the superuser.
+        python3 manage.py createsuperuser
+11. You can now run the cloned application to test it using the following command:
+        python3 manage.py runserver
+
 
 ### Heroku
+To deploy the project to Heroku, follow the steps above in "Local Deployment", then complere the following steps:
+1. Register/sign in for Heroku.
+2. Once signed in, click the "new" button on the dashboard to create a new application.
+3. Name the App and choose the region you are currently in.
+4. To use the Postgres database for deployment, select 'Heroku Postgres' as a free add-on.
+5. After the app is created, go to the 'Settings' tab and click on the 'Reveal Config Variables' button. Input the following values:
+        | Key               | Value                                   |
+        |-------------------|-----------------------------------------|
+        | DATABASE_URL      | Heroku Postgres database url            |
+        | SECRET_KEY        | secret key used for your Django project |
+        | STRIPE_PUBLIC_KEY | obtained through your Stripe account    |
+        | STRIPE_SECRET_KEY | obtained through your Stripe account    |
+        | STRIPE_WH_SECRET  | obtained through your Stripe account    |
+        | ADMINS_EMAIL      | email admin for the emails feature      |
+        | GOOGLE_MAP_KEY    | obtained from google maps api           |       
+6. Create a requirements.txt file in your gitpod terminal/
+        pip3 freeze --local > requirements.txt
+7. Create a Procfile with the following content
+        echo web: gunicorn mug_shots.wsgi:application > Procfile
+8. Set up the database with Postgres.
+        python3 manage.py makemigrations
+        python3 manage.py migrate
+9. Create a Superuser for your project to work as an admin. Add the following command to the terminal, then create username and password for the superuser.
+        python3 manage.py createsuperuser
+10. You can now run the cloned application to test it using the following command:
+        python3 manage.py runserver
+11. Commit these changes to your repository:
+        git add .
+        git commit -m "<your commit message here>"
+12. With these changes made and commited in gitpod, log into heroku and enter your login credentials.
+        heroku login -i
+13. Once you have successfully logged into Heroku from the terminal, link your Heroku app to your remote repository
+        heroku git:remote -a <your app name here>
+14. Finally, push the project to Heroku
+    git push heroku master
 
+##### Hosting media files with AWS
+The static files and media files for this project are currently hosted in an AWS S3 Bucket. To host them, you need to create an AWS account and create your S3 bucket, making sure to allow public access.
+After creating an account and uploading the files, the following environment variables should be added via the settings or .env file.
+        USE_AWS (set to True)
+        AWS_ACCESS_KEY_ID
+        AWS_SECRET_ACCESS_KEY
+
+##### Sending Emails with Gmail
+In order to send real emails from the website, you must connect it to a Gmail account. 
+Either use an existing Gmail account or create a new one, then sign in and navigate to the Google Account Security page. From here, create two-step authentication by creating an App password for a Django app. 
+Add the following environment variables to your settings or .env file.
+        EMAIL_HOST_USER
+        EMAIL_HOST_PASS
 
 
 ## Acknowledgement
@@ -307,6 +474,8 @@ I would like to thank and credit the following sources for their assistance and 
 * The tutoring Team at Code Institute for helping me fix several bugs and understand why these errors were happening
 
 * A big thanks to my friends and peers for helping me test the site extensively, to make sure each feature worked as expected on various devices.
+
+
 
 ## Credits
 
@@ -320,5 +489,9 @@ Icons are from Font Awesome.
 All fonts are from Google Fonts.
 
 Prices, names, and descriptions on all products are fictional.
+
+##### Code
+Much of the code is inspired by the Boutique Ado mini project from Code Institute. Their tutorial videos assisted me in creating
+many of the apps required for this project, including: the checkout app and the add to cart functionality.
 
 > NOTE: This project was created for educational purposes only as 'Mug Shots' is a fictional business.
