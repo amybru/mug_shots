@@ -130,6 +130,8 @@ Included in a lot of the views and a lot of the templates are checks to ensure t
 
 Several checks were put in place within the forms and the models to ensure all requests were receiving all the expected data. Adding 'required' to certain field helped ensure this was achieved and fields were not left blank.
 
+The Google Chrome's Dev Tools were used to view the results of new features added on different screen sizes. Doing so helped me make any adjustments to styling including; the margins, padding and font sizes of different aspects of the project, as well as checking that new features were compatible on all screens. The functionality of each feature was tested as it was added to the project to notice issues as they arose.
+
 ### Wireframes
 > Home Page
 ![Home](wireframes/home.png)
@@ -321,50 +323,179 @@ The template provided by Code Institute is used as basis (https://github.com/Cod
 
 
 ## Testing
+
 ### Testing User Stories
-Shopper:
+All user stories have been verified and have passed their tests.
+##### Shopper:
 > 1 : As a shopper, I want to be able to view a list of products, so that I can choose one to purchase                                                        
+
+The first of the shopper user stories highlights the importance of viewing all products in one area. This is achieved in the products/shop page where the user can view a list of all the products currently in the database.
+
 > 2 : As a shopper, I want to be able to view product details, so that I can identify price, description, and image                                        
+
+To go along with the minimalist theme for the site, it was decided to have the additional details of the product on a separate page from the one where the user can view all products together. Once a user clicks on the image or button
+on one of the cards on the products page, the user will be taken to a specific page where they can view all details of the product and add a nummber of that item to their cart.
+
 > 3 : As a shopper, I want to be able to view the cart at anytime, so that I can manage my purchase                                                         
+
+This is accomplished by being able to click the cart in the navbar, located at the top of the screen. The sticky class was applied to the navbar so as to have this feature available at all times for the user. If the user has items in their
+cart, they will also be able to view a grand total on the navbar.
+
 > 4 : As a shopper, I want to be able to adjust the quantity of items in my cart or completely remove them, so that I can manage my purchase                                                         
 
-Site User:
+In the cart page, if the shopper has items in their cart, they will be able to view a table of the contents in the cart. In this table, they will be able to adjust the quantity of the item or remove it completely by clicking the respective button
+or changing the quantity to zero.
+
+
+##### Site User:
 > 5 : As a site user, I want to be able to register for an account, so that I can have a personal account to view my profile                                    
+
+When the user clicks on the "My Account" button in the navbar, they will be able to view a dropdown with the options to register or login to the website.
+Using Allauth authentication system and custom styling, the user is able to register, get an email confirmation, and then sign in to their account. 
+
 > 6 : As a site user, I want to be able to login and logout, so that I can easily access my personal information                                         
+
+After registering for an account and verifing their email, the user will be able to login via the login page. If the form is valid when submitted, the user will be logged in.
+When the user is done browsing and would like to sign out, they can once again navigate to the navbar, click the "My Account" button, and select "Logout".
+
 > 7 : As a site user, I want to be able to recover my password , so that I can recover access to my account                                                  
+
+On the login page, the user has the option to recover their password by clicking the button "Forgot password". This will prompt the user to enter their email
+and a link helping them to reset their password will arrive. A future feature to add to the site is to add a "Reset password" function to the profile page to allow the user
+to reset their password when already logged in.
+
 > 8 : As a site user, I want to be able to receive an email conformation, so that I can verify my registration was successful                                         
+
+After filling out the registration form, the user will be sent an email with a link to confirm their email. Opening this link will prompt the user to click to comfirm 
+that this is their account. Once the email is confirmed, the user can sign in.
+
 > 9 : As a site user, I want to be able to have a personalized user profile, so that I can view my personal information such as payment information and order history 
 
-Customer:
-> 10 : As a customer, I want to be able to leave a review, so that I can leave my testimonial and support this small business                          
-> 11 : As a customer, I want to be able to edit my review, so that I can edit my previously created review with new details                            
-> 12 : As a customer, I want to be able to sort the list of products, so that I can view the available products by the size I prefer                              
-> 13 : As a customer, I want to be able to search for a product by name or description, so that I can quickly find the product I am interested in                                   
-> 14 : As a customer, I want to be able to view items in my bag to be purchased, so that I can identify the products and total cost before I purchase                        
-> 15 : As a customer, I want to be able to adjust the quantity or remove items in my bag, so that I can easily make changes before checkout                                           
-> 16 : As a customer, I want to be able to enter my payment information, so that I can check out easily with no problems                                             
-> 17 : As a customer, I want to be able to view an order confirmation after checkout, so that I can verify there are no mistakes with my address, order, or payment information   
+Once authenticated, the user can view their profile by going to the same "My Account" button in the navbar and selecting "My Profile". Here they will view a greeting to their name and/or username,
+a form to save their prefered shipping information, and a table that contains their order history (if applicable). 
 
-Store Owner:
-> 18 : As a store owner, I want to be able to add a product, so that I can add a new item to my store                                                    
-> 19 : As a store owner, I want to be able to edit a Product, so that I can change any details in the price or description                                
-> 20 : As a store owner, I want to be able to delete a Product, so that I can remove items that are no longer available                                     
-> 21 : As a store owner, I want to be able to edit and delete reviews, so that I can manage customer reviews                                        
+> 10 : As a site user, I want to be able to contact the store owner with any questions
+
+If the user clicks on the "Contact" button in the navbar, they will be taken to a contact page where the user is able to fill out a form that will be sent to the store owner. If the user is logged in and their name
+and email are saved to their profile, these fields will automatically be populated. The user is also able to view the address and map of the physical stoe by means of Google maps.
+
+
+##### Customer:
+> 11 : As a customer, I want to be able to leave a review, so that I can leave my testimonial and support this small business                          
+
+If the user clicks on the "Gallery" button in the navbar, they will be taken to a page to view photos of other people's orders as well as cards that contain reviews.
+Any visitor to the site, logged in or not, is able to view these reviews. Users who are logged in have the ability to add a review by the review form located just below the review cards.
+If the form is valid when submitted, the user's review will appear next to the other reviews.
+
+> 12 : As a customer, I want to be able to edit my review, so that I can edit my previously created review with new details                            
+
+If the user is logged in and has previously created a review, they will be able to see two buttons on their review card to either edit or delete their review. Clicking the edit review will take the user
+to a new page where they can edit their review. If the form is valid when submitting, their review will update and they will be taken back to the gallery page. Previously I had designed this function to be in a modal, however due to many errors, it was decided upon to move this form to its own page (More details in the bugs section).
+Clicking on the delete button on the review card will bring up a modal asking the user if they are sure they want to delete the review. Clicking confirm will carry out the action of deleting and the review will be removed from the database.
+
+> 13 : As a customer, I want to be able to sort the list of products, so that I can view the available products by the size I prefer                              
+
+If the user clicks on the "Shop" button in the navbar to visit the page with all products, they will be able to see a group of buttons where they can select the category they would like to browse. To the right of this group of buttons, 
+there is also a dropdown that gives the user the ability to sort by price (most expensive - least expensive  or vise versa) or by mug size.
+
+> 14 : As a customer, I want to be able to search for a product by name or description, so that I can quickly find the product I am interested in                                   
+
+In the footer located at the bottom of all pages, the user can see a search bar. Entering any word or short phrase in the search bar, then clickung the button beside it will allow the user to search all products in the database. Results will come up if there is a match in the name or description. 
+If no results or the user does not submit a valid search, an error message will show, inviting the user to try again.
+
+> 15 : As a customer, I want to be able to view items in my bag to be purchased, so that I can identify the products and total cost before I purchase                        
+
+Navigating to the cart, either from the navbar or in the toast message after adding an item to the cart, will allow the user to view a table of all items in their cart. A subtotal is calculated
+at the right of the table (product price * quantity). A grand total is located at the bottom.
+Once clicking the checkout button at the bottom of the page, the user will also be able to view a preview of the items they will purchase.
+
+> 16 : As a customer, I want to be able to adjust the quantity or remove items in my bag, so that I can easily make changes before checkout                                           
+
+When the user is on the cart page, they will see a table of all the products currently in the cart. There is a quantity selector to allow the user to change the quantity of the product in their cart. Clicking "update" 
+will save the changes. Clicking the delete button or setting the quantity to zero will remove the item from the cart.
+
+> 17 : As a customer, I want to be able to enter my payment information, so that I can check out easily with no problems                                             
+
+From the cart page, there is a button at the bottom of the page inviting the user to "checkout". This will bring them to the secure checkout page where they can enter their shipping information and payment information.
+If the user is logged in and has their shipping information saved in their profile, these fields will already be populated.
+
+> 18 : As a customer, I want to be able to view an order confirmation after checkout, so that I can verify there are no mistakes with my address, order, or payment information   
+
+If the checkout form on the checkout page is valid when submitted, an overlay with a spinning arrow will appear letting the user know their order is being processed. Once the payment process has completed, the user will 
+see a success message, their previously entered shipping details, as well as a summary of what they ordered. If the user is logged in, they can once again view this page from the "My account/"My Profile" page.
+
+
+##### Store Owner:
+> 19 : As a store owner, I want to be able to add a product, so that I can add a new item to my store                                                    
+
+If the user is a superuser and is logged in, they will be able to view an additional page in the "My Account" dropdown on the navbar called "Management". Clicking on this page will bring up a form to allow the superuser
+to add a new product to the store. When the form is valid on submit, the new product will be added to the shop page and the superuser will be directed there. If the user is not a validated superuser, they will not be able to access this page.
+
+> 20 : As a store owner, I want to be able to edit a Product, so that I can change any details in the price or description                                
+
+Navigating to a single product's page from the shop page will allow the user to view two additional buttons that other users will not be able to see, "edit" and "delete". Clicking on the "Edit" button will allow the superuser to access an editing form
+for the product they are currently looking at. If the form is valid on submit, the product will be updated, and the user will be taken back to the shop page.
+
+> 21 : As a store owner, I want to be able to delete a Product, so that I can remove items that are no longer available                                     
+
+Navigating to a single product's page from the shop page will allow the user to view two additional buttons that other users will not be able to see, "edit" and "delete".  Clicking on the delete button will remove the product from the store.
+
+> 22 : As a store owner, I want to be able to edit and delete reviews, so that I can manage customer reviews                                        
+
+If the superuser clicks on the "Gallery" button in the navbar and navigates to the reviews, they will be able to see two additional buttons on every review, "edit" and "delete". The superuser has the ability to edit or delete any review. Clicking the edit review will take the user
+to a new page where they can edit their review. If the form is valid when submitting, their review will update and they will be taken back to the gallery page. Previously I had designed this function to be in a modal, however due to many errors, it was decided upon to move this form to its own page (More details in the bugs section).
+Clicking on the delete button on the review card will bring up a modal asking the user if they are sure they want to delete the review. Clicking confirm will carry out the action of deleting and the review will be removed from the database.
+
+> 23 : As a store owner, I want to know if a contact form has been submitted, so I can write a reply to my customer
+
+If a customer has submitted a contact form, the superuser email that is set up with the account will recieve a message (see the picture below). A future feature that I would like to add to the site is for the user to be able to view the contents of the message in a page on their profile and be able to respond directly from this website.
+
+
+
 
 ### Manual Testing
+
+##### Navigation Bar
+
+##### Footer
+
+##### Home
+
+#### Shop
+
+##### One Product
+
+##### Gallery
+
+##### Contact
+
+##### Profile
+
+##### Management
+
+##### Login/register
+
+##### Cart
+
+##### Checkout
+
+
 
 ### Validation
 Validator websites were used to test the following:
 
-HTML - W3C Html Checker - only errors in all html were caused by the Jinja templating: " { is not allowed in certain lines ".
+HTML - W3C Html Checker:
+Doing so brought up a few errors throughout the project related to using Django templates. These included an issue in using '{}' brackets as part of the source for <a> elements and <img> elements. However, this syntax is necessary to access static files and urls and was therefore ignored.
+All html templates led to errors that the doctype and language were not declared. As the templates were based on the base.html template where these were addressed, this issue was also ignored.
+Some Bootstrap Modals on the site returned errors with their 'aria-labelledby' attribute. This error was related to using templating language to specify the item the modal was related to, so this error was also ultimately ignored.
+
+CSS - W3C CSS Checker - No errors found
 
 JavaScript - JSHint - No errors found
 
-Python - PEP8 Online Check - a number of whitespace and lines too long warnings. Could not indent some of them.
+Python - PEP8 Online Check - a number of whitespace and lines too long warnings.
+The command "python3 -m flake8" was also run in the terminal to fix problems with code. The only problems found were due to whitespace or lines that were too long.
 
-Command "python3 -m flake8" in the terminal to fix problems with code.
-
-CSS - W3C CSS Checker - No errors found
 
 ### Browser testing
 This website was tested on multiple devices with varying screen sizes and in multiple browsers. All devices and web browsers passed testing.
@@ -382,6 +513,9 @@ Devices:
 * iPhone 11
 The primary method of testing the browsers was to ask several users to visit the website using these different devices and web browsers. Each user was asked to complete a test purchase, register and login to a new account, and create, edit, and delete their reviews.
 
+### Found Bugs and fixes
+
+
 ## Deployment
 This project was developed using the Gitpod environment. It used Gitpod for version control. The project was regularly committed to GitHub after each crucial piece of coding.
 The deployed project can be viewed on the following link: 
@@ -389,67 +523,108 @@ The project's GitHub repository can be viewed with the following link:
 
 ### Local Deployment
 If you would like to further contribute to this project, you can clone it to your local machine using the following steps:
+
 1. Select the Repository from the Github Dashboard.
+
 2. Click on the "Clone or download" green button located above and to the right of the File Structure table.
+
 3. Click on the "clipboard icon" to the right of the Git URL to copy the web URL of the Clone.
+
 4. Open your preferred Integrated Development Environment (IDE) and navigate to the terminal window.
+
 5. Change the current working directory to the location where you want the cloned directory.
+
 6. Enter the following command and press 'Enter' to create your local clone:
+        
         git clone https://github.com/amybru/mug_shots
+
 7. Install the required dependencies. Add the following command to the terminal:
+        
         pip3 install -r requirements.txt
+
 8. Add the environment variables. If using Gitpod, the environment can be set in the settings. Or you can create an .env file. Add your env.py file to .gitignore to make sure your database information is not viewable to others and to keep your values safe. Add the following values:
+        
         SECRET_KEY
         STRIPE_PUBLIC_KEY
         STRIPE_SECRET_KEY
         STRIPE_WH_SECRET
         DATABASE_URL
         DEVELOPMENT = True
+
 9. To set up the Django SQLite3 tables required for this project, use the following commands:
+        
         python3 manage.py makemigrations
         python3 manage.py migrate
+
 10. Create a Superuser for your project to work as an admin. Add the following command to the terminal, then create username and password for the superuser.
+        
         python3 manage.py createsuperuser
+
 11. You can now run the cloned application to test it using the following command:
+        
         python3 manage.py runserver
 
 
 ### Heroku
 To deploy the project to Heroku, follow the steps above in "Local Deployment", then complere the following steps:
+
 1. Register/sign in for Heroku.
+
 2. Once signed in, click the "new" button on the dashboard to create a new application.
+
 3. Name the App and choose the region you are currently in.
+
 4. To use the Postgres database for deployment, select 'Heroku Postgres' as a free add-on.
+
 5. After the app is created, go to the 'Settings' tab and click on the 'Reveal Config Variables' button. Input the following values:
-        | Key               | Value                                   |
-        |-------------------|-----------------------------------------|
-        | DATABASE_URL      | Heroku Postgres database url            |
-        | SECRET_KEY        | secret key used for your Django project |
-        | STRIPE_PUBLIC_KEY | obtained through your Stripe account    |
-        | STRIPE_SECRET_KEY | obtained through your Stripe account    |
-        | STRIPE_WH_SECRET  | obtained through your Stripe account    |
-        | ADMINS_EMAIL      | email admin for the emails feature      |
-        | GOOGLE_MAP_KEY    | obtained from google maps api           |       
+
+| Key               | Value                                   |
+|-------------------|-----------------------------------------|
+| DATABASE_URL      | Heroku Postgres database url            |
+| SECRET_KEY        | secret key used for your Django project |
+| STRIPE_PUBLIC_KEY | obtained through your Stripe account    |
+| STRIPE_SECRET_KEY | obtained through your Stripe account    |
+| STRIPE_WH_SECRET  | obtained through your Stripe account    |
+| ADMINS_EMAIL      | email admin for the emails feature      |
+| GOOGLE_MAP_KEY    | obtained from google maps api           |  
+
 6. Create a requirements.txt file in your gitpod terminal/
+        
         pip3 freeze --local > requirements.txt
+
 7. Create a Procfile with the following content
+        
         echo web: gunicorn mug_shots.wsgi:application > Procfile
+
 8. Set up the database with Postgres.
+        
         python3 manage.py makemigrations
         python3 manage.py migrate
+
 9. Create a Superuser for your project to work as an admin. Add the following command to the terminal, then create username and password for the superuser.
+        
         python3 manage.py createsuperuser
+
 10. You can now run the cloned application to test it using the following command:
+        
         python3 manage.py runserver
+
 11. Commit these changes to your repository:
+        
         git add .
         git commit -m "<your commit message here>"
+
 12. With these changes made and commited in gitpod, log into heroku and enter your login credentials.
+        
         heroku login -i
+
 13. Once you have successfully logged into Heroku from the terminal, link your Heroku app to your remote repository
+        
         heroku git:remote -a <your app name here>
+
 14. Finally, push the project to Heroku
-    git push heroku master
+
+        git push heroku master
 
 ##### Hosting media files with AWS
 The static files and media files for this project are currently hosted in an AWS S3 Bucket. To host them, you need to create an AWS account and create your S3 bucket, making sure to allow public access.
@@ -487,6 +662,9 @@ Icons are from Font Awesome.
 
 ##### Fonts
 All fonts are from Google Fonts.
+
+##### Wireframes
+The wireframes attached to this README were created using Balsamic.
 
 Prices, names, and descriptions on all products are fictional.
 
