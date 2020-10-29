@@ -5,12 +5,6 @@
 <link rel="stylesheet" href="{% static 'contact/css/contact.css' %}">
 {% endblock %}
 
-{% block extra_js %}
-<script async defer src="https://maps.googleapis.com/maps/api/js?key={{api_key}}&callback=initMap"
-   type="text/javascript"></script>
-<script src="{% static 'contact/js/map.js' %}"></script>
-{% endblock %}
-
 {% block title %}Contact{% endblock %}
 
 {% block content %}
@@ -47,3 +41,7 @@
 
 {% block postloadjs %}
 {% endblock %}
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key={{api_key}}&callback=initMap"
+   type="text/javascript"></script>
+<script src="{% static 'contact/js/map.js' %}"></script>
