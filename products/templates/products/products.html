@@ -5,6 +5,10 @@
 <link rel="stylesheet" href="{% static 'products/css/products.css' %}">
 {% endblock %}
 
+{% block extra_js %}
+<script src="{% static 'products/js/to-top-btn.js' %}"></script>
+{% endblock %}
+
 {% block extra_title %}Products{% endblock %}
 
 {% block page_header %}
@@ -103,5 +107,3 @@
 
 {% block postloadjs %}
 {% endblock %}
-
-<script src="{% static 'products/js/to-top-btn.js' %}"></script>

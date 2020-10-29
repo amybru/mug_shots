@@ -5,6 +5,10 @@
 <link rel="stylesheet" href="{% static 'gallery/css/gallery.css' %}">
 {% endblock %}
 
+{% block extra_js %}
+<script src="{% static 'gallery/js/carousel.js' %}"></script>
+{% endblock %}
+
 {% block extra_title %}Gallery{% endblock %}
 
 {% block page_header %}
@@ -236,5 +240,3 @@
 
 {% block postloadjs %}
 {% endblock %}
-
-<script src="{% static 'gallery/js/carousel.js' %}"></script>
