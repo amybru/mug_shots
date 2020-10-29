@@ -36,6 +36,10 @@
     color: #dfdfdf;
 }
 
+.qty-text:hover {
+    color: #d4af37;
+}
+
 /* Alerts the user of free shipping if they spend a certain amount, color set */
 .alert-message {
     color: #d4af37;
