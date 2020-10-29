@@ -16,12 +16,12 @@
          </a>
       </li>
       <li class="nav-item dropdown">
-            <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                <div class="text-center">
                   <p>My Account</p>
                </div>
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+            <div class="dropdown-menu border-0" aria-labelledby="navbarDropdownMenuLink">
                {% if request.user.is_authenticated %}
                {% if request.user.is_superuser %}
                <a href="{% url 'add_product' %}" class="dropdown-item">Management</a>
@@ -33,13 +33,13 @@
                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                {% endif %}
             </div>
-         </li>
-      <li class="nav-item">
-         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
+    </li>
+    <li class="nav-item">
+        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
             <div class="text-center">
                <div><i class="fas fa-shopping-cart fa-lg"></i></div>
             </div>
-         </a>
-      </li>
+        </a>
+    </li>
    </ul>
 </div>
