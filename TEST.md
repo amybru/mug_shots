@@ -342,6 +342,45 @@ adjust the number.
 
 ### Automated Testing
 
+Additional automated testing was added to test the functionality of the python files required for the website.
+Due to time contstraints, the python code is not 100% covered by these automated tests. In the future, I plan to add more testing so that all of the apps will be covered.
+
+Testing was carried out by means of a tests.py file. Test cases were created for the Contact app, the Profiles app, and the Products app.
+
+
+##### Contact app
+
+Tests in the contact app were created to test the view, that the contact page renders with the correct template, and the contact form.
+The test cases for the contact form were written to check that validation works when a user doesn't fill in at least one field. In the contact form, all fields are required.
+
+Test Results: Pass
+![Contact tests](wireframes/contact-tests.png)
+
+
+##### Profiles app
+
+A test in the profiles app was created to test that the redirect is working properly. Since a user must be logged in to view a profile, a user who tries to access this page and is not logged 
+in will be redirected.
+
+The second test case checks that the form located in the user profile is valid. This form allows the user to save their default shipping information for a later use. 
+
+Test Results: Pass
+![Profiles Tests](wireframes/profiles-tests.png)
+
+
+##### Products app
+
+Several tests were created for the products app including testing for the views, the models, and the form to add a new product.
+First, the views that show 1) all products on the shop page and 2) just one specific product from the database were tested to make sure the pages render correctly.
+
+Next, the products model was tested to check that the product fields equal the saved products values.
+
+The final test in this category was on the product form. The product form requires all fields to be valid before being able to submit. Since adding and editing a product is something only a superuser is able to do, this form just checks that an average user
+cannot make any changes to products. This case is expected to be false, instead of true.
+
+Test Results: Pass
+![Products Tests](wireframes/products-tests.png)
+
 
 ### Validation
 
