@@ -7,6 +7,9 @@ from .forms import ContactForm
 
 
 class ContactViewsTest(TestCase):
+    """
+    This tests that the view returns properly.
+    """
     def test_get_contact_page(self):
         response = self.client.get('/contact/')
         self.assertEqual(response.status_code, 200)
