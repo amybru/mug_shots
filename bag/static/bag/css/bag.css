@@ -34,10 +34,12 @@
 /* Buttons to update or delete item from cart, color set */
 .qty-text {
     color: #dfdfdf;
+    text-decoration: none;
 }
 
 .qty-text:hover {
     color: #d4af37;
+    text-decoration: none;
 }
 
 /* Alerts the user of free shipping if they spend a certain amount, color set */
