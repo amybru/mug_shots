@@ -7,12 +7,14 @@
       </div>
       <div class="card-body">
          <div>
-            <p class="page-title">Review of: <a href="{% url 'one_product' review.product.id %}" class="review-link">{{ review.product }}</a></p>
+            <p class="page-title">Review of: {{ review.product }}</p>
          </div>
          <div>
          </div>
          <div>
-            <img class="product-thumbnail rounded float-left" src="{{ review.product.image.url }}" alt="{{ product.name }}">
+            <a href="{% url 'one_product' review.product.id %}">
+                <img class="product-thumbnail rounded float-left" src="{{ review.product.image.url }}" alt="{{ product.name }}">
+            </a>
             <p class="review-content scroll">{{ review.review_content }}</p>
          </div>
          <div class="footer">
