@@ -17,7 +17,7 @@
 
 {% block content %}
 <!--Page for store management, staff can add a new product to the database by a form-->
-<div class="container" id="main-content">
+<div class="container">
    <div class="row">
       <div class="col-12 col-md-6">
          <hr>
@@ -26,7 +26,7 @@
          <hr>
       </div>
    </div>
-   <div class="row">
+   <div class="row" id="main-content">
       <div class="col-12 col-md-6">
          <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
             {% csrf_token %}
