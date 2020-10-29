@@ -1,3 +1,5 @@
+## Testing 
+
 ### Testing User Stories
 
 All user stories have been verified and have passed their tests.
@@ -256,6 +258,7 @@ adjust the number
 * If the form is Valid on sumbit, the user's review will be updated in the database and will be brought back to the gallery page.
 * Clicking on the "delete" button will open a modal, asking the user if they are sure they want to delete the review.
 * If the user is a superuser, they can edit or delete ANY review following the steps above.
+* Gallery carousel shows five pictures and can be navigated by clicking the arrow buttons.
 
 ##### Contact
 * The map with the location of the physical store renders as expected. (This store/address is fictional, so the city of San Fransisco, CA was selected for development).
@@ -319,7 +322,8 @@ adjust the number.
 * Hovering over the "Complete order" button will change the background color from green to yellow.
 * If the form is valid when clicking the "Complete Order" button, it will take the user to a checkout-success page.
 * While the page is loading, an overlay with a spinning arrow appears to let the user know their order is being processed.
-* Once the order has been processed sucessfully, a checkout success page is rendered with a table showing the details of their order and shipping information
+* Once the order has been processed sucessfully, a checkout success page is rendered with a table showing the details of their order and shipping information.
+* An email will be sent to the management and the user.
 
 ##### Login/register
 * If the user has not created an account, they must register first. If the user does not exist and tries to login, they will see a message "The e-mail address and/or password you specified are not correct." and be invited to try again.
@@ -334,6 +338,9 @@ adjust the number.
 * After visiting the link provided in the email, the user will be asked to write a new password and click submit. 
 * After clicking submit, the user will be redirected to the sign in page and can login as normal.
 * Hovering over any of the submit buttons on these forms will change the background color from green to yellow.
+
+
+### Automated Testing
 
 
 ### Validation
@@ -351,8 +358,6 @@ CSS - W3C CSS Checker - No errors found
 JavaScript - JSHint - No errors found
 
 Python - PEP8 Online Check - a number of whitespace and lines too long warnings.
-
-The command "python3 -m flake8" was also run in the terminal to fix problems with code. The only problems found were due to whitespace or lines that were too long.
 
 
 
