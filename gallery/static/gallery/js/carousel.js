@@ -28,7 +28,6 @@ var slideIndex = 1;
             totalslides[i].style.display = "none"; 
         } 
         for (i = 0; i < totaldots.length; i++) { 
-            totaldots[i].className =  
             totaldots[i].className.replace(".active-dot", ""); 
         } 
         totalslides[slideIndex - 1].style.display = "block"; 
