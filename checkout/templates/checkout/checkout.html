@@ -91,7 +91,7 @@
                {{ order_form.postcode | as_crispy_field }}
                {{ order_form.country | as_crispy_field }}
                <div class="form-check form-check-inline float-right mr-0">
-               <!--If user is logged in, option to save info to their profile. If user is not logged in, they have the option to login or register to safe information-->
+                  <!--If user is logged in, option to save info to their profile. If user is not logged in, they have the option to login or register to safe information-->
                   {% if user.is_authenticated %}
                   <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
                   <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
@@ -113,7 +113,7 @@
                <input type="hidden" value="{{ client_secret }}" name="client_secret">
             </fieldset>
             <div class="submit-button text-right mt-5 mb-2">
-                <!--Return to the cart page to allow the user to edit-->
+               <!--Return to the cart page to allow the user to edit-->
                <a href="{% url 'view_bag' %}" class="btn user-btn">
                <span class="icon">
                <i class="fas fa-arrow-left"></i>
