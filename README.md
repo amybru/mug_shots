@@ -129,7 +129,7 @@ Thus, on the front end of the website, the term 'cart' is used instead of 'bag'.
 
 Throughout the build of this site various defensive features were added to protect against malicious activity, and also to stop things breaking.
 
-A {% csrf_token %} was added on every form to prevent Cross Site Request Forgeries.
+A `` {% csrf_token %} `` was added on every form to prevent Cross Site Request Forgeries.
 
 Included in a lot of the views and a lot of the templates are checks to ensure that the user has been authenticated. This helps avoid somebody who is already logged in to log in. It also helps ensure only registered users are accessing certain functions, such as making and editing reviews or viewing a personalized profile.
 
@@ -182,11 +182,12 @@ I also relied on Django’s default user model for authorization, allowing me to
 The structure of the Checkout and Services apps were inspired by my studies with Code Institute, namely the Boutique Ado project. 
 
 The Database Structure was first drawn to see how the database data would relate to each other across the site.
+
 ![Database](wireframes/database.png)
 
 After the rough sketch was drawn, I was able to use Numbers (Apple's built in spreadsheet software) to help plan the structure of the models.
 
-When each app and its models were created and implemented, python manage.py makemigrations was run in the terminal to create the initial model package and python manage.py migrate was then used to apply the model to the database and create the table.
+When each app and its models were created and implemented, `` python manage.py makemigrations `` was run in the terminal to create the initial model package and `` python manage.py migrate `` was then used to apply the model to the database and create the table.
 
 This project heavily relies on Django’s default user model for authorization. One of the project requirements were in separating features by anonymous users, users in session and superusers.
 
