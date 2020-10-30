@@ -182,13 +182,73 @@ I also relied on Django’s default user model for authorization, allowing me to
 The structure of the Checkout and Services apps were inspired by my studies with Code Institute, namely the Boutique Ado project. 
 
 The Database Structure was first drawn to see how the database data would relate to each other across the site.
-{{{ Handrawn picture}}}
+![Database](wireframes/database.png)
 
 After the rough sketch was drawn, I was able to use Numbers (Apple's built in spreadsheet software) to help plan the structure of the models.
 
 When each app and its models were created and implemented, python manage.py makemigrations was run in the terminal to create the initial model package and python manage.py migrate was then used to apply the model to the database and create the table.
 
-{{{Models}}}
+This project heavily relies on Django’s default user model for authorization. One of the project requirements were in separating features by anonymous users, users in session and superusers.
+
+Profiles app:
+The models in the profiles app have the goal of saving and retreiving the default shipping information for the user in session.
+
+| Name             | Database Key            | Field Type   | Validation                                       |
+|------------------|-------------------------|--------------|--------------------------------------------------|
+| Phone Number     | default_phone_number    | CharField    | max_length=20, null= True, blank =True           |
+| Street Address 1 | default_street_address1 | CharField    | max_length=80, null= True, blank =True           |
+| Street Address 2 | default_street_address2 | CharField    | max_length=80, null= True, blank =True           |
+| Town or City     | default_town_or_city    | CharField    | max_length=40, null= True, blank =True           |
+| County           | default_county          | CharField    | max_length=80, null= True, blank =True           |
+| Postcode         | default_postcode        | CharField    | max_length=20, null= True, blank =True           |
+| Country          | default_country         | CountryField | blank_label ='Country', null = True,  blank=True |
+
+
+Contact app:
+The contact models exist to create a contact form and send that form to the site owner by email.
+
+| Name       | Database Key    | Field Type    | Validation/Requirements                   |
+|------------|-----------------|---------------|-------------------------------------------|
+| First Name | first_name      | CharField     | max_length=200                            |
+| Last Name  | last_name       | CharField     | max_length=200                            |
+| Subject    | contact_subject | CharField     | max_length=200                            |
+| Email      | email           | CharField     | max_length=200                            |
+| Message    | contact_body    | TextField     | max_length=5000                           |
+| Date       | contact_date    | DateTimeField | default=datetime.now, blank=True          |
+| User       | query_user      | ForeignKey    | User, null=True, on_delete=models.CASCADE |
+
+
+Products app:
+The models in the products app were created to display all of the products in the store
+| Name             | Database Key            | Field Type   | Validation                                       |
+|------------------|-------------------------|--------------|--------------------------------------------------|
+| Phone Number     | default_phone_number    | CharField    | max_length=20, null= True, blank =True           |
+| Street Address 1 | default_street_address1 | CharField    | max_length=80, null= True, blank =True           |
+| Street Address 2 | default_street_address2 | CharField    | max_length=80, null= True, blank =True           |
+| Town or City     | default_town_or_city    | CharField    | max_length=40, null= True, blank =True           |
+| County           | default_county          | CharField    | max_length=80, null= True, blank =True           |
+| Postcode         | default_postcode        | CharField    | max_length=20, null= True, blank =True           |
+| Country          | default_country         | CountryField | blank_label ='Country', null = True,  blank=True |
+
+Categories:
+The product model heavily relies on the categories 
+
+| Name          | Database Key  | Field Type | Validation/Requirements               |
+|---------------|---------------|------------|---------------------------------------|
+| Name          | name          | CharField  | max_length=200                        |
+| Friendly Name | friendly_name | CharField  | max_length=200, null=True, blank=True |
+
+
+Reviews: 
+The reviews model was created to display user reviews on the gallery page:
+
+| Name           | Database Key   | Field Type | Validation/Requirements                                                                      |
+|----------------|----------------|------------|----------------------------------------------------------------------------------------------|
+| User           | user_profile   | ForeignKey | UserProfile, on_delete =models.SET_NULL, null= True, blank=True, related_name="user_profile" |
+| Product        | product        | ForeignKey | Product, on_delete=models.SET_NULL, null=True, blank=True, related_name= "user_product",     |
+| Review Title   | review_title   | CharField  | max_length=200                                                                               |
+| Review Content | review_content | TextField  | blank=True, null=True, default=""                                                            |
+
 
 Whenever possible, first-time-right methodology was used when creating each of the models to avoid too many alterations to the models and the database table through multiple makemigrations and migrate commands. 
 Throughout development, a few of the fields were adjusted and those commands needed to be run again.
@@ -302,7 +362,7 @@ The defensive design is implemented to restrict other than admin users to manual
 
 Languages, Frameworks, Libraries and other tools used for this project:
 
-* [Gitpod](https://fontawesome.com/?from=io): Used as IDE o write, run, and debug the code used for the web-app.
+* [Gitpod](https://www.gitpod.io/): Used as IDE to write, run, and debug the code used for the web-app.
 * [Github](https://github.com/): Used for version control of the code by using Git functions in the control panel.
 * [Heroku](https://heroku.com/): Used as deployment platform
 * [SQlite3](https://www.sqlite.org/index.html): SQL database engine
@@ -316,7 +376,7 @@ Languages, Frameworks, Libraries and other tools used for this project:
 * [JavaScript](https://www.javascript.com/): Provides dynamic interactivity, as it is a full-fledged versatile programming language.
 * [Bootstrap](https://getbootstrap.com/): To customise the html and make it responsive to different devices.
 * [JQuery](https://www.jquery.com/jquery-3.4.1): Simplifies many complicated tasks from JavaScript, such as AJAX calls and DOM manipulation. 
-* [Google Maps API](https://fontawesome.com/?from=io): to show a simple map 
+* [Google Maps API](https://cloud.google.com/maps-platform/?utm_source=google&utm_medium=cpc&utm_campaign=FY18-Q2-global-demandgen-paidsearchonnetworkhouseads-cs-maps_contactsal_saf&utm_content=text-ad-none-none-DEV_c-CRE_460848633793-ADGP_Hybrid%20%7C%20AW%20SEM%20%7C%20BKWS%20~%20Google%20Maps-KWID_43700036076725534-kwd-21146297871-userloc_9010810&utm_term=KW_%2Bgoogle%20%2Bmaps-ST_%2Bgoogle%20%2Bmaps&&gclid=CjwKCAjw8-78BRA0EiwAFUw8LDMm7p1T37ZiJgPBGJ66njkqOEKJFNebaxLSNgA1ysEMk7JjORh-gBoCxgkQAvD_BwE): to show a simple map 
 
 ### Back-End Technologies
 * [Python]( https://www.python.org/): Python3 is used as programming language
@@ -334,7 +394,7 @@ The template provided by Code Institute is used as basis (https://github.com/Cod
 
 
 ## Testing
-Please visit the testing file here to read more.
+Please visit the testing file [here](TEST.md) to read more.
 
 
 ## Deployment
@@ -482,10 +542,10 @@ All Images are taken from [Unsplash](https://unsplash.com/) .
 Icons are from [Font Awesome](https://fontawesome.com/?from=io) .
 
 ##### Fonts
-The fonts, Ubuntu and Ranchers, are from [Google Fonts](https://fonts.google.com//) .
+The fonts, Ubuntu and Ranchers, are from [Google Fonts](https://fonts.google.com/) .
 
 ##### Wireframes
-The wireframes attached to this README were created using Balsamic.
+The wireframes attached to this README were created using [Balsamiq](https://balsamiq.com/).
 
 Prices, names, and descriptions on all products are fictional.
 
