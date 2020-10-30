@@ -15,7 +15,7 @@ var slideIndex = 1;
         var totalslides =  
             document.getElementsByClassName("slide"); 
         var totaldots =  
-            document.getElementsByClassName("footerdot"); 
+            document.getElementsByClassName("dot"); 
           
         if (n > totalslides.length) { 
             slideIndex = 1; 
