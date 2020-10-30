@@ -1,6 +1,8 @@
 /* Home Page */
 
+
 /* Main landing Image for site, size image and color of text set */
+
 .home-jumbotron {
 	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/media/main-1.jpg);
 	background-size: cover;
@@ -16,7 +18,9 @@
 	padding-top: 20px;
 }
 
+
 /* Button on jumbotron color and on hover set */
+
 .shop-button {
 	background-color: #d4af37;
 	color: #dfdfdf;
@@ -34,24 +38,34 @@
 	color: #d4af37;
 }
 
+
 /* About section contains half text and half photo */
+
+
 /* font set for title */
+
 .about h3 {
 	font-family: 'Ranchers', cursive;
 }
 
+
 /* Photo styling, size */
+
 #teamphoto {
 	width: 90%;
 	margin-bottom: 15px;
 }
 
+
 /* Adjust bootstrap styling */
+
 .flex-column {
 	max-width: 260px;
 }
 
+
 /* Row that contains a mini image grid and a call to action section */
+
 .grid-container {
 	background: #dfdfdf;
 }
@@ -75,14 +89,18 @@
 	}
 }
 
+
 /* Image size and position for mini grid */
+
 .grid-column img {
 	margin-top: 8px;
 	vertical-align: middle;
 	width: 200%;
 }
 
+
 /* Text in mini grid, color font-size and font set */
+
 .home-ig a {
 	color: #133616;
 	font-size: 0.8rem;
@@ -92,8 +110,9 @@
 	text-decoration: none
 }
 
-/* Call to action- text and link */
+
 /* background color and padding set for col */
+
 .home-comission {
 	background-color: #133616;
 	padding: 15px;
