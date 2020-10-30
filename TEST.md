@@ -333,6 +333,7 @@ adjust the number.
 * While the page is loading, an overlay with a spinning arrow appears to let the user know their order is being processed.
 * Once the order has been processed sucessfully, a checkout success page is rendered with a table showing the details of their order and shipping information.
 * An email will be sent to the management and the user.
+* These payments are also visible on the [Stripe Dashbord](https://dashboard.stripe.com/payments) page. This confirms all the payments that have been passed through the system. 
 
 ##### Login/register
 * If the user has not created an account, they must register first. If the user does not exist and tries to login, they will see a message "The e-mail address and/or password you specified are not correct." and be invited to try again.
@@ -396,16 +397,26 @@ Test Results: Pass
 
 Validator websites were used to test the following:
 
-HTML - W3C Html Checker:
+HTML - [W3C Html Checker](https://validator.w3.org/) :
+
 Doing so brought up a few errors throughout the project related to using Django templates. These included an issue in using '{}' brackets as part of the source for <a> elements and <img> elements. However, this syntax is necessary to access static files and urls and was therefore ignored.
 All html templates led to errors that the doctype and language were not declared. As the templates were based on the base.html template where these were addressed, this issue was also ignored.
 Some Bootstrap Modals on the site returned errors with their 'aria-labelledby' attribute. This error was related to using templating language to specify the item the modal was related to, so this error was also ultimately ignored.
 
-CSS - W3C CSS Checker - No errors found
 
-JavaScript - JSHint - No errors found
+CSS - [W3C CSS Checker](https://jigsaw.w3.org/css-validator/validator) :
 
-Python - PEP8 Online Check - a number of whitespace and lines too long warnings.
+No errors found
+
+
+JavaScript - [JSHint](https://jshint.com/) :
+
+ No errors found
+
+
+Python - PEP8 Online Check [PEP8 Online Check](http://pep8online.com/) :
+
+a number of whitespace and lines too long warnings.
 
 
 ### Bugs Found and Fixed

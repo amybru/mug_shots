@@ -1,5 +1,7 @@
 # Mug Shots
 
+Drinking from a mug so good-its almost criminal. 
+
 Live Demo: (https://mug-shots.herokuapp.com/)
 
 The Mug Shots e-commerce website is developed for a fictional handmade pottery company who specializes in custom mugs. 
@@ -21,18 +23,18 @@ Click here to view the deployed site
 
 # Table of Contents
 1. [UX](#UX)
-    - [Main Requirements](#Main)
-    - [User Stories](#User)
+    - [Main Requirements](#Main-Requirements)
+    - [User Stories](#User-Stories)
     - [Design](#Design)
     - [Wireframes](#Wireframes)
-    - [Database Structure](#Database)
+    - [Database Structure](#Database-Structure)
 2. [Features](#Features)
-    - [Existing Features](#Existing)
-    - [Features Left To Implement](#Implement)
+    - [Existing Features](#Existing-Features)
+    - [Features Left To Implement](#Features-Left-To-Implement)
 3. [Technologies](#Technologies)
 4. [Testing](#Testing)
 5. [Deployment](#Deployment)
-    - [Local Deployment](#Local)
+    - [Local Deployment](#Local-Deployment)
     - [Heroku](#Heroku)
 6. [Acknowledgement](#Acknowledgement)
 7. [Credits](#Credits)
@@ -146,7 +148,7 @@ The Google Chrome's Dev Tools were used to view the results of new features adde
 
 > One Product Page 
 ![One Product](wireframes/oneproduct.png)
-![One Product Mobile](wireframes/mobile-oneproduct.png)
+![One Product Mobile](wireframes/oneproduct-mobile.png)
 
 > Gallery Page
 ![Gallery](wireframes/gallery.png)
@@ -298,36 +300,41 @@ The defensive design is implemented to restrict other than admin users to manual
 
 ## Technologies
 
-Languages, Frameworks, Editors & Version Control:
-* HTML
-* CSS
-* JavaScript: to make Stripe elements, ShareThis button and dataTables work and to add the django-countries dropdown.
-* Django: web framework version 3.0.8
-* Python: Python3 is used as programming language
-* Pillow: to be able to upload images
-* Allauth: addressing authentication, registration and account management
-* Stripe: to enable the user to make payments and check credit cards
-* Crispy-forms: to easily make the forms and make them user-friendly.
-* Bootstrap: to customise the html and make it responsive to different devices.
-* JQuery:  For the Modal and Responsive Navbar expand & collapse functionality.
-* Gitpod: used as IDE
-* Heroku: used as deployment platform
-* Google Maps API- to show a simple map 
-* Pillow 4.3.0 - The Python Imaging Library adds image processing capabilities to your Python interpreter. This library provides extensive file format support, an efficient internal representation, and fairly powerful image processing capabilities. https://pillow.readthedocs.io/en/stable/handbook/overview.html
-* Jinja - This is a modern and designer-friendly templating language for Python. It is fast, widely used and secure with the optional sandboxed template execution environment. https://jinja.palletsprojects.com/en/2.11.x/ 
-* Stripe 2.46.0 - Checkout creates a secure, Stripe-hosted payment page that lets you collect payments quickly. It works across devices and is designed to increase conversion. Checkout makes it easy to build a first-class payments experience. https://stripe.com/docs/payments/checkout 
-* Boto3- The Amazon Web Services (AWS) SDK for Python. It enables Python developers to create, configure, and manage AWS services, such as S3.
-* AWS S3 Bucket- Used to store static and media files in production
-* Gunicorn- A Python WSGI HTTP Server to enable deployment to Heroku
-* Psycopg2- needed to enable the PostgreSQL database to function with Django
+Languages, Frameworks, Libraries and other tools used for this project:
+
+* [Gitpod](https://fontawesome.com/?from=io): Used as IDE o write, run, and debug the code used for the web-app.
+* [Github](https://github.com/): Used for version control of the code by using Git functions in the control panel.
+* [Heroku](https://heroku.com/): Used as deployment platform
+* [SQlite3](https://www.sqlite.org/index.html): SQL database engine
+* [PostgreSQL](https://www.postgresql.org/): Object-relational database system
+* [Django]( https://www.djangoproject.com/): Web framework
+* [AWS S3 Bucket](https://aws.amazon.com/s3/): Used to store static and media files in production
+
+### Front-End Technologies
+* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML): Used as a fundamental basis for building the web-app. Where possible semantic HTML is used to give the user a better understanding.
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS): Used for styling of elements within the website. 
+* [JavaScript](https://www.javascript.com/): Provides dynamic interactivity, as it is a full-fledged versatile programming language.
+* [Bootstrap](https://getbootstrap.com/): To customise the html and make it responsive to different devices.
+* [JQuery](https://www.jquery.com/jquery-3.4.1): Simplifies many complicated tasks from JavaScript, such as AJAX calls and DOM manipulation. 
+* [Google Maps API](https://fontawesome.com/?from=io): to show a simple map 
+
+### Back-End Technologies
+* [Python]( https://www.python.org/): Python3 is used as programming language
+* [Allauth](https://fontawesome.com/?from=io): Addressing authentication, registration and account management
+* [Stripe](https://stripe.com/docs/payments/checkout): To enable the user to make payments and check credit cards
+* [Crispy-forms](https://fontawesome.com/?from=io): To easily build the forms and make them user-friendly.
+* [Pillow 4.3.0](https://pillow.readthedocs.io/en/stable/handbook/overview.html): Adds image processing capabilities to your Python interpreter. This library provides extensive file format support, an efficient internal representation, and fairly powerful image processing capabilities.
+* [Jinja](https://jinja.palletsprojects.com/en/2.11.x/): A modern and designer-friendly templating language for Python. It is fast, widely used and secure with the optional sandboxed template execution environment.
+* [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html): The Amazon Web Services (AWS) SDK for Python. It enables Python developers to create, configure, and manage AWS services, such as S3.
+* [Gunicorn](https://docs.gunicorn.org/en/stable/): A Python WSGI HTTP Server to enable deployment to Heroku
+* [Psycopg2]( https://pypi.org/project/psycopg2/): needed to enable the PostgreSQL database to function with Django
 
 Template- Code Institute
 The template provided by Code Institute is used as basis (https://github.com/Code-Institute-Org/gitpod-full-template.git). A repository was created on GitHub by choosing the green "Use this template" button.
 
 
-
 ## Testing
-
+Please visit the testing file here to read more.
 
 
 ## Deployment
@@ -363,7 +370,6 @@ If you would like to further contribute to this project, you can clone it to you
         STRIPE_SECRET_KEY
         STRIPE_WH_SECRET
         DATABASE_URL
-        DEVELOPMENT = True
 
 9. To set up the Django SQLite3 tables required for this project, use the following commands:
         
@@ -443,6 +449,7 @@ To deploy the project to Heroku, follow the steps above in "Local Deployment", t
 ##### Hosting media files with AWS
 The static files and media files for this project are currently hosted in an AWS S3 Bucket. To host them, you need to create an AWS account and create your S3 bucket, making sure to allow public access.
 After creating an account and uploading the files, the following environment variables should be added via the settings or .env file.
+        
         USE_AWS (set to True)
         AWS_ACCESS_KEY_ID
         AWS_SECRET_ACCESS_KEY
@@ -451,6 +458,7 @@ After creating an account and uploading the files, the following environment var
 In order to send real emails from the website, you must connect it to a Gmail account. 
 Either use an existing Gmail account or create a new one, then sign in and navigate to the Google Account Security page. From here, create two-step authentication by creating an App password for a Django app. 
 Add the following environment variables to your settings or .env file.
+       
         EMAIL_HOST_USER
         EMAIL_HOST_PASS
 
@@ -465,17 +473,16 @@ I would like to thank and credit the following sources for their assistance and 
 * A big thanks to my friends and peers for helping me test the site extensively, to make sure each feature worked as expected on various devices.
 
 
-
 ## Credits
 
 ##### Images
-All Images are taken from Unsplash.
+All Images are taken from [Unsplash](https://unsplash.com/) .
 
 ##### Icons
-Icons are from Font Awesome.
+Icons are from [Font Awesome](https://fontawesome.com/?from=io) .
 
 ##### Fonts
-All fonts are from Google Fonts.
+The fonts, Ubuntu and Ranchers, are from [Google Fonts](https://fonts.google.com//) .
 
 ##### Wireframes
 The wireframes attached to this README were created using Balsamic.
@@ -483,7 +490,7 @@ The wireframes attached to this README were created using Balsamic.
 Prices, names, and descriptions on all products are fictional.
 
 ##### Code
-Much of the code is inspired by the Boutique Ado mini project from Code Institute. Their tutorial videos assisted me in creating
+Several apps included the code are inspired by the Boutique Ado mini project from Code Institute. Their tutorial videos assisted me in creating
 many of the apps required for this project, including: the checkout app and the add to cart functionality.
 
 > NOTE: This project was created for educational purposes only as 'Mug Shots' is a fictional business.
