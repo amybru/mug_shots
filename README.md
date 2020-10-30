@@ -43,9 +43,9 @@ Click [here](https://mug-shots.herokuapp.com/) to view the deployed site
 ## UX
 
 ### Main Requirements
-The Main requirement of this project was to create a full stack e-commerce website where both the user is able to 
+The main requirement of this project was to create a full stack e-commerce website where both the user is able to 
 successfully purchase a product and the owner is able to satisfy all CRUD functions to Create, Read, Update, and 
-Delete products and reviews.
+Delete for products and reviews.
 
 #### Additional requirements
 * To view all products in a list
@@ -108,7 +108,7 @@ will also be able to add, edit, and delete products from the store as well as ma
 In order to keep the user informed throughout their experience on the website, I also decided to add a notification system using Bootstrap's toasts feature, confirming the actions a user would take. For example, deleting a product from their cart or adjusting the quantity. 
 The website also must meet content requirements to provide users with enough information about each product, including item pricing and details.
 
-For this project, I chose a minimalistic dark mode style website. To soften the styling as to not have a harsh black or white, the colors #161616 (Muted black) and #dfdfdf (A light Gray, white color) were chosen for the main colors of the site.
+For this project, I chose a minimalistic dark mode style website. To soften the styling as to not have a harsh black or white, the colors #161616 (Muted black) and #dfdfdf (A light Gray/white color) were chosen for the main colors of the site.
 These colors make up most of the website with two additional colors to help certain elements such as the buttons and titles pop. The colors, #d4af37 (Gold) and #133616 (Forest Green) were chosen to complement the main black and white design. 
 
 For the font, I chose the classic font, "Ubuntu" for the main text on the site. This font is very clean to read and works well with the minimalistic theme. I wanted an additional font to make some of the titles and buttons stand out, so the font "Ranchers"
@@ -131,13 +131,15 @@ Throughout the build of this site various defensive features were added to prote
 
 A `` {% csrf_token %} `` was added on every form to prevent Cross Site Request Forgeries.
 
-Included in a lot of the views and a lot of the templates are checks to ensure that the user has been authenticated. This helps avoid somebody who is already logged in to log in. It also helps ensure only registered users are accessing certain functions, such as making and editing reviews or viewing a personalized profile.
+Included in a lot of the views and a lot of the templates are tests to ensure that the user has been authenticated. This helps avoid somebody who is already logged in to log in. It also helps ensure only registered users are accessing certain functions, such as making and editing reviews or viewing a personalized profile.
 
 Several checks were put in place within the forms and the models to ensure all requests were receiving all the expected data. Adding 'required' to certain field helped ensure this was achieved and fields were not left blank.
 
 The Google Chrome's Dev Tools were used to view the results of new features added on different screen sizes. Doing so helped me make any adjustments to styling including; the margins, padding and font sizes of different aspects of the project, as well as checking that new features were compatible on all screens. The functionality of each feature was tested as it was added to the project to notice issues as they arose.
 
 ### Wireframes
+Wireframes were created using [Balsamiq](https://balsamiq.com/).
+
 > Home Page
 ![Home](wireframes/home.png)
 ![Home Mobile](wireframes/mobile-home.png)
@@ -183,7 +185,7 @@ The structure of the Checkout and Services apps were inspired by my studies with
 
 The Database Structure was first drawn to see how the database data would relate to each other across the site.
 
-![Database](wireframes/database.png)
+![Database](wireframes/database.jpg)
 
 After the rough sketch was drawn, I was able to use Numbers (Apple's built in spreadsheet software) to help plan the structure of the models.
 
@@ -348,15 +350,15 @@ The defensive design is implemented to restrict other than admin users to manual
 
 ### Features Left To Implement
 
-* 404 Errors required for instances where usher visits an unavailable page
-* After successfully ordering a product, email confirmation is sent for order
-* A page for the staff to see all orders made my customers, for fulfillment purposes to track orders completed and orders to do
+* 404 Errors pages required for instances where user visits an unavailable page
+* After successfully ordering a product, email confirmation is sent for order to the user's email
+* A page for the staff to see all orders made by customers, for fulfillment purposes to track orders completed and orders to do
 * Star rating for reveiws and reviews for individual products
 * To be able to signup/login through social media acounts facebook and google
 * A reset password feature for logged in users, in case the user forgets their password
 * Add a custom item where the user can add a specific size and color of their choosing to the cart
 * A wishlist for users to save items they would like to purchase later
-
+* I would also like to write more test cases to cover all apps for this website. 
 
 
 ## Technologies
@@ -383,7 +385,7 @@ Languages, Frameworks, Libraries and other tools used for this project:
 * [Python]( https://www.python.org/): Python3 is used as programming language
 * [Allauth](https://fontawesome.com/?from=io): Addressing authentication, registration and account management
 * [Stripe](https://stripe.com/docs/payments/checkout): To enable the user to make payments and check credit cards
-* [Crispy-forms](https://fontawesome.com/?from=io): To easily build the forms and make them user-friendly.
+* [Crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/): To easily build the forms and make them user-friendly.
 * [Pillow 4.3.0](https://pillow.readthedocs.io/en/stable/handbook/overview.html): Adds image processing capabilities to your Python interpreter. This library provides extensive file format support, an efficient internal representation, and fairly powerful image processing capabilities.
 * [Jinja](https://jinja.palletsprojects.com/en/2.11.x/): A modern and designer-friendly templating language for Python. It is fast, widely used and secure with the optional sandboxed template execution environment.
 * [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html): The Amazon Web Services (AWS) SDK for Python. It enables Python developers to create, configure, and manage AWS services, such as S3.
