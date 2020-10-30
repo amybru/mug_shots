@@ -1,27 +1,32 @@
 /* Profiles App */
 
+
 /* Save User Billing Information Form */
+
 #profile-update-form .form-control {
-    color: #000;
+	color: #000;
 }
 
 #profile-update-form input::placeholder {
-    color: #aab7c4;
+	color: #aab7c4;
 }
 
 #id_default_country,
 #id_default_country option:not(:first-child) {
-    color: #000;
+	color: #000;
 }
 
 #id_default_country option:first-child {
-    color: #aab7c4;
+	color: #aab7c4;
 }
 
+
 /* Order History Table */
+
 .order-history {
-    max-height: 416px; /* height of profile form + submit button */
-    overflow-y: auto;
+	max-height: 416px;
+	/* height of profile form + submit button */
+	overflow-y: auto;
 }
 
 .order-history-table {
@@ -29,6 +34,6 @@
 }
 
 .order-number {
-    text-decoration: none;
-    color: #133616;
+	text-decoration: none;
+	color: #133616;
 }
