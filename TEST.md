@@ -424,4 +424,4 @@ a small line of code in the context processors section of the settings file was 
 
 4. Many of the errors and bugs found during this project were due to syntax errors, proper punctuation or capitalization. Once fixed, the code began to run as expected.
 
-[Return to main README](#README.md)
+[Return to main README](README.md)
