@@ -168,8 +168,9 @@ textarea {
 }
 
 .want-review {
-    margin-top: 15em;
+	margin-top: 15em;
 }
+
 
 /* Delete & Edit Modals, background color and text set*/
 
@@ -194,7 +195,7 @@ textarea {
 
 .images-carousel {
 	margin-top: 3.5em;
-    margin-bottom: 2em;
+	margin-bottom: 2em;
 }
 
 .prev-next:hover {
