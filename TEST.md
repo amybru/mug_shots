@@ -1,13 +1,13 @@
 ## Testing 
 
-1. [Testing User Stories](#Testing)
+1. [Testing User Stories](#Testing-User-Stories)
     - [Shopper](#Shopper)
-    - [Site User](#Site)
+    - [Site User](#Site-User)
     - [Customer](#Customer)
-    - [Store Owner](#Store)
-2. [Manual Testing](#Manual)
-3. [Automated Testing](#Automated)
-4. [Bugs Found and Fixed](#Bugs)
+    - [Store Owner](#Store-Owner)
+2. [Manual Testing](#Manual-Testing)
+3. [Automated Testing](#Automated-Testing)
+4. [Bugs Found and Fixed](#Bugs-Found-and-Fixed)
 
 ### Testing User Stories
 
