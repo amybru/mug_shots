@@ -1,5 +1,14 @@
 ## Testing 
 
+1. [Testing User Stories](#Testing)
+    - [Shopper](#Shopper)
+    - [Site User](#Site)
+    - [Customer](#Customer)
+    - [Store Owner](#Store)
+2. [Manual Testing](#Manual)
+3. [Automated Testing](#Automated)
+4. [Bugs Found and Fixed](#Bugs)
+
 ### Testing User Stories
 
 All user stories have been verified and have passed their tests.
@@ -399,5 +408,20 @@ JavaScript - JSHint - No errors found
 Python - PEP8 Online Check - a number of whitespace and lines too long warnings.
 
 
-
 ### Bugs Found and Fixed
+During development and ongoing testing of the website both local and deployed links were found to have several bugs that proved to be a little more than a quick fix. 
+
+1. As mentioned earlier in the gallery section, if the user is logged in and has previously created a review, they will be able to see two buttons on their review card to either edit or delete their review. Clicking the edit review will take the user
+to a new page where they can edit their review. Previously I had designed this edit function to be in a modal just as the delete function, however due to many errors trying to populate the edit form, it was decided upon to move this form to its own page.
+Because the function for editing the form wasn't properly called when the button to open the modal was clicked, the edit form was not being populated with data from the review and instead was a blank form. Due to the complexity of changing this function to retrieve the data from 
+the database when the modal was opened this was simplified. Now when the user clickes on the edit button on the review, they will be taken to a new page to edit their form. 
+
+2. When the user is logged in, has their personal data saved, and is on the contact page, the contact form will automatically render their first and last name as well as the email. However, I got mixed up with my field names in the forms and models for that app causing these fields not to 
+populate. Overall it was an easy fix. I was originally trying to call a username and a full name, when my form required a first name and last name. These issues were resolved and now work as expected.
+
+3. There was a bug occuring in the add to cart function. When a user tried to add an item to the cart, nothing happened and a POST 302 error occured. Testing this function with a print statement confirmed that the function was working and retrieved the correct data. It was found that
+a small line of code in the context processors section of the settings file was missing. This was added in and tested again. After testing this time, the function worked as expected.
+
+4. Many of the errors and bugs found during this project were due to syntax errors, proper punctuation or capitalization. Once fixed, the code began to run as expected.
+
+[Return to main README](#README.md)
