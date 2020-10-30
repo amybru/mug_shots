@@ -47,11 +47,21 @@ footer>h4 {
 .footer-phone {
 	color: #d4af37;
 	font-size: 0.75rem;
+    text-decoration: none;
+}
+
+.footer-phone:hover {
+    color: #dfdfdf;
 }
 
 .footer-email {
 	color: #d4af37;
 	font-size: 0.75rem;
+    text-decoration: none;
+}
+
+.footer-email:hover {
+    color: #dfdfdf;
 }
 
 
