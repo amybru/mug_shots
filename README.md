@@ -19,7 +19,7 @@ To test the site as a superuser, you can use the following credentials to login:
 - Password: Test0499
 
 The app is deployed on Heroku. 
-Click here to view the deployed site
+Click [here](https://mug-shots.herokuapp.com/) to view the deployed site
 
 # Table of Contents
 1. [UX](#UX)
